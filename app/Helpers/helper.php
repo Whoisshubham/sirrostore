@@ -44,4 +44,3 @@ function bagCount()
     }
     return $cart;
 }
-?>

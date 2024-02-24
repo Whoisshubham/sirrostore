@@ -14,8 +14,7 @@ class UserRegisterController extends Controller
     public function store(Request $request)
     {
         $validator = Validator::make($request->all(), [
-            'first_name' => "required|string|min:3|max:40",
-            'last_name' => "required|string|min:3|max:40",
+            'fname' => "required|string|min:3|max:40",
             'email' => "required|email|unique:users,email",
             "password" => 'required|min:5|max:20',
             "confirm_password" => "required|same:password"
@@ -29,7 +28,6 @@ class UserRegisterController extends Controller
 
         $storeUser = new User;
         $storeUser->fname = $request->first_name ?? null;
-        $storeUser->lname = $request->last_name ?? null;
         $storeUser->email = $request->email ?? null;
         $storeUser->password = Hash::make($request->password) ?? null;
         $result = $storeUser->save();

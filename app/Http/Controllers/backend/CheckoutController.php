@@ -12,4 +12,7 @@ class CheckoutController extends Controller
         $countrieList=Countrie::whereStatus(1)->get();
         return view('Frontend.checkout',compact('countrieList'));
     }
+    public function account(){
+        return view('Frontend.account');
+    }
 }

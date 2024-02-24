@@ -27,13 +27,11 @@ class ProductController extends Controller
     }
     public function productDetails($slug)
     {
-        // $productData = Product::where('slug', $slug)->first();
-        // if ($productData == null) {
-        //     return redirect(404);
-        // }
-        $relatedProduct=[];
-        $productData=[];
-        // $relatedProduct = Product::where('category_id', $productData->category_id)->whereStatus(1)->where('id', "!=", $productData->id)->get();
+        $productData = Product::with(['productOne'])->where('slug', $slug)->first();
+        if ($productData == null) {
+            return redirect(404);
+        }
+        $relatedProduct = Product::where('category_id', $productData->category_id)->whereStatus(1)->where('id', "!=", $productData->id)->get();
         return view('Frontend.products-view', compact('productData', 'relatedProduct'));
     }
 }

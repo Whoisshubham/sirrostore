@@ -13,16 +13,13 @@
     <script>
         document.documentElement.className = document.documentElement.className + ' yes-js js_active js'
     </script>
-    <title>Women&#8217;s Floral Midi Dress &#8211; Nooni</title>
+
     <meta name='robots' content='noindex, nofollow' />
     <link rel='dns-prefetch' href='http://fonts.googleapis.com/' />
     <link rel='preconnect' href='https://fonts.gstatic.com/' crossorigin />
-    <link rel="alternate" type="application/rss+xml" title="Nooni &raquo; Feed"
-        href="https://demo.theme-sky.com/nooni-fashion/feed/" />
+
     <link rel="alternate" type="application/rss+xml" title="Nooni &raquo; Comments Feed"
         href="https://demo.theme-sky.com/nooni-fashion/comments/feed/" />
-    <link rel="alternate" type="application/rss+xml" title="Nooni &raquo; Women&#8217;s Floral Midi Dress Comments Feed"
-        href="https://demo.theme-sky.com/nooni-fashion/shop/womens-floral-midi-dress/feed/" />
     <link rel='stylesheet' id='jquery-selectBox-css'
         href='https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/plugins/yith-woocommerce-wishlist/assets/css/jquery.selectBox.css?ver=1.2.0'
         type='text/css' media='all' />
@@ -652,7 +649,7 @@
         <!-- Page Slider -->
 
 
-     @include('Frontend.layouts.header')
+        @include('Frontend.layouts.header')
 
         <div id="main" class="wrapper">
             <div class="breadcrumb-title-wrapper breadcrumb-v1 no-title">
@@ -686,120 +683,54 @@
                                 <div class="woocommerce-product-gallery woocommerce-product-gallery--with-images woocommerce-product-gallery--columns-4 images"
                                     data-columns="4" style="opacity: 0; transition: opacity .25s ease-in-out;">
                                     <div class="woocommerce-product-gallery__wrapper">
-                                        <div data-thumb="https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/uploads/2023/04/10-450x572.jpg"
-                                            data-thumb-alt="" class="woocommerce-product-gallery__image"><a
-                                                href="https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/uploads/2023/04/10.jpg"><img
-                                                    width="1000" height="1276"
-                                                    src="https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/uploads/2023/04/10.jpg"
-                                                    class="wp-post-image" alt="" title="10"
-                                                    data-caption=""
-                                                    data-src="https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/uploads/2023/04/10.jpg"
-                                                    data-large_image="https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/uploads/2023/04/10.jpg"
-                                                    data-large_image_width="1000" data-large_image_height="1276"
-                                                    decoding="async" loading="lazy" /></a></div>
-                                        <div data-thumb="https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/uploads/2023/04/15-450x572.jpg"
-                                            data-thumb-alt="" class="woocommerce-product-gallery__image"><a
-                                                href="https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/uploads/2023/04/15.jpg"><img
-                                                    width="1000" height="1276"
-                                                    src="https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/uploads/2023/04/15.jpg"
-                                                    class="" alt="" title="15" data-caption=""
-                                                    data-src="https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/uploads/2023/04/15.jpg"
-                                                    data-large_image="https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/uploads/2023/04/15.jpg"
-                                                    data-large_image_width="1000" data-large_image_height="1276"
-                                                    decoding="async" loading="lazy" /></a></div>
-                                        <div data-thumb="https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/uploads/2023/04/23-450x572.jpg"
-                                            data-thumb-alt="" class="woocommerce-product-gallery__image"><a
-                                                href="https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/uploads/2023/04/23.jpg"><img
-                                                    width="1000" height="1276"
-                                                    src="https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/uploads/2023/04/23.jpg"
-                                                    class="" alt="" title="23" data-caption=""
-                                                    data-src="https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/uploads/2023/04/23.jpg"
-                                                    data-large_image="https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/uploads/2023/04/23.jpg"
-                                                    data-large_image_width="1000" data-large_image_height="1276"
-                                                    decoding="async" loading="lazy" /></a></div>
-                                        <div data-thumb="https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/uploads/2023/04/14-450x572.jpg"
-                                            data-thumb-alt="" class="woocommerce-product-gallery__image"><a
-                                                href="https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/uploads/2023/04/14.jpg"><img
-                                                    width="1000" height="1276"
-                                                    src="https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/uploads/2023/04/14.jpg"
-                                                    class="" alt="" title="14" data-caption=""
-                                                    data-src="https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/uploads/2023/04/14.jpg"
-                                                    data-large_image="https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/uploads/2023/04/14.jpg"
-                                                    data-large_image_width="1000" data-large_image_height="1276"
-                                                    decoding="async" loading="lazy" /></a></div>
-                                        <div class="product-label on-thumbnail">
+                                        @php
+                                            $images = json_decode($productData->image);
+                                        @endphp
+                                        @foreach ($images as $image)
+                                            <div data-thumb="{{ asset($image) }}" data-thumb-alt=""
+                                                class="woocommerce-product-gallery__image"><a
+                                                    href="{{ asset($image) }}"><img width="1000" height="1276"
+                                                        src="{{ asset($image) }}" class="wp-post-image"
+                                                        alt="" title="10" data-caption=""
+                                                        data-src="{{ asset($image) }}"
+                                                        data-large_image="{{ asset($image) }}"
+                                                        data-large_image_width="1000" data-large_image_height="1276"
+                                                        decoding="async" loading="lazy" /></a>
+                                            </div>
+                                        @endforeach
+
+                                        {{-- <div class="product-label on-thumbnail">
                                             <span class="onsale"><span>Sale</span></span>
-                                        </div>
+                                        </div> --}}
                                     </div>
                                 </div>
 
                                 <div class="summary entry-summary">
-                                    <h1 class="product_title entry-title">Women&#8217;s Floral Midi Dress</h1>
+                                    <h1 class="product_title entry-title">{{ $productData->product_name ?? null }}</h1>
                                     <div class="ts-product-ratings-stock">
-                                        <div class="woocommerce-product-rating">
-                                            <div class="star-rating" role="img" aria-label="Rate this product:">
-                                                <span style="width:0%">Rated <strong class="rating">0</strong> out of
-                                                    5</span>
-                                            </div><span class="review-count">(0)</span>
-                                        </div>
-                                        <div class="availability stock in-stock" data-original="78 in stock"
-                                            data-class="in-stock">
-                                            <span class="label">Stock:</span> <span class="availability-text">78 in
-                                                stock</span>
+
+                                        <div class="availability stock in-stock" data-class="in-stock">
+                                            <span class="label">Stock:</span> <span
+                                                class="availability-text">{{ $productData->productOne->stock ?? '0' }}
+                                                in Stock</span>
                                         </div>
                                     </div>
-                                    <div class="ts-countdown style-default">
-                                        <div class="counter-wrapper days-3">
-                                            <div class="days " data-days="820">
-                                                <div class="number-wrapper">
-                                                    <span class="number">820</span>
-                                                </div>
-                                                <div class="ref-wrapper">
-                                                    days </div>
-                                            </div>
-                                            <span class="dots">:</span>
-                                            <div class="hours" data-hours="09">
-                                                <div class="number-wrapper">
-                                                    <span class="number">09</span>
-                                                </div>
-                                                <div class="ref-wrapper">
-                                                    hours </div>
-                                            </div>
-                                            <span class="dots">:</span>
-                                            <div class="minutes" data-minutes="20">
-                                                <div class="number-wrapper">
-                                                    <span class="number">20</span>
-                                                </div>
-                                                <div class="ref-wrapper">
-                                                    mins </div>
-                                            </div>
-                                            <span class="dots">:</span>
-                                            <div class="seconds" data-seconds="45">
-                                                <div class="number-wrapper">
-                                                    <span class="number">45</span>
-                                                </div>
-                                                <div class="ref-wrapper">
-                                                    secs </div>
-                                            </div>
-                                        </div>
-                                    </div>
+
                                     <div class="woocommerce-product-details__short-description">
-                                        <p>Constructed from a durable polyester fabrication, this quilted staple
-                                            features a hooded neckline, long sleeves with elasticated cuffs. Machine
-                                            washable at 30 degrees.</p>
+                                        <p>
+                                            {!! $productData->product_overview !!}
+                                        </p>
                                     </div>
                                     <div class="ts-variation-price hidden"></div>
                                     <p class="price"><del aria-hidden="true"><span
                                                 class="woocommerce-Price-amount amount"><bdi><span
-                                                        class="woocommerce-Price-currencySymbol">&#36;</span>2,099</bdi></span></del>
+                                                        class="woocommerce-Price-currencySymbol">&#36;</span>{{ $productData->productOne->product_price ?? '0' }}</bdi></span></del>
                                         <ins><span class="woocommerce-Price-amount amount"><bdi><span
-                                                        class="woocommerce-Price-currencySymbol">&#36;</span>1,399</bdi></span></ins>
+                                                        class="woocommerce-Price-currencySymbol">&#36;</span>{{ $productData->productOne->sale_price ?? '0' }}</bdi></span></ins>
                                     </p>
-                                    <span class="ts-discount-percent ">(-<span>33</span>%)</span>
+                                    {{-- <span class="ts-discount-percent ">(-<span>33</span>%)</span> --}}
 
-                                    <form class="cart"
-                                        action="https://demo.theme-sky.com/nooni-fashion/shop/womens-floral-midi-dress/"
-                                        method="post" enctype='multipart/form-data'>
+                                    <form class="cart">
 
                                         <div class="quantity">
                                             <div class="number-button">
@@ -810,30 +741,22 @@
                                                 <input type="number" id="quantity_65d5a8a214db0"
                                                     class="input-text qty text" name="quantity" value="1"
                                                     aria-label="Product quantity" size="4" min="1"
-                                                    max="78" step="1" placeholder="" inputmode="numeric"
-                                                    autocomplete="off" />
+                                                    max="{{ $productData->productOne->stock }}" step="1"
+                                                    placeholder="" inputmode="numeric" autocomplete="off" />
                                                 <input type="button" value="+" class="plus" />
                                             </div>
                                         </div>
 
-                                        <button type="submit" name="add-to-cart" value="259"
-                                            class="single_add_to_cart_button button alt">Add to cart</button>
+                                        <button type="submit" class="single_add_to_cart_button button alt">Add to
+                                            cart</button>
 
-                                    </form>
+                                    </form> <a href="#" class="button ts-buy-now-button">Buy now</a>
 
 
-                                    <a href="#" class="button ts-buy-now-button">Buy now</a>
-                                   
-                                    <div class="meta-content">
-                                        <div class="sku-wrapper product_meta"><span>SKU: </span><span
-                                                class="sku">1GF7DV</span></div>
-                                        <div class="product-brands"><span>Brands: </span><span class="brand-links"><a
-                                                    href="https://demo.theme-sky.com/nooni-fashion/product-brand/real-estate/"
-                                                    rel="tag">Real Estate</a></span></div>
-                                    </div>
                                 </div>
 
                             </div>
+
                             <div class="woocommerce-tabs wc-tabs-wrapper">
                                 <ul class="tabs wc-tabs" role="tablist">
                                     <li class="description_tab" id="tab-title-description" role="tab"
@@ -904,8 +827,6 @@
                                     <div id="reviews" class="woocommerce-Reviews">
                                         <h2 class="woocommerce-Reviews-title">
                                             Customers Reviews </h2>
-
-
                                         <div id="comments">
                                             <p class="woocommerce-noreviews">There are no reviews yet.</p>
                                         </div>
@@ -943,14 +864,12 @@
                                                                 name="author" placeholder="Name *" type="text"
                                                                 value="" size="30" required /></p>
                                                         <p class="comment-form-email"><input id="email"
-                                                                name="email" placeholder="Email *"
-                                                                type="email" value="" size="30"
-                                                                required /></p>
-                                                        <p class="form-submit"><input name="submit"
-                                                                type="submit" id="submit" class="submit"
-                                                                value="Submit" /> <input type='hidden'
-                                                                name='comment_post_ID' value='259'
-                                                                id='comment_post_ID' />
+                                                                name="email" placeholder="Email *" type="email"
+                                                                value="" size="30" required /></p>
+                                                        <p class="form-submit"><input name="submit" type="submit"
+                                                                id="submit" class="submit" value="Submit" />
+                                                            <input type='hidden' name='comment_post_ID'
+                                                                value='259' id='comment_post_ID' />
                                                             <input type='hidden' name='comment_parent'
                                                                 id='comment_parent' value='0' />
                                                         </p>
@@ -971,136 +890,51 @@
                                 <h2>Related products</h2>
 
                                 <div class="products">
+                                    @foreach ($relatedProduct as $related)
+                                        <section
+                                            class="product add-to-wishlist-after_add_to_cart type-product post-6179 status-publish first instock product_cat-18th-century product_cat-19th-century product_cat-20th-century product_cat-21th-century product_cat-activities product_cat-body-fit product_cat-casual-clothings product_cat-women-coats-jackets product_cat-collections product_cat-fall-collection product_cat-fashion-style product_cat-pastel-collection product_cat-petite product_cat-tall product_cat-tops product_cat-vintage-collection product_cat-winter-collection product_cat-women product_cat-work-clothings has-post-thumbnail featured shipping-taxable purchasable product-type-simple"
+                                            data-product_id="6179">
+                                            <div class="product-wrapper">
 
+                                                <div class="thumbnail-wrapper">
+                                                    <a href="{{ url('product-details', [$related->slug]) }}">
+                                                        @php
+                                                            $images = json_decode($related->image);
+                                                        @endphp
+                                                        <figure class="has-back-image"><img
+                                                                src="{{ asset('prod_loading.gif') }}"
+                                                                data-src="{{ asset($images[0] ?? null) }}"
+                                                                class="attachment-shop_catalog wp-post-image ts-lazy-load"
+                                                                alt="" width="450" height="572" /><img
+                                                                src="{{ asset('prod_loading.gif') }}"
+                                                                data-src="{{ asset($images[0] ?? null) }}"
+                                                                class="product-image-back ts-lazy-load" alt=""
+                                                                width="450" height="572" /></figure>
+                                                    </a>
+                                                    <div class="product-label on-thumbnail">
+                                                        <span class="featured"><span>Hot</span></span>
+                                                    </div>
+                                                    <div class="product-group-button">
+                                                        <div class="loop-add-to-cart"><a href=""
+                                                                data-quantity="1"
+                                                                class="button product_type_simple add_to_cart_button"><span
+                                                                    class="ts-tooltip button-tooltip">Add to
+                                                                    cart</span></a></div>
 
-
-                                    <section
-                                        class="product add-to-wishlist-after_add_to_cart type-product post-6179 status-publish first instock product_cat-18th-century product_cat-19th-century product_cat-20th-century product_cat-21th-century product_cat-activities product_cat-body-fit product_cat-casual-clothings product_cat-women-coats-jackets product_cat-collections product_cat-fall-collection product_cat-fashion-style product_cat-pastel-collection product_cat-petite product_cat-tall product_cat-tops product_cat-vintage-collection product_cat-winter-collection product_cat-women product_cat-work-clothings has-post-thumbnail featured shipping-taxable purchasable product-type-simple"
-                                        data-product_id="6179">
-                                        <div class="product-wrapper">
-
-                                            <div class="thumbnail-wrapper">
-                                                <a
-                                                    href="https://demo.theme-sky.com/nooni-fashion/shop/hood-jacket-in-white/">
-                                                    <figure class="has-back-image"><img
-                                                            src="https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/themes/nooni/images/prod_loading.gif"
-                                                            data-src="https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/uploads/2023/04/03-450x572.jpg"
-                                                            class="attachment-shop_catalog wp-post-image ts-lazy-load"
-                                                            alt="" width="450" height="572" /><img
-                                                            src="https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/themes/nooni/images/prod_loading.gif"
-                                                            data-src="https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/uploads/2023/04/03_3-450x572.jpg"
-                                                            class="product-image-back ts-lazy-load" alt=""
-                                                            width="450" height="572" /></figure>
-                                                </a>
-                                                <div class="product-label on-thumbnail">
-                                                    <span class="featured"><span>Hot</span></span>
+                                                    </div>
                                                 </div>
-                                                <div class="product-group-button">
-                                                    <div class="loop-add-to-cart"><a
-                                                            href="https://demo.theme-sky.com/nooni-fashion/shop/womens-floral-midi-dress/?add-to-cart=6179"
-                                                            data-quantity="1"
-                                                            class="button product_type_simple add_to_cart_button ajax_add_to_cart"
-                                                            data-product_id="6179" data-product_sku="0093-2-1"
-                                                            aria-label="Add &ldquo;Hood Jacket in White&rdquo; to your cart"
-                                                            rel="nofollow"><span
-                                                                class="ts-tooltip button-tooltip">Add to
-                                                                cart</span></a></div>
-                                                   
+                                                <div class="meta-wrapper">
+                                                    <h3 class="heading-title product-name"><a
+                                                            href="https://demo.theme-sky.com/nooni-fashion/shop/hood-jacket-in-white/">Hood
+                                                            Jacket in White</a></h3>
+                                                    <span class="price"><span
+                                                            class="woocommerce-Price-amount amount"><bdi><span
+                                                                    class="woocommerce-Price-currencySymbol">&#36;</span>1,349</bdi></span></span>
+                                                    <div class="product-group-button-meta"></div>
                                                 </div>
                                             </div>
-                                            <div class="meta-wrapper">
-                                                <h3 class="heading-title product-name"><a
-                                                        href="https://demo.theme-sky.com/nooni-fashion/shop/hood-jacket-in-white/">Hood
-                                                        Jacket in White</a></h3>
-                                                <span class="price"><span
-                                                        class="woocommerce-Price-amount amount"><bdi><span
-                                                                class="woocommerce-Price-currencySymbol">&#36;</span>1,349</bdi></span></span>
-                                                <div class="product-group-button-meta"></div>
-                                            </div>
-                                        </div>
-                                    </section>
-
-
-                                    <section
-                                        class="product add-to-wishlist-after_add_to_cart type-product post-283 status-publish instock product_cat-18th-century product_cat-19th-century product_cat-activities product_cat-body-fit product_cat-casual-clothings product_cat-men-coats-jackets product_cat-collections product_cat-curve-plus-size product_cat-fall-collection product_cat-fashion-style product_cat-men product_cat-pastel-collection product_cat-petite product_cat-sport-clothings product_cat-spring-collection product_cat-summer-clothings product_cat-summer-collection product_cat-tall product_cat-vintage-collection product_cat-winter-collection product_cat-work-clothings has-post-thumbnail shipping-taxable purchasable product-type-simple"
-                                        data-product_id="283">
-                                        <div class="product-wrapper">
-
-                                            <div class="thumbnail-wrapper">
-                                                <a
-                                                    href="https://demo.theme-sky.com/nooni-fashion/shop/classic-zip-front-polar-fleece-jacket/">
-                                                    <figure class="has-back-image"><img
-                                                            src="https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/themes/nooni/images/prod_loading.gif"
-                                                            data-src="https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/uploads/2023/04/01-450x572.jpg"
-                                                            class="attachment-shop_catalog wp-post-image ts-lazy-load"
-                                                            alt="" width="450" height="572" /><img
-                                                            src="https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/themes/nooni/images/prod_loading.gif"
-                                                            data-src="https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/uploads/2023/04/09-450x572.jpg"
-                                                            class="product-image-back ts-lazy-load" alt=""
-                                                            width="450" height="572" /></figure>
-                                                </a>
-                                                <div class="product-label on-thumbnail">
-                                                </div>
-                                                <div class="product-group-button">
-                                                    <div class="loop-add-to-cart"><a
-                                                            href="https://demo.theme-sky.com/nooni-fashion/shop/womens-floral-midi-dress/?add-to-cart=283"
-                                                            data-quantity="1"
-                                                            class="button product_type_simple add_to_cart_button ajax_add_to_cart"
-                                                            data-product_id="283" data-product_sku="B2NMN5"
-                                                            aria-label="Add &ldquo;Classic Zip Front Polar Fleece Jacket&rdquo; to your cart"
-                                                            rel="nofollow"><span
-                                                                class="ts-tooltip button-tooltip">Add to
-                                                                cart</span></a></div>
-                                                 </div>
-                                            </div>
-                                            <div class="meta-wrapper">
-                                                <h3 class="heading-title product-name"><a
-                                                        href="https://demo.theme-sky.com/nooni-fashion/shop/classic-zip-front-polar-fleece-jacket/">Classic
-                                                        Zip Front Polar Fleece Jacket</a></h3>
-                                                <span class="price"><span
-                                                        class="woocommerce-Price-amount amount"><bdi><span
-                                                                class="woocommerce-Price-currencySymbol">&#36;</span>1,899</bdi></span></span>
-                                                <div class="product-group-button-meta"></div>
-                                            </div>
-                                        </div>
-                                    </section>
-
-
-                                    <section
-                                        class="product add-to-wishlist-after_add_to_cart type-product post-279 status-publish instock product_cat-18th-century product_cat-19th-century product_cat-20th-century product_cat-21th-century product_cat-activities product_cat-body-fit product_cat-casual-clothings product_cat-collections product_cat-curve-plus-size product_cat-fall-collection product_cat-fashion-style product_cat-men-hoodies product_cat-men product_cat-petite product_cat-tall product_cat-winter-collection product_cat-work-clothings has-post-thumbnail shipping-taxable purchasable product-type-simple"
-                                        data-product_id="279">
-                                        <div class="product-wrapper">
-
-                                            <div class="thumbnail-wrapper">
-                                                <a
-                                                    href="https://demo.theme-sky.com/nooni-fashion/shop/mens-hoodies-in-brown/">
-                                                    <figure class="has-back-image"><img
-                                                            src="https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/themes/nooni/images/prod_loading.gif"
-                                                            data-src="https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/uploads/2023/04/32-450x572.jpg"
-                                                            class="attachment-shop_catalog wp-post-image ts-lazy-load"
-                                                            alt="" width="450" height="572" /><img
-                                                            src="https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/themes/nooni/images/prod_loading.gif"
-                                                            data-src="https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/uploads/2023/04/13-450x572.jpg"
-                                                            class="product-image-back ts-lazy-load" alt=""
-                                                            width="450" height="572" /></figure>
-                                                </a>
-                                                <div class="product-label on-thumbnail">
-                                                </div>
-                                               
-                                            </div>
-                                            <div class="meta-wrapper">
-                                                <h3 class="heading-title product-name"><a
-                                                        href="https://demo.theme-sky.com/nooni-fashion/shop/mens-hoodies-in-brown/">Men&#039;s
-                                                        Hoodies in Brown</a></h3>
-                                                <span class="price"><span
-                                                        class="woocommerce-Price-amount amount"><bdi><span
-                                                                class="woocommerce-Price-currencySymbol">&#36;</span>1,299</bdi></span></span>
-                                                <div class="product-group-button-meta"></div>
-                                            </div>
-                                        </div>
-                                    </section>
-
-
+                                        </section>
+                                    @endforeach
                                 </div>
                             </section>
                         </div>
@@ -1361,8 +1195,7 @@
                                 <li id="menu-item-6475"
                                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-has-children menu-item-6475 ts-normal-menu parent">
                                     <a href="https://demo.theme-sky.com/nooni-fashion/"><span
-                                            class="menu-label">Home</span></a><span
-                                        class="ts-menu-drop-icon"></span>
+                                            class="menu-label">Home</span></a><span class="ts-menu-drop-icon"></span>
                                     <ul class="sub-menu">
                                         <li id="menu-item-6477"
                                             class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6477">
@@ -1401,8 +1234,7 @@
                                 <li id="menu-item-2287"
                                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children current_page_parent menu-item-2287 ts-normal-menu parent">
                                     <a href="https://demo.theme-sky.com/nooni-fashion/shop/"><span
-                                            class="menu-label">Shop</span></a><span
-                                        class="ts-menu-drop-icon"></span>
+                                            class="menu-label">Shop</span></a><span class="ts-menu-drop-icon"></span>
                                     <ul class="sub-menu">
                                         <li id="menu-item-6093"
                                             class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6093">
@@ -1583,8 +1415,7 @@
                                 <li
                                     class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-6468 hide ts-megamenu ts-megamenu-columns--1 ts-megamenu-fullwidth ts-megamenu-fullwidth-stretch no-stretch-content parent">
                                     <a href="https://demo.theme-sky.com/nooni-fashion/shop/"><span
-                                            class="menu-label">Shop</span></a><span
-                                        class="ts-menu-drop-icon"></span>
+                                            class="menu-label">Shop</span></a><span class="ts-menu-drop-icon"></span>
                                     <ul class="sub-menu">
                                         <li>
                                             <div class="ts-megamenu-widgets-container ts-megamenu-container">
@@ -1770,18 +1601,13 @@
                                                                 data-id="cfc36ba" data-element_type="widget"
                                                                 data-widget_type="ts-banner.default">
                                                                 <div class="elementor-widget-container">
-                                                                    <div
-                                                                        class="ts-banner eff-zoom-in description-top">
+                                                                    <div class="ts-banner eff-zoom-in description-top">
                                                                         <div class="banner-wrapper">
-
-
                                                                             <div class="banner-bg">
                                                                                 <div class="bg-content">
-                                                                                    <img width="690"
-                                                                                        height="200"
+                                                                                    <img width="690" height="200"
                                                                                         src="https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/uploads/2023/05/banner-mega-1-2.jpg"
-                                                                                        class="img"
-                                                                                        alt=""
+                                                                                        class="img" alt=""
                                                                                         decoding="async"
                                                                                         loading="lazy" />
                                                                                 </div>
@@ -1790,8 +1616,6 @@
                                                                             <div class="box-content">
 
                                                                                 <h2>The Best Collections</h2>
-
-
                                                                                 <div class="description">NEW PRODUCTS
                                                                                 </div>
 
@@ -1805,8 +1629,7 @@
                                                                 data-id="8804ce0" data-element_type="widget"
                                                                 data-widget_type="ts-banner.default">
                                                                 <div class="elementor-widget-container">
-                                                                    <div
-                                                                        class="ts-banner eff-zoom-in description-top">
+                                                                    <div class="ts-banner eff-zoom-in description-top">
                                                                         <div class="banner-wrapper">
 
                                                                             <a class="banner-link"
@@ -1815,11 +1638,9 @@
 
                                                                             <div class="banner-bg">
                                                                                 <div class="bg-content">
-                                                                                    <img width="690"
-                                                                                        height="200"
+                                                                                    <img width="690" height="200"
                                                                                         src="https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/uploads/2023/05/banner-mega-2-2.jpg"
-                                                                                        class="img"
-                                                                                        alt=""
+                                                                                        class="img" alt=""
                                                                                         decoding="async"
                                                                                         loading="lazy" />
                                                                                 </div>
@@ -1828,8 +1649,6 @@
                                                                             <div class="box-content">
 
                                                                                 <h2>Men Pick From $15</h2>
-
-
                                                                                 <div class="description">ENJOY FREE
                                                                                     SHIPPING</div>
 
@@ -2284,8 +2103,6 @@
                                                                             <div
                                                                                 class="ts-banner eff-zoom-in description-top">
                                                                                 <div class="banner-wrapper">
-
-
                                                                                     <div class="banner-bg">
                                                                                         <div class="bg-content">
                                                                                             <img width="690"
@@ -2301,8 +2118,6 @@
                                                                                     <div class="box-content">
 
                                                                                         <h2>Knitwear Collections</h2>
-
-
                                                                                         <div class="description">BIG
                                                                                             SALE</div>
 
@@ -2324,8 +2139,6 @@
                                                                         <div
                                                                             class="ts-banner eff-zoom-in description-top">
                                                                             <div class="banner-wrapper">
-
-
                                                                                 <div class="banner-bg">
                                                                                     <div class="bg-content">
                                                                                         <img width="690"
@@ -2342,8 +2155,6 @@
 
                                                                                     <h2>The Best <br>
                                                                                         Coats &amp; Jackets</h2>
-
-
                                                                                     <div class="description">ENJOY
                                                                                         FREE SHIPPING</div>
 
@@ -2454,7 +2265,7 @@
                             <div class="ts-tiny-account-wrapper">
                                 <div class="account-control">
 
-                                    <a class="login" href="https://demo.theme-sky.com/nooni-fashion/my-account/"
+                                    <a class="login" href="{{url('account')}}"
                                         title="My Account">Login/Register</a>
 
 
@@ -2584,7 +2395,6 @@
             document.addEventListener(event, lazyloadRunObserver);
         });
     </script>
-    <script type="application/ld+json">{"@context":"https:\/\/schema.org\/","@graph":[{"@context":"https:\/\/schema.org\/","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"name":"Home","@id":"https:\/\/demo.theme-sky.com\/nooni-fashion"}},{"@type":"ListItem","position":2,"item":{"name":"Shop","@id":"https:\/\/demo.theme-sky.com\/nooni-fashion\/shop\/"}},{"@type":"ListItem","position":3,"item":{"name":"Fashion Style","@id":"https:\/\/demo.theme-sky.com\/nooni-fashion\/product-category\/fashion-style\/"}},{"@type":"ListItem","position":4,"item":{"name":"20th Century","@id":"https:\/\/demo.theme-sky.com\/nooni-fashion\/product-category\/fashion-style\/20th-century\/"}},{"@type":"ListItem","position":5,"item":{"name":"Women&amp;#8217;s Floral Midi Dress","@id":"https:\/\/demo.theme-sky.com\/nooni-fashion\/shop\/womens-floral-midi-dress\/"}}]},{"@context":"https:\/\/schema.org\/","@type":"Product","@id":"https:\/\/demo.theme-sky.com\/nooni-fashion\/shop\/womens-floral-midi-dress\/#product","name":"Women's Floral Midi Dress","url":"https:\/\/demo.theme-sky.com\/nooni-fashion\/shop\/womens-floral-midi-dress\/","description":"Constructed from a durable polyester fabrication, this quilted staple features a hooded neckline, long sleeves with elasticated cuffs. Machine washable at 30 degrees.","image":"https:\/\/demo.theme-sky.com\/nooni-fashion\/wp-content\/uploads\/2023\/04\/10.jpg","sku":"1GF7DV","offers":[{"@type":"Offer","price":"1399","priceValidUntil":"2026-05-21","priceSpecification":{"price":"1399","priceCurrency":"USD","valueAddedTaxIncluded":"false"},"priceCurrency":"USD","availability":"http:\/\/schema.org\/InStock","url":"https:\/\/demo.theme-sky.com\/nooni-fashion\/shop\/womens-floral-midi-dress\/","seller":{"@type":"Organization","name":"Nooni","url":"https:\/\/demo.theme-sky.com\/nooni-fashion"}}]}]}</script>
     <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="pswp__bg"></div>
         <div class="pswp__scroll-wrap">
@@ -2656,54 +2466,7 @@
     <link rel='stylesheet' id='rs-plugin-settings-css'
         href='https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/plugins/revslider/public/assets/css/rs6.css?ver=6.6.18'
         type='text/css' media='all' />
-    <style id='rs-plugin-settings-inline-css' type='text/css'>
-        #rs-demo-id {}
-    </style>
-    <script type="text/javascript" id="jquery-yith-wcwl-js-extra">
-        /* <![CDATA[ */
-        var yith_wcwl_l10n = {
-            "ajax_url": "\/nooni-fashion\/wp-admin\/admin-ajax.php",
-            "redirect_to_cart": "no",
-            "yith_wcwl_button_position": "add-to-cart",
-            "multi_wishlist": "",
-            "hide_add_button": "1",
-            "enable_ajax_loading": "",
-            "ajax_loader_url": "https:\/\/demo.theme-sky.com\/nooni-fashion\/wp-content\/plugins\/yith-woocommerce-wishlist\/assets\/images\/ajax-loader-alt.svg",
-            "remove_from_wishlist_after_add_to_cart": "1",
-            "is_wishlist_responsive": "1",
-            "time_to_close_prettyphoto": "3000",
-            "fragments_index_glue": ".",
-            "reload_on_found_variation": "1",
-            "mobile_media_query": "768",
-            "labels": {
-                "cookie_disabled": "We are sorry, but this feature is available only if cookies on your browser are enabled.",
-                "added_to_cart_message": "<div class=\"woocommerce-notices-wrapper\"><div class=\"woocommerce-message\" role=\"alert\">Product added to cart successfully<\/div><\/div>"
-            },
-            "actions": {
-                "add_to_wishlist_action": "add_to_wishlist",
-                "remove_from_wishlist_action": "remove_from_wishlist",
-                "reload_wishlist_and_adding_elem_action": "reload_wishlist_and_adding_elem",
-                "load_mobile_action": "load_mobile",
-                "delete_item_action": "delete_item",
-                "save_title_action": "save_title",
-                "save_privacy_action": "save_privacy",
-                "load_fragments": "load_fragments"
-            },
-            "nonce": {
-                "add_to_wishlist_nonce": "069dd4e390",
-                "remove_from_wishlist_nonce": "69076893cb",
-                "reload_wishlist_and_adding_elem_nonce": "eb9b4bd460",
-                "load_mobile_nonce": "c018cf5b1f",
-                "delete_item_nonce": "a61399e7bb",
-                "save_title_nonce": "c90def4422",
-                "save_privacy_nonce": "1d6c3edced",
-                "load_fragments_nonce": "f07641d77c"
-            },
-            "redirect_after_ask_estimate": "",
-            "ask_estimate_redirect_url": "https:\/\/demo.theme-sky.com\/nooni-fashion"
-        };
-        /* ]]> */
-    </script>
+    
     <script type="text/javascript"
         src="https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/plugins/yith-woocommerce-wishlist/assets/js/jquery.yith-wcwl.min.js?ver=3.26.0"
         id="jquery-yith-wcwl-js"></script>
@@ -2713,13 +2476,7 @@
     <script type="text/javascript"
         src="https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/plugins/revslider/public/assets/js/rs6.min.js?ver=6.6.18"
         defer async id="revmin-js"></script>
-    <script type="text/javascript" id="ts-script-js-extra">
-        /* <![CDATA[ */
-        var themesky_params = {
-            "ajax_uri": "\/nooni-fashion\/wp-admin\/admin-ajax.php"
-        };
-        /* ]]> */
-    </script>
+   
     <script type="text/javascript"
         src="https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/plugins/themesky/js/themesky.js?ver=1.0.2"
         id="ts-script-js"></script>
@@ -2827,50 +2584,11 @@
     <script type="text/javascript"
         src="https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/plugins/yith-woocommerce-compare/assets/js/jquery.colorbox-min.js?ver=1.4.21"
         id="jquery-colorbox-js"></script>
-    <script type="text/javascript" id="wc-cart-fragments-js-extra">
-        /* <![CDATA[ */
-        var wc_cart_fragments_params = {
-            "ajax_url": "\/nooni-fashion\/wp-admin\/admin-ajax.php",
-            "wc_ajax_url": "\/nooni-fashion\/?wc-ajax=%%endpoint%%",
-            "cart_hash_key": "wc_cart_hash_e98621cff5f257c875a1f6ec910e0cd6",
-            "fragment_name": "wc_fragments_e98621cff5f257c875a1f6ec910e0cd6",
-            "request_timeout": "5000"
-        };
-        /* ]]> */
-    </script>
+
     <script type="text/javascript"
         src="https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/plugins/woocommerce/assets/js/frontend/cart-fragments.min.js?ver=8.2.1"
         id="wc-cart-fragments-js"></script>
-    <script type="text/javascript" id="nooni-script-js-extra">
-        /* <![CDATA[ */
-        var nooni_params = {
-            "ajax_url": "\/nooni-fashion\/wp-admin\/admin-ajax.php",
-            "sticky_header": "1",
-            "menu_overlay": "0",
-            "ajax_search": "1",
-            "show_cart_after_adding": "1",
-            "ajax_add_to_cart": "1",
-            "add_to_cart_effect": "show_popup",
-            "shop_loading_type": "ajax-pagination",
-            "flexslider": {
-                "rtl": false,
-                "animation": "slide",
-                "smoothHeight": true,
-                "directionNav": false,
-                "controlNav": "thumbnails",
-                "slideshow": false,
-                "animationSpeed": 500,
-                "animationLoop": false,
-                "allowOneSlide": false
-            },
-            "zoom_options": [],
-            "placeholder_form": {
-                "usernamePlaceholder": "Username or email address*",
-                "passwordPlaceholder": "Password*"
-            }
-        };
-        /* ]]> */
-    </script>
+    
     <script type="text/javascript"
         src="https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/themes/nooni/js/main.js?ver=1.0.3" id="nooni-script-js">
     </script>
@@ -2886,27 +2604,10 @@
     <script type="text/javascript"
         src="https://nooni-be87.kxcdn.com/nooni-fashion/wp-includes/js/underscore.min.js?ver=1.13.4" id="underscore-js">
     </script>
-    <script type="text/javascript" id="wp-util-js-extra">
-        /* <![CDATA[ */
-        var _wpUtilSettings = {
-            "ajax": {
-                "url": "\/nooni-fashion\/wp-admin\/admin-ajax.php"
-            }
-        };
-        /* ]]> */
-    </script>
+   
     <script type="text/javascript" src="https://nooni-be87.kxcdn.com/nooni-fashion/wp-includes/js/wp-util.min.js?ver=6.4.3"
         id="wp-util-js"></script>
-    <script type="text/javascript" id="wc-add-to-cart-variation-js-extra">
-        /* <![CDATA[ */
-        var wc_add_to_cart_variation_params = {
-            "wc_ajax_url": "\/nooni-fashion\/?wc-ajax=%%endpoint%%",
-            "i18n_no_matching_variations_text": "Sorry, no products matched your selection. Please choose a different combination.",
-            "i18n_make_a_selection_text": "Please select some product options before adding this product to your cart.",
-            "i18n_unavailable_text": "Sorry, this product is unavailable. Please choose a different combination."
-        };
-        /* ]]> */
-    </script>
+  
     <script type="text/javascript"
         src="https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart-variation.min.js?ver=8.2.1"
         id="wc-add-to-cart-variation-js"></script>

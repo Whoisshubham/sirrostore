@@ -20,7 +20,6 @@ class ContactController extends Controller
             "name" => "required|string",
             "email" => "required|email",
             "subject" => "required",
-            "number" => "required",
             "message" => "required"
         ]);
         if ($validator->fails()) {

@@ -1,3 +1,7 @@
+@php
+    $settingData=settings();
+@endphp
+
 <footer id="colophon" class="footer-container footer-area loading">
     <div data-elementor-type="wp-post" data-elementor-id="5433" class="elementor elementor-5433">
         <div class="elementor-element elementor-element-5f8afb4 e-con-full e-flex e-con e-parent"
@@ -23,7 +27,7 @@
                     <div class="elementor-element elementor-element-3400063 elementor-widget__width-initial elementor-widget elementor-widget-image"
                         data-id="3400063" data-element_type="widget" data-widget_type="image.default">
                         <div class="elementor-widget-container">
-                            <img width="480" height="108" src="{{ $settingData->logo ?? null }}" />
+                            <img width="480" height="108" src="{{ asset($settingData->logo ?? null) }}" />
                         </div>
                     </div>
                     <div class="elementor-element elementor-element-57ee23f elementor-widget__width-initial elementor-widget-tablet__width-inherit elementor-widget-mobile__width-initial elementor-widget-tablet_extra__width-initial elementor-widget elementor-widget-text-editor"
@@ -251,56 +255,6 @@
                 </div>
             </div>
         </div>
-        <div class="elementor-element elementor-element-4d88998 e-flex e-con-boxed e-con e-parent"
-            data-id="4d88998" data-element_type="container"
-            data-settings="{&quot;content_width&quot;:&quot;boxed&quot;}" data-core-v316-plus="true">
-            <div class="e-con-inner">
-                <div class="elementor-element elementor-element-f87a3cc elementor-shape-rounded elementor-grid-0 elementor-widget elementor-widget-social-icons"
-                    data-id="f87a3cc" data-element_type="widget" data-widget_type="social-icons.default">
-                    <div class="elementor-widget-container">
-                        <div class="elementor-social-icons-wrapper elementor-grid">
-                            <span class="elementor-grid-item">
-                                <a class="elementor-icon elementor-social-icon elementor-social-icon-tb-icon-brand-facebook elementor-repeater-item-a211895"
-                                    href="#" target="_blank">
-                                    <span class="elementor-screen-only">Tb-icon-brand-facebook</span>
-                                    <i class="tb-icon tb-icon-brand-facebook"></i> </a>
-                            </span>
-                            <span class="elementor-grid-item">
-                                <a class="elementor-icon elementor-social-icon elementor-social-icon-tb-icon-brand-twitter elementor-repeater-item-0398a75"
-                                    href="#" target="_blank">
-                                    <span class="elementor-screen-only">Tb-icon-brand-twitter</span>
-                                    <i class="tb-icon tb-icon-brand-twitter"></i> </a>
-                            </span>
-                            <span class="elementor-grid-item">
-                                <a class="elementor-icon elementor-social-icon elementor-social-icon-tb-icon-brand-instagram elementor-repeater-item-f75f28d"
-                                    href="#" target="_blank">
-                                    <span class="elementor-screen-only">Tb-icon-brand-instagram</span>
-                                    <i class="tb-icon tb-icon-brand-instagram"></i> </a>
-                            </span>
-                            <span class="elementor-grid-item">
-                                <a class="elementor-icon elementor-social-icon elementor-social-icon-tb-icon-brand-pinterest elementor-repeater-item-ff862a1"
-                                    href="#" target="_blank">
-                                    <span class="elementor-screen-only">Tb-icon-brand-pinterest</span>
-                                    <i class="tb-icon tb-icon-brand-pinterest"></i> </a>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-                <div class="elementor-element elementor-element-9b6389e elementor-widget elementor-widget-text-editor"
-                    data-id="9b6389e" data-element_type="widget" data-widget_type="text-editor.default">
-                    <div class="elementor-widget-container">
-                        <p>© Nooni. All Rights Reserved.</p>
-                    </div>
-                </div>
-                <div class="elementor-element elementor-element-17f62f0 elementor-widget elementor-widget-image"
-                    data-id="17f62f0" data-element_type="widget" data-widget_type="image.default">
-                    <div class="elementor-widget-container">
-                        <img width="286" height="26"
-                            src="https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/uploads/2022/12/payment.png"
-                            class="attachment-full size-full wp-image-5887" alt="" loading="lazy" />
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
 </footer>
+<script src="{{asset('ajaxform.js')}}"></script>

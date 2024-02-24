@@ -19,8 +19,7 @@
     <meta name='robots' content='noindex, nofollow' />
     <link rel='dns-prefetch' href='http://fonts.googleapis.com/' />
     <link rel='preconnect' href='https://fonts.gstatic.com/' crossorigin />
-    <link rel="alternate" type="application/rss+xml" title="Nooni &raquo; Feed"
-        href="https://demo.theme-sky.com/nooni-fashion/feed/" />
+       
     <link rel="alternate" type="application/rss+xml" title="Nooni &raquo; Comments Feed"
         href="https://demo.theme-sky.com/nooni-fashion/comments/feed/" />
     <style id='classic-theme-styles-inline-css' type='text/css'>
@@ -1723,7 +1722,7 @@
                                             <div class="account-control">
 
                                                 <a class="login"
-                                                    href="https://demo.theme-sky.com/nooni-fashion/my-account/"
+                                                    href="{{url('account')}}"
                                                     title="My Account">Login/Register</a>
 
                                                 <div class="account-dropdown-form dropdown-container">
@@ -1773,7 +1772,7 @@
                                         <div class="ts-tiny-cart-wrapper">
                                             <div class="cart-icon">
                                                 <a class="cart-control"
-                                                    href="https://demo.theme-sky.com/nooni-fashion/cart/"
+                                                    href=""
                                                     title="View your shopping cart">
                                                     <span class="ic-cart"></span>
                                                     <span class="cart-number">0</span>
@@ -4020,7 +4019,7 @@
                             <div class="ts-tiny-account-wrapper">
                                 <div class="account-control">
 
-                                    <a class="login" href="https://demo.theme-sky.com/nooni-fashion/my-account/"
+                                    <a class="login" href="{{url('account')}}"
                                         title="My Account">Login/Register</a>
 
 
@@ -4230,75 +4229,19 @@
 
     <script src="https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/cache/minify/f1647.js"></script>
 
-    <script type="text/javascript" id="wc-cart-fragments-js-extra">
-        /* <![CDATA[ */
-        var wc_cart_fragments_params = {
-            "ajax_url": "\/nooni-fashion\/wp-admin\/admin-ajax.php",
-            "wc_ajax_url": "\/nooni-fashion\/?wc-ajax=%%endpoint%%",
-            "cart_hash_key": "wc_cart_hash_e98621cff5f257c875a1f6ec910e0cd6",
-            "fragment_name": "wc_fragments_e98621cff5f257c875a1f6ec910e0cd6",
-            "request_timeout": "5000"
-        };
-        /* ]]> */
-    </script>
+
     <script src="https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/cache/minify/d6a2c.js"></script>
 
-    <script type="text/javascript" id="nooni-script-js-extra">
-        /* <![CDATA[ */
-        var nooni_params = {
-            "ajax_url": "\/nooni-fashion\/wp-admin\/admin-ajax.php",
-            "sticky_header": "1",
-            "menu_overlay": "0",
-            "ajax_search": "1",
-            "show_cart_after_adding": "1",
-            "ajax_add_to_cart": "1",
-            "add_to_cart_effect": "show_popup",
-            "shop_loading_type": "ajax-pagination",
-            "flexslider": {
-                "rtl": false,
-                "animation": "slide",
-                "smoothHeight": true,
-                "directionNav": false,
-                "controlNav": "thumbnails",
-                "slideshow": false,
-                "animationSpeed": 500,
-                "animationLoop": false,
-                "allowOneSlide": false
-            },
-            "zoom_options": [],
-            "placeholder_form": {
-                "usernamePlaceholder": "Username or email address*",
-                "passwordPlaceholder": "Password*"
-            }
-        };
-        /* ]]> */
-    </script>
+    
 
 
 
     <script src="https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/cache/minify/077e6.js"></script>
 
-    <script type="text/javascript" id="wp-util-js-extra">
-        /* <![CDATA[ */
-        var _wpUtilSettings = {
-            "ajax": {
-                "url": "\/nooni-fashion\/wp-admin\/admin-ajax.php"
-            }
-        };
-        /* ]]> */
-    </script>
+   
     <script src="https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/cache/minify/1f9a4.js"></script>
 
-    <script type="text/javascript" id="wc-add-to-cart-variation-js-extra">
-        /* <![CDATA[ */
-        var wc_add_to_cart_variation_params = {
-            "wc_ajax_url": "\/nooni-fashion\/?wc-ajax=%%endpoint%%",
-            "i18n_no_matching_variations_text": "Sorry, no products matched your selection. Please choose a different combination.",
-            "i18n_make_a_selection_text": "Please select some product options before adding this product to your cart.",
-            "i18n_unavailable_text": "Sorry, this product is unavailable. Please choose a different combination."
-        };
-        /* ]]> */
-    </script>
+  
 
 
     <script defer src="https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/cache/minify/09cb6.js"></script>

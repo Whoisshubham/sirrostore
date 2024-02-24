@@ -66,6 +66,7 @@ Route::post('user-login', [UserRegisterController::class, 'login']);
 
 #>>>>>>>>>>>>>>>>>>>>Checkout Section <<<<<<<<<<<<
 Route::get('checkout', [CheckoutController::class, 'index']);
+Route::get('account', [CheckoutController::class, 'account']);
 
 
 
@@ -98,7 +99,7 @@ Route::group(['middleware' => 'UserAuth'], function () {
     #Password Change Section
     Route::post('user-password', [UserRegisterController::class, 'passswordChange']);
 
-    Route::get('account', [PagesController::class, 'account']);
+   
     Route::get('logout', [UserRegisterController::class, 'logout']);
 });
 

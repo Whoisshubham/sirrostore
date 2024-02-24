@@ -1106,25 +1106,26 @@
                                 <div class="ts-tiny-account-wrapper">
                                     <div class="account-control">
 
-                                        <a class="login" href="https://demo.theme-sky.com/nooni-fashion/my-account/"
+                                        <a class="login" href="{{url('account')}}"
                                             title="My Account">Login/Register</a>
 
                                         <div class="account-dropdown-form dropdown-container">
                                             <div class="form-content">
 
-                                                <form name="ts-login-form" id="ts-login-form"
-                                                    action="https://demo.theme-sky.com/nooni-fashion/wp-login.php"
+                                                <form  class="submitForm"
+                                                    action="{{url('user-login')}}"
                                                     method="post">
+                                                    @csrf
                                                     <p class="login-username">
                                                         <label for="user_login"></label>
                                                         <input type="text" name="log" id="user_login"
-                                                            autocomplete="username" class="input" value=""
+                                                            placeholder="E-mail" class="input" value=""
                                                             size="20" />
                                                     </p>
                                                     <p class="login-password">
                                                         <label for="user_pass"></label>
-                                                        <input type="password" name="pwd" id="user_pass"
-                                                            autocomplete="current-password" spellcheck="false"
+                                                        <input type="password" name="password" 
+                                                            placeholder="Password" spellcheck="false"
                                                             class="input" value="" size="20" />
                                                     </p>
                                                     <p class="login-remember"><label><input name="rememberme"
@@ -1133,8 +1134,7 @@
                                                     <p class="login-submit">
                                                         <input type="submit" name="wp-submit" id="wp-submit"
                                                             class="button button-primary" value="Sign in" />
-                                                        <input type="hidden" name="redirect_to"
-                                                            value="https://demo.theme-sky.com/nooni-fashion/" />
+                                                     
                                                     </p>
                                                 </form>
                                             </div>
@@ -1150,7 +1150,7 @@
                             <div class="shopping-cart-wrapper">
                                 <div class="ts-tiny-cart-wrapper">
                                     <div class="cart-icon">
-                                        <a class="cart-control" href="https://demo.theme-sky.com/nooni-fashion/cart/"
+                                        <a class="cart-control" href=""
                                             title="View your shopping cart">
                                             <span class="ic-cart"></span>
                                             <span class="cart-number">0</span>

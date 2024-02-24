@@ -189,7 +189,7 @@
                                     <i class="fe fe-bell header-icons"></i>
                                     <span class="badge bg-danger nav-link-badge">4</span>
                                 </a>
-                                <div class="dropdown-menu">
+                                {{-- <div class="dropdown-menu">
                                     <div class="header-navheading">
                                         <p class="main-notification-text">You have 1 unread notification<span
                                                 class="badge bg-pill bg-primary ms-3">View all</span></p>
@@ -227,7 +227,7 @@
                                     <div class="dropdown-footer">
                                         <a href="javascript:void(0);">View All Notifications</a>
                                     </div>
-                                </div>
+                                </div> --}}
                             </div>
                             <!-- Notification -->
                             <!-- Messages -->
@@ -245,7 +245,7 @@
                                             src="{{asset('backend')}}/build/assets/img/users/1.jpg"></span>
                                 </a>
                                 <div class="dropdown-menu">
-                                    <div class="header-navheading">
+                                    {{-- <div class="header-navheading">
                                         <h6 class="main-notification-title">Sonia Taylor</h6>
                                         <p class="main-notification-text">Web Designer</p>
                                     </div>
@@ -263,7 +263,7 @@
                                     </a>
                                     <a class="dropdown-item" href="{{url('admin/dashboard')}}">
                                         <i class="fe fe-compass"></i> Activity
-                                    </a>
+                                    </a> --}}
                                     <a class="dropdown-item" href="{{route('logout')}}">
                                         <i class="fe fe-power"></i> Sign Out
                                     </a>

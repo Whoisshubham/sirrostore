@@ -1,3 +1,6 @@
+@php
+    $categoriesList = categories();
+@endphp
 <div id="vertical-menu-sidebar" class="vertical-menu-sidebar hidden-phone">
     <div class="overlay"></div>
     <div class="ts-sidebar-content">
@@ -7,101 +10,22 @@
                 <ul id="menu-vertical-menu" class="menu">
                     <li id="menu-item-6473"
                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-5327 current_page_item current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-6473 ts-normal-menu parent">
-                        <a href="https://demo.theme-sky.com/nooni-fashion/"><span
-                                class="menu-label">Home1</span></a><span class="ts-menu-drop-icon"></span>
-                        <ul class="sub-menu">
-                            <li id="menu-item-6471"
-                                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6471">
-                                <a href="https://demo.theme-sky.com/nooni/"><span class="menu-label">Furniture
-                                        1</span></a>
-                            </li>
-                            <li id="menu-item-6278"
-                                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6278">
-                                <a
-                                    href="https://demo.theme-sky.com/nooni/furniture-2/?label_style=after-thumbnail&amp;label_as=percent"><span
-                                        class="menu-label">Furniture 2</span></a>
-                            </li>
-                            <li id="menu-item-6472"
-                                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6472">
-                                <a href="https://demo.theme-sky.com/nooni/furniture-3/"><span
-                                        class="menu-label">Furniture 3</span></a>
-                            </li>
-                            <li id="menu-item-6007"
-                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-5327 current_page_item menu-item-6007">
-                                <a href="https://demo.theme-sky.com/nooni-fashion/"><span
-                                        class="menu-label">Fashion 1</span></a>
-                            </li>
-                            <li id="menu-item-6275"
-                                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6275">
-                                <a href="https://demo.theme-sky.com/nooni-fashion/fashion-2/?color=red"><span
-                                        class="menu-label">Fashion 2</span></a>
-                            </li>
-                            <li id="menu-item-6333"
-                                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6333">
-                                <a href="https://demo.theme-sky.com/nooni-fashion/fashion-3/?search_results=6"><span
-                                        class="menu-label">Fashion 3</span></a>
-                            </li>
-                        </ul>
+                        <a href="https://demo.theme-sky.com/nooni-fashion/"><span class="menu-label">Home</span></a>
+
                     </li>
                     <li id="menu-item-5930"
                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-5930 ts-normal-menu parent">
                         <a href="https://demo.theme-sky.com/nooni-fashion/shop/"><span
                                 class="menu-label">Shop</span></a><span class="ts-menu-drop-icon"></span>
                         <ul class="sub-menu">
-                            <li id="menu-item-6055"
-                                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6055">
-                                <a
-                                    href="https://demo.theme-sky.com/nooni-fashion/shop/?filter_area=1&amp;columns=4&amp;per_page=16"><span
-                                        class="menu-label">Shop Grid</span></a>
-                            </li>
-                            <li id="menu-item-6056"
-                                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6056">
-                                <a
-                                    href="https://demo.theme-sky.com/nooni-fashion/shop/?filter_area=1&amp;show_filter_default=1&amp;grid_list_default=list"><span
-                                        class="menu-label">Shop List</span></a>
-                            </li>
-                            <li id="menu-item-6057"
-                                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6057">
-                                <a
-                                    href="https://demo.theme-sky.com/nooni-fashion/product-category/women/?scroll_sidebar=1"><span
-                                        class="menu-label">Scroll Sidebar</span></a>
-                            </li>
-                            <li id="menu-item-6088"
-                                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6088">
-                                <a
-                                    href="https://demo.theme-sky.com/nooni-fashion/shop/?filter_area=1&amp;show_filter_default=1"><span
-                                        class="menu-label">Filter Sidebar</span></a>
-                            </li>
-                            <li id="menu-item-6089"
-                                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6089">
-                                <a
-                                    href="https://demo.theme-sky.com/nooni-fashion/shop/?filter_area=1&amp;filter_style=dropdown&amp;columns=4&amp;per_page=16"><span
-                                        class="menu-label">Filter Dropdown</span></a>
-                            </li>
-                            <li id="menu-item-6090"
-                                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6090">
-                                <a
-                                    href="https://demo.theme-sky.com/nooni-fashion/shop/?filter_area=1&amp;filter_style=floating-sidebar&amp;columns=4&amp;per_page=16"><span
-                                        class="menu-label">Float Filter</span></a>
-                            </li>
-                            <li id="menu-item-6058"
-                                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6058">
-                                <a
-                                    href="https://demo.theme-sky.com/nooni-fashion/shop/?loading_type=load-more-button"><span
-                                        class="menu-label">Load More Button</span></a>
-                            </li>
-                            <li id="menu-item-6059"
-                                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6059">
-                                <a
-                                    href="https://demo.theme-sky.com/nooni-fashion/shop/?loading_type=infinity-scroll"><span
-                                        class="menu-label">Infinity Scroll</span></a>
-                            </li>
-                            <li id="menu-item-6060"
-                                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6060">
-                                <a
-                                    href="https://demo.theme-sky.com/nooni-fashion/shop/?loading_type=ajax-pagination"><span
-                                        class="menu-label">Ajax Pagination</span></a>
-                            </li>
+                            @foreach ($categoriesList as $categorie)
+                                <li id="menu-item-6055"
+                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6055">
+                                    <a href="{{ url('products-list', [$categorie->slug]) }}"><span
+                                            class="menu-label">{{ $categorie->name }}</span></a>
+                                </li>
+                            @endforeach
+
                         </ul>
                     </li>
                     <li id="menu-item-5931"
@@ -123,8 +47,7 @@
                             </li>
                             <li id="menu-item-6063"
                                 class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6063">
-                                <a
-                                    href="https://demo.theme-sky.com/nooni-fashion/shop/smiley-t-shirt-in-light-blue/"><span
+                                <a href="https://demo.theme-sky.com/nooni-fashion/shop/smiley-t-shirt-in-light-blue/"><span
                                         class="menu-label">Product 03</span></a>
                             </li>
                             <li id="menu-item-6064"
@@ -141,8 +64,7 @@
                             </li>
                             <li id="menu-item-6066"
                                 class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6066">
-                                <a
-                                    href="https://demo.theme-sky.com/nooni-fashion/shop/crop-top-jackets-set-in-white/"><span
+                                <a href="https://demo.theme-sky.com/nooni-fashion/shop/crop-top-jackets-set-in-white/"><span
                                         class="menu-label">Product 06</span></a>
                             </li>
                             <li id="menu-item-6181"
@@ -159,50 +81,15 @@
                             </li>
                         </ul>
                     </li>
-                    <li id="menu-item-5933"
-                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-5933 ts-normal-menu parent">
-                        <a href="https://demo.theme-sky.com/nooni-fashion/blog/"><span
-                                class="menu-label">Blog</span></a><span class="ts-menu-drop-icon"></span>
-                        <ul class="sub-menu">
-                            <li id="menu-item-6126"
-                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6126">
-                                <a href="https://demo.theme-sky.com/nooni-fashion/blog/"><span
-                                        class="menu-label">Blog Default</span></a>
-                            </li>
-                            <li id="menu-item-6127"
-                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6127">
-                                <a href="https://demo.theme-sky.com/nooni-fashion/blog-masonry/"><span
-                                        class="menu-label">Blog Masonry</span></a>
-                            </li>
-                            <li id="menu-item-6128"
-                                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6128">
-                                <a
-                                    href="https://demo.theme-sky.com/nooni-fashion/perfect-pieces-to-match-your-custom-tees/"><span
-                                        class="menu-label">Blog Detail</span></a>
-                            </li>
-                            <li id="menu-item-6129"
-                                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6129">
-                                <a
-                                    href="https://demo.theme-sky.com/nooni-fashion/your-summer-is-incomplete-without-these-dresses/?style=thumbnail-parallax"><span
-                                        class="menu-label">Blog Parallax</span></a>
-                            </li>
-                            <li id="menu-item-6130"
-                                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6130">
-                                <a
-                                    href="https://demo.theme-sky.com/nooni-fashion/blazer-guide-my-favorite-blazer-in-my-closet/?style=thumbnail-parallax"><span
-                                        class="menu-label">Blog Video</span></a>
-                            </li>
-                        </ul>
-                    </li>
+
                     <li id="menu-item-5932"
                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5932 ts-normal-menu">
-                        <a href="https://demo.theme-sky.com/nooni-fashion/about-us/"><span
-                                class="menu-label">About us</span></a>
+                        <a href="{{ url('about-us') }}"><span class="menu-label">About
+                                us</span></a>
                     </li>
                     <li id="menu-item-5934"
                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5934 ts-normal-menu">
-                        <a href="https://demo.theme-sky.com/nooni-fashion/contact-us/"><span
-                                class="menu-label">Contact us</span></a>
+                        <a href="{{ url('contact-us') }}"><span class="menu-label">Contact us</span></a>
                     </li>
                 </ul>
             </nav>
@@ -210,45 +97,45 @@
     </div>
 </div>
 
-    <!-- Search Sidebar -->
+<!-- Search Sidebar -->
 
-    <div id="ts-search-sidebar" class="ts-floating-sidebar">
-        <div class="overlay"></div>
-        <div class="ts-sidebar-content">
-            <div class="ts-search-by-category woocommerce">
-                <div class="search--header">
-                    <h2 class="title">Search for products (<span class="count">0</span>)</h2>
-                    <span class="close"></span>
-                </div>
-
-                <div class="search--form">
-                    <form method="get" action="https://demo.theme-sky.com/nooni-fashion/" id="searchform-851">
-                        <div class="search-table">
-                            <div class="search-field search-content">
-                                <input type="text" value="" name="s" id="s-851"
-                                    placeholder="Search for products..." autocomplete="off" />
-                                <input type="hidden" name="post_type" value="product" />
-                            </div>
-                            <div class="search-button">
-                                <input type="submit" id="searchsubmit-851" value="Search" />
-                            </div>
-                        </div>
-                    </form>
-                </div>
-
-                <div class="ts-search-result-container"></div>
+<div id="ts-search-sidebar" class="ts-floating-sidebar">
+    <div class="overlay"></div>
+    <div class="ts-sidebar-content">
+        <div class="ts-search-by-category woocommerce">
+            <div class="search--header">
+                <h2 class="title">Search for products (<span class="count">0</span>)</h2>
+                <span class="close"></span>
             </div>
+
+            <div class="search--form">
+                <form method="get" action="https://demo.theme-sky.com/nooni-fashion/" id="searchform-851">
+                    <div class="search-table">
+                        <div class="search-field search-content">
+                            <input type="text" value="" name="s" id="s-851"
+                                placeholder="Search for products..." autocomplete="off" />
+                            <input type="hidden" name="post_type" value="product" />
+                        </div>
+                        <div class="search-button">
+                            <input type="submit" id="searchsubmit-851" value="Search" />
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="ts-search-result-container"></div>
         </div>
     </div>
-<!-----Search End ->
+</div>
+<!-----Search End ---->
 
 
 
 
-    {{-- mobile header --}}
+{{-- mobile header --}}
 
-   <!-- Group Header Button -->
-   <div id="group-icon-header" class="ts-floating-sidebar">
+{{-- Group Header Button  --}}
+<div id="group-icon-header" class="ts-floating-sidebar">
     <div class="overlay"></div>
     <div class="ts-sidebar-content ">
 
@@ -280,8 +167,8 @@
                                 <ul class="sub-menu">
                                     <li id="menu-item-6477"
                                         class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6477">
-                                        <a href="https://demo.theme-sky.com/nooni/"><span
-                                                class="menu-label">Furniture 1</span></a>
+                                        <a href="https://demo.theme-sky.com/nooni/"><span class="menu-label">Furniture
+                                                1</span></a>
                                     </li>
                                     <li id="menu-item-2301"
                                         class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2301">
@@ -306,8 +193,7 @@
                                     </li>
                                     <li id="menu-item-2305"
                                         class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2305">
-                                        <a
-                                            href="https://demo.theme-sky.com/nooni-fashion/fashion-3/?search_results=6"><span
+                                        <a href="https://demo.theme-sky.com/nooni-fashion/fashion-3/?search_results=6"><span
                                                 class="menu-label">Fashion 3</span></a>
                                     </li>
                                 </ul>
@@ -369,10 +255,8 @@
                             </li>
                             <li id="menu-item-2308"
                                 class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2308 ts-normal-menu parent">
-                                <a
-                                    href="https://demo.theme-sky.com/nooni-fashion/shop/wood-outdoor-adirondack-chair/"><span
-                                        class="menu-label">Product</span></a><span
-                                    class="ts-menu-drop-icon"></span>
+                                <a href="https://demo.theme-sky.com/nooni-fashion/shop/wood-outdoor-adirondack-chair/"><span
+                                        class="menu-label">Product</span></a><span class="ts-menu-drop-icon"></span>
                                 <ul class="sub-menu">
                                     <li id="menu-item-2309"
                                         class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2309">
@@ -682,20 +566,16 @@
                                                             data-id="cfc36ba" data-element_type="widget"
                                                             data-widget_type="ts-banner.default">
                                                             <div class="elementor-widget-container">
-                                                                <div
-                                                                    class="ts-banner eff-zoom-in description-top">
+                                                                <div class="ts-banner eff-zoom-in description-top">
                                                                     <div class="banner-wrapper">
 
 
                                                                         <div class="banner-bg">
                                                                             <div class="bg-content">
-                                                                                <img width="690"
-                                                                                    height="200"
+                                                                                <img width="690" height="200"
                                                                                     src="https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/uploads/2023/05/banner-mega-1-2.jpg"
-                                                                                    class="img"
-                                                                                    alt=""
-                                                                                    decoding="async"
-                                                                                    loading="lazy"
+                                                                                    class="img" alt=""
+                                                                                    decoding="async" loading="lazy"
                                                                                     srcset="https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/uploads/2023/05/banner-mega-1-2.jpg 690w, https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/uploads/2023/05/banner-mega-1-2-300x87.jpg 300w"
                                                                                     sizes="(max-width: 690px) 100vw, 690px" />
                                                                             </div>
@@ -719,8 +599,7 @@
                                                             data-id="8804ce0" data-element_type="widget"
                                                             data-widget_type="ts-banner.default">
                                                             <div class="elementor-widget-container">
-                                                                <div
-                                                                    class="ts-banner eff-zoom-in description-top">
+                                                                <div class="ts-banner eff-zoom-in description-top">
                                                                     <div class="banner-wrapper">
 
                                                                         <a class="banner-link"
@@ -729,13 +608,10 @@
 
                                                                         <div class="banner-bg">
                                                                             <div class="bg-content">
-                                                                                <img width="690"
-                                                                                    height="200"
+                                                                                <img width="690" height="200"
                                                                                     src="https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/uploads/2023/05/banner-mega-2-2.jpg"
-                                                                                    class="img"
-                                                                                    alt=""
-                                                                                    decoding="async"
-                                                                                    loading="lazy"
+                                                                                    class="img" alt=""
+                                                                                    decoding="async" loading="lazy"
                                                                                     srcset="https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/uploads/2023/05/banner-mega-2-2.jpg 690w, https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/uploads/2023/05/banner-mega-2-2-300x87.jpg 300w"
                                                                                     sizes="(max-width: 690px) 100vw, 690px" />
                                                                             </div>
@@ -1091,16 +967,14 @@
                                                                 data-id="898cc7c" data-element_type="container"
                                                                 data-settings="{&quot;content_width&quot;:&quot;full&quot;}">
                                                                 <div class="elementor-element elementor-element-4947cfa e-flex e-con-boxed e-con e-child"
-                                                                    data-id="4947cfa"
-                                                                    data-element_type="container"
+                                                                    data-id="4947cfa" data-element_type="container"
                                                                     data-settings="{&quot;content_width&quot;:&quot;boxed&quot;}">
                                                                     <div class="e-con-inner">
                                                                         <div class="elementor-element elementor-element-a8498fb title-align-left elementor-widget elementor-widget-ts-list-of-product-categories"
                                                                             data-id="a8498fb"
                                                                             data-element_type="widget"
                                                                             data-widget_type="ts-list-of-product-categories.default">
-                                                                            <div
-                                                                                class="elementor-widget-container">
+                                                                            <div class="elementor-widget-container">
                                                                                 <div
                                                                                     class="ts-list-of-product-categories-wrapper columns-1 no-shop-more-button">
 
@@ -1139,16 +1013,14 @@
                                                                     </div>
                                                                 </div>
                                                                 <div class="elementor-element elementor-element-e06e9ff e-flex e-con-boxed e-con e-child"
-                                                                    data-id="e06e9ff"
-                                                                    data-element_type="container"
+                                                                    data-id="e06e9ff" data-element_type="container"
                                                                     data-settings="{&quot;content_width&quot;:&quot;boxed&quot;}">
                                                                     <div class="e-con-inner">
                                                                         <div class="elementor-element elementor-element-1e06f4a title-align-left elementor-widget elementor-widget-ts-list-of-product-categories"
                                                                             data-id="1e06f4a"
                                                                             data-element_type="widget"
                                                                             data-widget_type="ts-list-of-product-categories.default">
-                                                                            <div
-                                                                                class="elementor-widget-container">
+                                                                            <div class="elementor-widget-container">
                                                                                 <div
                                                                                     class="ts-list-of-product-categories-wrapper columns-1 no-shop-more-button">
 
@@ -1239,18 +1111,15 @@
                                                                 data-id="1a2231e" data-element_type="widget"
                                                                 data-widget_type="ts-banner.default">
                                                                 <div class="elementor-widget-container">
-                                                                    <div
-                                                                        class="ts-banner eff-zoom-in description-top">
+                                                                    <div class="ts-banner eff-zoom-in description-top">
                                                                         <div class="banner-wrapper">
 
 
                                                                             <div class="banner-bg">
                                                                                 <div class="bg-content">
-                                                                                    <img width="690"
-                                                                                        height="504"
+                                                                                    <img width="690" height="504"
                                                                                         src="https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/uploads/2023/05/banner-mega-4-1.jpg"
-                                                                                        class="img"
-                                                                                        alt=""
+                                                                                        class="img" alt=""
                                                                                         decoding="async"
                                                                                         loading="lazy"
                                                                                         srcset="https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/uploads/2023/05/banner-mega-4-1.jpg 690w, https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/uploads/2023/05/banner-mega-4-1-300x219.jpg 300w"
@@ -1284,13 +1153,11 @@
                             <li
                                 class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children menu-item-6414 ts-normal-menu parent">
                                 <a href="https://demo.theme-sky.com/nooni-fashion/product-category/kids/"><span
-                                        class="menu-label">Kids</span></a><span
-                                    class="ts-menu-drop-icon"></span>
+                                        class="menu-label">Kids</span></a><span class="ts-menu-drop-icon"></span>
                                 <ul class="sub-menu">
                                     <li
                                         class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-6418">
-                                        <a
-                                            href="https://demo.theme-sky.com/nooni-fashion/product-category/kids/boys/"><span
+                                        <a href="https://demo.theme-sky.com/nooni-fashion/product-category/kids/boys/"><span
                                                 class="menu-label">Boys</span></a>
                                     </li>
                                     <li
@@ -1340,8 +1207,7 @@
                                             <span class="wpml-ls-native">English</span>
                                         </a>
                                         <ul class="wpml-ls-sub-menu">
-                                            <li
-                                                class="wpml-ls-slot-shortcode_actions wpml-ls-item wpml-ls-item-fr">
+                                            <li class="wpml-ls-slot-shortcode_actions wpml-ls-item wpml-ls-item-fr">
                                                 <a href="#" class="wpml-ls-link">
                                                     <span class="wpml-ls-native">Français</span>
                                                 </a>
@@ -1374,8 +1240,7 @@
                         <div class="ts-tiny-account-wrapper">
                             <div class="account-control">
 
-                                <a class="login" href="https://demo.theme-sky.com/nooni-fashion/my-account/"
-                                    title="My Account">Login/Register</a>
+                                <a class="login" href="{{ url('account') }}" title="My Account">Login/Register</a>
 
 
                             </div>
@@ -1390,6 +1255,172 @@
     </div>
 </div>
 
+<!-- Shopping Cart Floating Sidebar -->
+<div id="ts-shopping-cart-sidebar" class="ts-floating-sidebar">
+    <div class="overlay"></div>
+    <div class="ts-sidebar-content">
+        <span class="close"></span>
+        <div class="ts-sidebar-content">
+            <span class="close"></span>
+            <div class="ts-tiny-cart-wrapper" style="opacity: 1;">
 
+                <div class="cart-dropdown-form dropdown-container woocommerce">
+                    <div class="form-content">
+                        <h3 class="theme-title">Cart (04)</h3>
+                        <div class="cart-wrapper">
+                            <div class="cart-content">
+                                <ul class="cart_list">
+                                    <li class="woocommerce-mini-cart-item">
+                                        <a class="thumbnail"
+                                            href="https://demo.theme-sky.com/nooni-fashion/shop/faux-longline-coat-in-light-pink/">
+                                            <img width="450" height="572"
+                                                src="https://demo.theme-sky.com/nooni-fashion/wp-content/uploads/2023/04/31-450x572.jpg"
+                                                class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
+                                                alt="" decoding="async" loading="lazy"
+                                                srcset="https://demo.theme-sky.com/nooni-fashion/wp-content/uploads/2023/04/31-450x572.jpg 450w, https://demo.theme-sky.com/nooni-fashion/wp-content/uploads/2023/04/31-235x300.jpg 235w"
+                                                sizes="(max-width: 450px) 100vw, 450px"> </a>
+                                        <div class="cart-item-wrapper">
+                                            <h3 class="product-name">
+                                                <a
+                                                    href="https://demo.theme-sky.com/nooni-fashion/shop/faux-longline-coat-in-light-pink/">
+                                                    Faux Longline Coat in Light Pink </a>
+                                            </h3>
 
-    
+                                            <span class="price"><span
+                                                    class="woocommerce-Price-amount amount"><bdi><span
+                                                            class="woocommerce-Price-currencySymbol">$</span>1,009</bdi></span></span>
+
+                                            <div class="quantity">
+                                                <div class="number-button">
+                                                    <input type="button" value="-" class="minus">
+                                                    <label class="screen-reader-text"
+                                                        for="quantity_65da082974ac2">Faux Longline Coat in Light Pink
+                                                        quantity</label>
+                                                    <input type="number" id="quantity_65da082974ac2"
+                                                        class="input-text qty text"
+                                                        name="cart[3f088ebeda03513be71d34d214291986][qty]"
+                                                        value="1" aria-label="Product quantity" size="4"
+                                                        min="0" max="" step="1" placeholder=""
+                                                        inputmode="numeric" autocomplete="off">
+                                                    <input type="button" value="+" class="plus">
+                                                </div>
+                                            </div>
+                                            <div class="subtotal"><span
+                                                    class="woocommerce-Price-amount amount"><bdi><span
+                                                            class="woocommerce-Price-currencySymbol">$</span>1,009</bdi></span>
+                                            </div>
+                                            <a href="?remove_item=3f088ebeda03513be71d34d214291986&amp;_wpnonce=efc384caaf"
+                                                class="remove remove_from_cart_button" aria-label="Remove this item"
+                                                data-cart_item_key="3f088ebeda03513be71d34d214291986">×</a>
+                                        </div>
+                                    </li>
+
+                                    <li class="woocommerce-mini-cart-item">
+                                        <a class="thumbnail"
+                                            href="https://demo.theme-sky.com/nooni-fashion/shop/women-hooded-jacket-in-blue/">
+                                            <img width="450" height="572"
+                                                src="https://demo.theme-sky.com/nooni-fashion/wp-content/uploads/2023/04/06-450x572.jpg"
+                                                class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
+                                                alt="" decoding="async" loading="lazy"
+                                                srcset="https://demo.theme-sky.com/nooni-fashion/wp-content/uploads/2023/04/06-450x572.jpg 450w, https://demo.theme-sky.com/nooni-fashion/wp-content/uploads/2023/04/06-235x300.jpg 235w"
+                                                sizes="(max-width: 450px) 100vw, 450px"> </a>
+                                        <div class="cart-item-wrapper">
+                                            <h3 class="product-name">
+                                                <a
+                                                    href="https://demo.theme-sky.com/nooni-fashion/shop/women-hooded-jacket-in-blue/">
+                                                    Women Hooded Jacket in Blue </a>
+                                            </h3>
+
+                                            <span class="price"><span
+                                                    class="woocommerce-Price-amount amount"><bdi><span
+                                                            class="woocommerce-Price-currencySymbol">$</span>399</bdi></span></span>
+
+                                            <div class="quantity">
+                                                <div class="number-button">
+                                                    <input type="button" value="-" class="minus">
+                                                    <label class="screen-reader-text"
+                                                        for="quantity_65da082974d1b">Women Hooded Jacket in Blue
+                                                        quantity</label>
+                                                    <input type="number" id="quantity_65da082974d1b"
+                                                        class="input-text qty text"
+                                                        name="cart[555d6702c950ecb729a966504af0a635][qty]"
+                                                        value="2" aria-label="Product quantity" size="4"
+                                                        min="0" max="" step="1" placeholder=""
+                                                        inputmode="numeric" autocomplete="off">
+                                                    <input type="button" value="+" class="plus">
+                                                </div>
+                                            </div>
+                                            <div class="subtotal"><span
+                                                    class="woocommerce-Price-amount amount"><bdi><span
+                                                            class="woocommerce-Price-currencySymbol">$</span>798</bdi></span>
+                                            </div>
+                                            <a href="?remove_item=555d6702c950ecb729a966504af0a635&amp;_wpnonce=efc384caaf"
+                                                class="remove remove_from_cart_button" aria-label="Remove this item"
+                                                data-cart_item_key="555d6702c950ecb729a966504af0a635">×</a>
+                                        </div>
+                                    </li>
+
+                                    <li class="woocommerce-mini-cart-item">
+                                        <a class="thumbnail"
+                                            href="https://demo.theme-sky.com/nooni-fashion/shop/womens-long-sleeve-shirt-dress/">
+                                            <img width="450" height="572"
+                                                src="https://demo.theme-sky.com/nooni-fashion/wp-content/uploads/2023/04/16-450x572.jpg"
+                                                class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
+                                                alt="" decoding="async" loading="lazy"
+                                                srcset="https://demo.theme-sky.com/nooni-fashion/wp-content/uploads/2023/04/16-450x572.jpg 450w, https://demo.theme-sky.com/nooni-fashion/wp-content/uploads/2023/04/16-235x300.jpg 235w"
+                                                sizes="(max-width: 450px) 100vw, 450px"> </a>
+                                        <div class="cart-item-wrapper">
+                                            <h3 class="product-name">
+                                                <a
+                                                    href="https://demo.theme-sky.com/nooni-fashion/shop/womens-long-sleeve-shirt-dress/">
+                                                    Women's Long Sleeve Shirt Dress </a>
+                                            </h3>
+
+                                            <span class="price"><span
+                                                    class="woocommerce-Price-amount amount"><bdi><span
+                                                            class="woocommerce-Price-currencySymbol">$</span>3,049</bdi></span></span>
+
+                                            <div class="quantity">
+                                                <div class="number-button">
+                                                    <input type="button" value="-" class="minus">
+                                                    <label class="screen-reader-text"
+                                                        for="quantity_65da082974f3a">Women's Long Sleeve Shirt Dress
+                                                        quantity</label>
+                                                    <input type="number" id="quantity_65da082974f3a"
+                                                        class="input-text qty text"
+                                                        name="cart[d296c101daa88a51f6ca8cfc1ac79b50][qty]"
+                                                        value="1" aria-label="Product quantity" size="4"
+                                                        min="0" max="92" step="1" placeholder=""
+                                                        inputmode="numeric" autocomplete="off">
+                                                    <input type="button" value="+" class="plus">
+                                                </div>
+                                            </div>
+                                            <div class="subtotal"><span
+                                                    class="woocommerce-Price-amount amount"><bdi><span
+                                                            class="woocommerce-Price-currencySymbol">$</span>3,049</bdi></span>
+                                            </div>
+                                            <a href="?remove_item=d296c101daa88a51f6ca8cfc1ac79b50&amp;_wpnonce=efc384caaf"
+                                                class="remove remove_from_cart_button" aria-label="Remove this item"
+                                                data-cart_item_key="d296c101daa88a51f6ca8cfc1ac79b50">×</a>
+                                        </div>
+                                    </li>
+
+                                </ul>
+                                <div class="dropdown-footer">
+                                    <div class="total"><span class="total-title primary-text">Subtotal</span><span
+                                            class="woocommerce-Price-amount amount"><bdi><span
+                                                    class="woocommerce-Price-currencySymbol">$</span>4,856</bdi></span>
+                                    </div>
+
+                                    <a href="" class="button view-cart">View Cart</a>
+                                    <a href="https://demo.theme-sky.com/nooni-fashion/checkout/"
+                                        class="button checkout-button">Checkout</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
