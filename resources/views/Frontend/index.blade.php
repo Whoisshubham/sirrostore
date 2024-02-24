@@ -731,10 +731,10 @@
                                                                                 <span class="price"><del
                                                                                         aria-hidden="true"><span
                                                                                             class="woocommerce-Price-amount amount"><bdi><span
-                                                                                                    class="woocommerce-Price-currencySymbol">&#36;</span>1,259</bdi></span></del>
+                                                                                                    class="woocommerce-Price-currencySymbol">&#36;</span>{{$product->productOne->product_name ?? null}}</bdi></span></del>
                                                                                     <ins><span
                                                                                             class="woocommerce-Price-amount amount"><bdi><span
-                                                                                                    class="woocommerce-Price-currencySymbol">&#36;</span>1,009</bdi></span></ins></span>
+                                                                                                    class="woocommerce-Price-currencySymbol">&#36;</span>{{$product->productOne->product_name ?? null}}</bdi></span></ins></span>
                                                                                 <div class="product-group-button-meta">
                                                                                 </div>
                                                                             </div>
