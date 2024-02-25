@@ -14,7 +14,7 @@ function settings()
 }
 function categories()
 {
-    $getAllcategories = Categorie::whereStatus(1)->get();
+    $getAllcategories = Categorie::with(['subcategoriesList'])->whereStatus(1)->get();
     return $getAllcategories;
 }
 
