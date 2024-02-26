@@ -446,74 +446,7 @@
         href="https://demo.theme-sky.com/nooni-fashion/xmlrpc.php?rsd" />
     <meta name="generator" content="WordPress 6.4.3" />
     <meta name="generator" content="WooCommerce 8.2.1" />
-    <meta name="generator" content="Redux 4.4.8" /> <noscript>
-        <style>
-            .woocommerce-product-gallery {
-                opacity: 1 !important;
-            }
-        </style>
-    </noscript>
-    <meta name="generator"
-        content="Elementor 3.16.6; features: e_dom_optimization, e_optimized_assets_loading, additional_custom_breakpoints; settings: css_print_method-external, google_font-enabled, font_display-auto">
-    <meta name="generator"
-        content="Powered by Slider Revolution 6.6.18 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface." />
-    <script>
-        function setREVStartSize(e) {
-            //window.requestAnimationFrame(function() {
-            window.RSIW = window.RSIW === undefined ? window.innerWidth : window.RSIW;
-            window.RSIH = window.RSIH === undefined ? window.innerHeight : window.RSIH;
-            try {
-                var pw = document.getElementById(e.c).parentNode.offsetWidth,
-                    newh;
-                pw = pw === 0 || isNaN(pw) || (e.l == "fullwidth" || e.layout == "fullwidth") ? window.RSIW : pw;
-                e.tabw = e.tabw === undefined ? 0 : parseInt(e.tabw);
-                e.thumbw = e.thumbw === undefined ? 0 : parseInt(e.thumbw);
-                e.tabh = e.tabh === undefined ? 0 : parseInt(e.tabh);
-                e.thumbh = e.thumbh === undefined ? 0 : parseInt(e.thumbh);
-                e.tabhide = e.tabhide === undefined ? 0 : parseInt(e.tabhide);
-                e.thumbhide = e.thumbhide === undefined ? 0 : parseInt(e.thumbhide);
-                e.mh = e.mh === undefined || e.mh == "" || e.mh === "auto" ? 0 : parseInt(e.mh, 0);
-                if (e.layout === "fullscreen" || e.l === "fullscreen")
-                    newh = Math.max(e.mh, window.RSIH);
-                else {
-                    e.gw = Array.isArray(e.gw) ? e.gw : [e.gw];
-                    for (var i in e.rl)
-                        if (e.gw[i] === undefined || e.gw[i] === 0) e.gw[i] = e.gw[i - 1];
-                    e.gh = e.el === undefined || e.el === "" || (Array.isArray(e.el) && e.el.length == 0) ? e.gh : e.el;
-                    e.gh = Array.isArray(e.gh) ? e.gh : [e.gh];
-                    for (var i in e.rl)
-                        if (e.gh[i] === undefined || e.gh[i] === 0) e.gh[i] = e.gh[i - 1];
-
-                    var nl = new Array(e.rl.length),
-                        ix = 0,
-                        sl;
-                    e.tabw = e.tabhide >= pw ? 0 : e.tabw;
-                    e.thumbw = e.thumbhide >= pw ? 0 : e.thumbw;
-                    e.tabh = e.tabhide >= pw ? 0 : e.tabh;
-                    e.thumbh = e.thumbhide >= pw ? 0 : e.thumbh;
-                    for (var i in e.rl) nl[i] = e.rl[i] < window.RSIW ? 0 : e.rl[i];
-                    sl = nl[0];
-                    for (var i in nl)
-                        if (sl > nl[i] && nl[i] > 0) {
-                            sl = nl[i];
-                            ix = i;
-                        }
-                    var m = pw > (e.gw[ix] + e.tabw + e.thumbw) ? 1 : (pw - (e.tabw + e.thumbw)) / (e.gw[ix]);
-                    newh = (e.gh[ix] * m) + (e.tabh + e.thumbh);
-                }
-                var el = document.getElementById(e.c);
-                if (el !== null && el) el.style.height = newh + "px";
-                el = document.getElementById(e.c + "_wrapper");
-                if (el !== null && el) {
-                    el.style.height = newh + "px";
-                    el.style.display = "block";
-                }
-            } catch (e) {
-                console.log("Failure at Presize of Slider:" + e)
-            }
-            //});
-        };
-    </script>
+  
 </head>
 
 <body
@@ -1449,24 +1382,33 @@
     </script>
     <script src="https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/cache/minify/b5d0c.js"></script>
 
-    <div id="ts-quickshop-modal" class="ts-popup-modal">
-        <div class="overlay"></div>
-        <div class="quickshop-container popup-container">
-            <span class="close"></span>
-            <div class="quickshop-content"></div>
-        </div>
-    </div>
+    
+    <script>
+        var nooni_params = null;
+        var yith_wcwl_l10n = null;
+
+        function addTocart(pId) {
+        var url = "{{route('addCart',":id")}}";
+        url1 = url.replace(':id', pId);
+        $.ajax({
+            cache: false,
+            contentType: false,
+            processData: false,
+            url: url1,
+            method: "get",
+            dataType: "json",
+            success: function(response) {
+                if (response.responseCode == 200) {
+                    toastr.success(response.responseMessage);
+                    $('#selectSize').removeClass('show');
+                    removeBackDrop();
+                } else {
+                    toastr.error(response.responseMessage);
+                }
+            }
+        });
+    }
+    </script>
 </body>
 
-<!-- Mirrored from demo.theme-sky.com/nooni-fashion/product-category/women/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 21 Feb 2024 07:41:45 GMT -->
-
 </html>
-<!--
-Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/
-
-Page Caching using disk: enhanced
-Content Delivery Network via nooni-be87.kxcdn.com
-Minified using disk
-
-Served from: demo.theme-sky.com @ 2024-02-21 14:41:15 by W3 Total Cache
--->

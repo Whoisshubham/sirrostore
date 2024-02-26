@@ -272,7 +272,7 @@
 
                                                                                 <div class="product-group-button">
                                                                                     <div class="loop-add-to-cart"><a
-                                                                                            href=""
+                                                                                            onclick="addTocart({{$product->productOne->id ?? null}})"
                                                                                             class="button product_type_variable add_to_cart_button"><span
                                                                                                 class="ts-tooltip button-tooltip">Add
                                                                                                 to cart</span></a></div>
@@ -320,7 +320,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="elementor-element elementor-element-38d3e9e e-flex e-con-boxed e-con e-parent"
+                                <div style="background-image: url('{{asset('slider/1708757796DSC05063.jpg')}}')" class="elementor-element elementor-element-38d3e9e e-flex e-con-boxed e-con e-parent"
                                     data-id="38d3e9e" data-element_type="container"
                                     data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;content_width&quot;:&quot;boxed&quot;}"
                                     data-e-bg-lazyload="" data-core-v316-plus="true">
@@ -676,7 +676,7 @@
                                     </div>
                                 </div>
 
-                                <div class="elementor-element elementor-element-98623c0 e-con-full e-flex e-con e-parent"
+                                <div style="background-image: url('slider/1708762084DSC05175.jpg')" class="elementor-element elementor-element-98623c0 e-con-full e-flex e-con e-parent"
                                     data-id="98623c0" data-element_type="container"
                                     data-settings="{&quot;content_width&quot;:&quot;full&quot;,&quot;background_background&quot;:&quot;classic&quot;}"
                                     data-e-bg-lazyload="" data-core-v316-plus="true">
@@ -777,13 +777,33 @@
     <script src="{{ asset('frontend/js/index.page4.js') }}"></script>
     <script src="{{ asset('frontend/js/index.page5.js') }}"></script>
     <script src="{{ asset('frontend/js/index.other.js') }}"></script>
-    <div id="ts-quickshop-modal" class="ts-popup-modal">
-        <div class="overlay"></div>
-        <div class="quickshop-container popup-container">
-            <span class="close"></span>
-            <div class="quickshop-content"></div>
-        </div>
-    </div>
+   
+    <script>
+        var nooni_params = null;
+        var yith_wcwl_l10n = null;
+
+        function addTocart(pId) {
+        var url = "{{route('addCart',":id")}}";
+        url1 = url.replace(':id', pId);
+        $.ajax({
+            cache: false,
+            contentType: false,
+            processData: false,
+            url: url1,
+            method: "get",
+            dataType: "json",
+            success: function(response) {
+                if (response.responseCode == 200) {
+                    toastr.success(response.responseMessage);
+                    $('#selectSize').removeClass('show');
+                    removeBackDrop();
+                } else {
+                    toastr.error(response.responseMessage);
+                }
+            }
+        });
+    }
+    </script>
 </body>
 
 </html>

@@ -53,6 +53,10 @@ class ContactController extends Controller
         $contactList = Contact::orderBy('id', 'DESC')->get();
         return view('Backend.contact.index', compact('contactList'));
     }
+    public function about()
+    {
+        return view('Frontend.aboutus');
+    }
 
     public function status($id)
     {

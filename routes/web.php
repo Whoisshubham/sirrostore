@@ -72,6 +72,7 @@ Route::get('account', [CheckoutController::class, 'account']);
 
 
 #>>>>>>>>>>>>>>>>>>>>Checkout Section <<<<<<<<<<<<
+Route::get('about-us', [ContactController::class, 'about']);
 Route::get('contact-us', [ContactController::class, 'index']);
 Route::post('contact-us', [ContactController::class, 'store']);
 
