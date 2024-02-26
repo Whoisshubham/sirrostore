@@ -507,7 +507,7 @@
                     <div class="breadcrumb-title">
                         <div class="breadcrumbs">
                             <div class="breadcrumbs-container"><a
-                                    href="https://demo.theme-sky.com/nooni-fashion/">Home</a> <span
+                                    href="{{url('/')}}">Home</a> <span
                                     class="brn_arrow">&#047;</span> <span class="current">My Account</span></div>
                         </div>
                     </div>

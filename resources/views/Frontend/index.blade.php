@@ -24,10 +24,9 @@
         href="https://demo.theme-sky.com/nooni-fashion/comments/feed/" />
     <style id='classic-theme-styles-inline-css' type='text/css'>
         /*! This file is auto-generated */
-       
     </style>
     <style id='global-styles-inline-css' type='text/css'>
-        
+
     </style>
     <link rel="stylesheet" href="https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/cache/minify/e7801.css"
         media="all" />
@@ -36,12 +35,10 @@
             visibility: visible;
         }
     </style>
-  
-    <link rel="stylesheet" href="{{asset('frontend/css/page.main2.css')}}"
-        media="all" />
-    <link rel="stylesheet" href="{{asset('frontend/css/page.main.css')}}"
-        media="all" />
-    <script src="{{asset('frontend/js/index.page7.js')}}"></script>
+
+    <link rel="stylesheet" href="{{ asset('frontend/css/page.main2.css') }}" media="all" />
+    <link rel="stylesheet" href="{{ asset('frontend/css/page.main.css') }}" media="all" />
+    <script src="{{ asset('frontend/js/index.page7.js') }}"></script>
 </head>
 
 <body
@@ -143,7 +140,7 @@
                                                                             Shipping</strong> On Orders $119+
                                                                     </rs-layer><a id="slider-56-slide-209-layer-9"
                                                                         class="rs-layer"
-                                                                        href="https://demo.theme-sky.com/nooni-fashion/shop/"
+                                                                        href=""
                                                                         target="_self" data-type="text"
                                                                         data-color="#000000"
                                                                         data-xy="x:l,l,l,c;y:t,t,t,b;yo:307px,240px,200px,0;"
@@ -166,9 +163,9 @@
                                                                 class="rs-layer-static" data-type="shape"
                                                                 data-rsp_ch="on" data-xy="x:r;y:m;"
                                                                 data-text="w:normal;s:20,14,10,6;l:0,17,12,7;"
-                                                                data-dim="w:5%,6%,6%,6%;h:100%;"
-                                                                data-vbility="t,f,f,f" data-basealign="slide"
-                                                                data-onslides="s:1;" data-frame_999="o:0;st:w;"
+                                                                data-dim="w:5%,6%,6%,6%;h:100%;" data-vbility="t,f,f,f"
+                                                                data-basealign="slide" data-onslides="s:1;"
+                                                                data-frame_999="o:0;st:w;"
                                                                 style="z-index:6;background-color:#ffffff;">
                                                             </rs-layer>
                                                         </rs-static-layers>
@@ -221,14 +218,12 @@
                                                         </ul>
 
                                                         <div class="shop-more tab-3b85a40" style="">
-                                                            <a class="shop-more-button"
-                                                                href="https://demo.theme-sky.com/nooni-fashion/shop/?orderby=popularity"
+                                                            <a class="shop-more-button" href="?orderby=popularity"
                                                                 target="_blank" rel="nofollow">
                                                                 See All </a>
                                                         </div>
                                                         <div class="shop-more tab-2b73727" style="display: none">
-                                                            <a class="shop-more-button"
-                                                                href="https://demo.theme-sky.com/nooni-fashion/shop/?orderby=date"
+                                                            <a class="shop-more-button" href="?orderby=date"
                                                                 target="_blank" rel="nofollow">
                                                                 See All </a>
                                                         </div>
@@ -272,7 +267,7 @@
 
                                                                                 <div class="product-group-button">
                                                                                     <div class="loop-add-to-cart"><a
-                                                                                            onclick="addTocart({{$product->productOne->id ?? null}})"
+                                                                                            onclick="addTocart({{ $product->productOne->id ?? null }})"
                                                                                             class="button product_type_variable add_to_cart_button"><span
                                                                                                 class="ts-tooltip button-tooltip">Add
                                                                                                 to cart</span></a></div>
@@ -304,14 +299,12 @@
                                                     </div>
 
                                                     <div class="shop-more tab-3b85a40" style="">
-                                                        <a class="shop-more-button"
-                                                            href="https://demo.theme-sky.com/nooni-fashion/shop/?orderby=popularity"
+                                                        <a class="shop-more-button" href="?orderby=popularity"
                                                             target="_blank" rel="nofollow">
                                                             See All </a>
                                                     </div>
                                                     <div class="shop-more tab-2b73727" style="display: none">
-                                                        <a class="shop-more-button"
-                                                            href="https://demo.theme-sky.com/nooni-fashion/shop/?orderby=date"
+                                                        <a class="shop-more-button" href="?orderby=date"
                                                             target="_blank" rel="nofollow">
                                                             See All </a>
                                                     </div>
@@ -320,7 +313,8 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div style="background-image: url('{{asset('slider/1708757796DSC05063.jpg')}}')" class="elementor-element elementor-element-38d3e9e e-flex e-con-boxed e-con e-parent"
+                                <div style="background-image: url('{{ asset('slider/1708757796DSC05063.jpg') }}')"
+                                    class="elementor-element elementor-element-38d3e9e e-flex e-con-boxed e-con e-parent"
                                     data-id="38d3e9e" data-element_type="container"
                                     data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;content_width&quot;:&quot;boxed&quot;}"
                                     data-e-bg-lazyload="" data-core-v316-plus="true">
@@ -364,7 +358,7 @@
                                             <div class="elementor-widget-container">
                                                 <div class="elementor-button-wrapper">
                                                     <a class="elementor-button elementor-button-link elementor-size-sm"
-                                                        href="https://demo.theme-sky.com/nooni-fashion/shop/">
+                                                        href="">
                                                         <span class="elementor-button-content-wrapper">
                                                             <span class="elementor-button-text">Shop now</span>
                                                         </span>
@@ -676,7 +670,8 @@
                                     </div>
                                 </div>
 
-                                <div style="background-image: url('slider/1708762084DSC05175.jpg')" class="elementor-element elementor-element-98623c0 e-con-full e-flex e-con e-parent"
+                                <div style="background-image: url('slider/1708762084DSC05175.jpg')"
+                                    class="elementor-element elementor-element-98623c0 e-con-full e-flex e-con e-parent"
                                     data-id="98623c0" data-element_type="container"
                                     data-settings="{&quot;content_width&quot;:&quot;full&quot;,&quot;background_background&quot;:&quot;classic&quot;}"
                                     data-e-bg-lazyload="" data-core-v316-plus="true">
@@ -723,7 +718,7 @@
                                             <div class="elementor-widget-container">
                                                 <div class="elementor-button-wrapper">
                                                     <a class="elementor-button elementor-button-link elementor-size-sm"
-                                                        href="https://demo.theme-sky.com/nooni-fashion/shop/">
+                                                        href="">
                                                         <span class="elementor-button-content-wrapper">
                                                             <span class="elementor-button-text">shop now</span>
                                                         </span>
@@ -767,7 +762,8 @@
     </div>
 
 
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="{{ asset('frontend/css/index.page.css') }}" media="all" />
     <link rel="stylesheet" href="{{ asset('frontend/css/index.innline.css') }}">
@@ -777,32 +773,32 @@
     <script src="{{ asset('frontend/js/index.page4.js') }}"></script>
     <script src="{{ asset('frontend/js/index.page5.js') }}"></script>
     <script src="{{ asset('frontend/js/index.other.js') }}"></script>
-   
+
     <script>
         var nooni_params = null;
         var yith_wcwl_l10n = null;
 
         function addTocart(pId) {
-        var url = "{{route('addCart',":id")}}";
-        url1 = url.replace(':id', pId);
-        $.ajax({
-            cache: false,
-            contentType: false,
-            processData: false,
-            url: url1,
-            method: "get",
-            dataType: "json",
-            success: function(response) {
-                if (response.responseCode == 200) {
-                    toastr.success(response.responseMessage);
-                    $('#selectSize').removeClass('show');
-                    removeBackDrop();
-                } else {
-                    toastr.error(response.responseMessage);
+            var url = "{{ route('addCart', ':id') }}";
+            url1 = url.replace(':id', pId);
+            $.ajax({
+                cache: false,
+                contentType: false,
+                processData: false,
+                url: url1,
+                method: "get",
+                dataType: "json",
+                success: function(response) {
+                    if (response.responseCode == 200) {
+                        toastr.success(response.responseMessage);
+                        $('#selectSize').removeClass('show');
+                        removeBackDrop();
+                    } else {
+                        toastr.error(response.responseMessage);
+                    }
                 }
-            }
-        });
-    }
+            });
+        }
     </script>
 </body>
 

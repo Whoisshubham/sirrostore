@@ -468,7 +468,7 @@
                     <div class="breadcrumb-title">
                         <div class="breadcrumbs">
                             <div class="breadcrumbs-container"><a
-                                    href="https://demo.theme-sky.com/nooni-fashion/">Home</a> <span
+                                    href="{{url('/')}}">Home</a> <span
                                     class="brn_arrow">&#047;</span> <span class="current">About us</span></div>
                         </div>
                     </div>
@@ -495,7 +495,7 @@
                                             data-id="6b26eee" data-element_type="widget"
                                             data-widget_type="heading.default">
                                             <div class="elementor-widget-container">
-                                                <h2 class="elementor-heading-title elementor-size-default">About Noon’i
+                                                <h2 class="elementor-heading-title elementor-size-default">About Sirro
                                                 </h2>
                                             </div>
                                         </div>
@@ -503,7 +503,7 @@
                                             data-id="4a96844" data-element_type="widget"
                                             data-widget_type="text-editor.default">
                                             <div class="elementor-widget-container">
-                                                <p>Noon’i was established in 1990, consectetur eleifend commodo at,
+                                                <p>Sirro was established in 1990, consectetur eleifend commodo at,
                                                     consectetur eu justo. Sed viverra consectetur risus nec ultricies.
                                                 </p>
                                             </div>
@@ -876,55 +876,16 @@
         media="all" />
 
     <script src="https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/cache/minify/aa08f.js"></script>
-
-
-
-
-
-
     <script src="https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/cache/minify/e2652.js"></script>
-
-   
-
     <script src="https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/cache/minify/036c3.js"></script>
-
-    <script type="text/javascript" id="woocommerce-js-extra">
-        /* <![CDATA[ */
-        var woocommerce_params = {
-            "ajax_url": "\/nooni-fashion\/wp-admin\/admin-ajax.php",
-            "wc_ajax_url": "\/nooni-fashion\/?wc-ajax=%%endpoint%%"
-        };
-        /* ]]> */
-    </script>
     <script src="https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/cache/minify/dfd7c.js"></script>
-
-
     <script src="https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/cache/minify/f1647.js"></script>
-
-
     <script src="https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/cache/minify/d6a2c.js"></script>
-
-
-
-
-
     <script src="https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/cache/minify/077e6.js"></script>
-
-
     <script src="https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/cache/minify/1f9a4.js"></script>
-
-
-
-
     <script defer src="https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/cache/minify/09cb6.js"></script>
-
-
-
-
     <script src="https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/cache/minify/94e37.js"></script>
-
     <script src="https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/cache/minify/b5d0c.js"></script>
-
     <div id="ts-quickshop-modal" class="ts-popup-modal">
         <div class="overlay"></div>
         <div class="quickshop-container popup-container">

@@ -561,7 +561,7 @@
         href="https://demo.theme-sky.com/nooni-fashion/xmlrpc.php?rsd" />
     <meta name="generator" content="WordPress 6.4.3" />
     <meta name="generator" content="WooCommerce 8.2.1" />
-    <link rel="canonical" href="https://demo.theme-sky.com/nooni-fashion/shop/womens-floral-midi-dress/" />
+    <link rel="canonical" href="womens-floral-midi-dress/" />
     <link rel='shortlink' href='https://demo.theme-sky.com/nooni-fashion/?p=259' />
     <link rel="alternate" type="application/json+oembed"
         href="https://demo.theme-sky.com/nooni-fashion/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fdemo.theme-sky.com%2Fnooni-fashion%2Fshop%2Fwomens-floral-midi-dress%2F" />
@@ -613,8 +613,8 @@
                     <div class="breadcrumb-title">
                         <div class="breadcrumbs">
                             <div class="breadcrumbs-container"><a
-                                    href="https://demo.theme-sky.com/nooni-fashion">Home</a><span>&#47;</span><a
-                                    href="https://demo.theme-sky.com/nooni-fashion/shop/">Shop</a><span>&#47;</span><a
+                                    href="{{url('/')}}">Home</a><span>&#47;</span><a
+                                    href="">Shop</a><span>&#47;</span><a
                                     href="https://demo.theme-sky.com/nooni-fashion/product-category/fashion-style/">Fashion
                                     Style</a><span>&#47;</span><a
                                     href="https://demo.theme-sky.com/nooni-fashion/product-category/fashion-style/20th-century/">20th
@@ -794,7 +794,7 @@
                                                     <span id="reply-title" class="comment-reply-title">Be the first to
                                                         review &ldquo;Women&#8217;s Floral Midi Dress&rdquo; <small><a
                                                                 rel="nofollow" id="cancel-comment-reply-link"
-                                                                href="https://demo.theme-sky.com/nooni-fashion/shop/womens-floral-midi-dress/#respond"
+                                                                href="womens-floral-midi-dress/#respond"
                                                                 style="display:none;">Cancel reply</a></small></span>
                                                     <form
                                                         action="https://demo.theme-sky.com/nooni-fashion/wp-comments-post.php"
@@ -882,7 +882,7 @@
                                                 </div>
                                                 <div class="meta-wrapper">
                                                     <h3 class="heading-title product-name"><a
-                                                            href="https://demo.theme-sky.com/nooni-fashion/shop/hood-jacket-in-white/">Hood
+                                                            href="hood-jacket-in-white/">Hood
                                                             Jacket in White</a></h3>
                                                     <span class="price"><span
                                                             class="woocommerce-Price-amount amount"><bdi><span

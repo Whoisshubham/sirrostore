@@ -12,7 +12,8 @@ class CartController extends Controller
 {
     public function index()
     {
-        return view('Frontend.cart');
+        $cartList=session('cart');
+        return view('Frontend.cart',compact('cartList'));
     }
 
     public function addCart($productId)
@@ -37,7 +38,6 @@ class CartController extends Controller
         $cart[] = array(
             "id" => (int) $productOverviewData->id,
             "image" => $image[0] ?? null,
-            "size" => $productOverviewData->size ?? null,
             "product_name" => $productData->product_name,
             "product_sale_price" => $productOverviewData->sale_price,
             "qty" => 1,

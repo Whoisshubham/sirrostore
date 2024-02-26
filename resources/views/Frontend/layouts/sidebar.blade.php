@@ -268,7 +268,7 @@
                                                         data-settings="{&quot;content_width&quot;:&quot;boxed&quot;}"
                                                         data-core-v316-plus="true">
                                                         <div class="e-con-inner">
-                                                            <div class="elementor-element elementor-element-3f5ad04 e-con-full e-flex e-con e-child"
+                                                            {{-- <div class="elementor-element elementor-element-3f5ad04 e-con-full e-flex e-con e-child"
                                                                 data-id="cat-{{ $key + 111 }}"
                                                                 data-element_type="container"
                                                                 data-settings="{&quot;content_width&quot;:&quot;full&quot;}">
@@ -351,11 +351,11 @@
                                                                         </div>
                                                                     </div>
                                                                 </div>
-                                                            </div>
+                                                            </div> --}}
 
                                                         </div>
                                                     </div>
-                                                    <div class="elementor-element elementor-element-b7aa36c e-flex e-con-boxed e-con e-parent"
+                                                    {{-- <div class="elementor-element elementor-element-b7aa36c e-flex e-con-boxed e-con e-parent"
                                                         data-id="cat-{{ $key + 111 }}"
                                                         data-element_type="container"
                                                         data-settings="{&quot;content_width&quot;:&quot;boxed&quot;}"
@@ -433,7 +433,7 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    </div>
+                                                    </div> --}}
                                                 </div>
                                             </div>
                                         </li>

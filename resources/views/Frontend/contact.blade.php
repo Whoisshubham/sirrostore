@@ -425,8 +425,7 @@
 		<link rel="stylesheet"
 			href="https://fonts.googleapis.com/css?family=Inter:400,500,700&amp;display=swap&amp;ver=1694399027" />
 	</noscript>
-	<link rel="stylesheet" href="https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/cache/minify/94c98.css"
-		media="all" />
+	
 
 	<script src="https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/cache/minify/de34a.js"></script>
 

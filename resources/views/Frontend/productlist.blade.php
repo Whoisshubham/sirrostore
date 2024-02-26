@@ -466,8 +466,8 @@
                         <h1 class="heading-title page-title entry-title ">Women</h1>
                         <div class="breadcrumbs">
                             <div class="breadcrumbs-container"><a
-                                    href="https://demo.theme-sky.com/nooni-fashion">Home</a><span>&#47;</span><a
-                                    href="https://demo.theme-sky.com/nooni-fashion/shop/">Shop</a><span>&#47;</span>Women
+                                    href="{{url('/')}}">Home</a><span>&#47;</span><a
+                                    href="">Shop</a><span>&#47;</span>Women
                             </div>
                         </div>
                     </div>
@@ -750,7 +750,7 @@
 
                                         <div class="thumbnail-wrapper">
                                             <a
-                                                href="https://demo.theme-sky.com/nooni-fashion/shop/chiffon-wrap-button-detail-maxi-dress/">
+                                                href="chiffon-wrap-button-detail-maxi-dress/">
                                                 <figure class="has-back-image"><img
                                                         src="{{asset('prod_loading.gif')}}"
                                                         data-src="https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/uploads/2023/06/38-450x572.jpg"
@@ -767,7 +767,7 @@
                                             </div>
                                             <div class="product-group-button">
                                                 <div class="loop-add-to-cart"><a
-                                                        href="https://demo.theme-sky.com/nooni-fashion/shop/chiffon-wrap-button-detail-maxi-dress/"
+                                                        href="chiffon-wrap-button-detail-maxi-dress/"
                                                         data-quantity="1"
                                                         class="button product_type_variable add_to_cart_button"
                                                         data-product_id="3578" data-product_sku="0093"
@@ -810,7 +810,7 @@
                                         </div>
                                         <div class="meta-wrapper">
                                             <h3 class="heading-title product-name"><a
-                                                    href="https://demo.theme-sky.com/nooni-fashion/shop/chiffon-wrap-button-detail-maxi-dress/">Chiffon
+                                                    href="chiffon-wrap-button-detail-maxi-dress/">Chiffon
                                                     Wrap Button Detail Maxi Dress</a></h3>
                                             <span class="price"><del aria-hidden="true"><span
                                                         class="woocommerce-Price-amount amount"><bdi><span
@@ -823,7 +823,7 @@
                                                 washable at 30 degrees. </div>
                                             <div class="product-group-button-meta">
                                                 <div class="loop-add-to-cart"><a
-                                                        href="https://demo.theme-sky.com/nooni-fashion/shop/chiffon-wrap-button-detail-maxi-dress/"
+                                                        href="chiffon-wrap-button-detail-maxi-dress/"
                                                         data-quantity="1"
                                                         class="button product_type_variable add_to_cart_button"
                                                         data-product_id="3578" data-product_sku="0093"
@@ -873,7 +873,7 @@
                     <ul id="menu-vertical-menu" class="menu">
                         <li id="menu-item-6473"
                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-has-children menu-item-6473 ts-normal-menu parent">
-                            <a href="https://demo.theme-sky.com/nooni-fashion/"><span
+                            <a href="{{url('/')}}"><span
                                     class="menu-label">Home</span></a><span class="ts-menu-drop-icon"></span>
                             <ul class="sub-menu">
                                 <li id="menu-item-6471"
@@ -894,7 +894,7 @@
                                 </li>
                                 <li id="menu-item-6007"
                                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-6007">
-                                    <a href="https://demo.theme-sky.com/nooni-fashion/"><span
+                                    <a href="{{url('/')}}"><span
                                             class="menu-label">Fashion 1</span></a>
                                 </li>
                                 <li id="menu-item-6275"
@@ -911,19 +911,19 @@
                         </li>
                         <li id="menu-item-5930"
                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-5930 ts-normal-menu parent">
-                            <a href="https://demo.theme-sky.com/nooni-fashion/shop/"><span
+                            <a href=""><span
                                     class="menu-label">Shop</span></a><span class="ts-menu-drop-icon"></span>
                             <ul class="sub-menu">
                                 <li id="menu-item-6055"
                                     class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6055">
                                     <a
-                                        href="https://demo.theme-sky.com/nooni-fashion/shop/?filter_area=1&amp;columns=4&amp;per_page=16"><span
+                                        href="?filter_area=1&amp;columns=4&amp;per_page=16"><span
                                             class="menu-label">Shop Grid</span></a>
                                 </li>
                                 <li id="menu-item-6056"
                                     class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6056">
                                     <a
-                                        href="https://demo.theme-sky.com/nooni-fashion/shop/?filter_area=1&amp;show_filter_default=1&amp;grid_list_default=list"><span
+                                        href="?filter_area=1&amp;show_filter_default=1&amp;grid_list_default=list"><span
                                             class="menu-label">Shop List</span></a>
                                 </li>
                                 <li id="menu-item-6057"
@@ -935,92 +935,92 @@
                                 <li id="menu-item-6088"
                                     class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6088">
                                     <a
-                                        href="https://demo.theme-sky.com/nooni-fashion/shop/?filter_area=1&amp;show_filter_default=1"><span
+                                        href="?filter_area=1&amp;show_filter_default=1"><span
                                             class="menu-label">Filter Sidebar</span></a>
                                 </li>
                                 <li id="menu-item-6089"
                                     class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6089">
                                     <a
-                                        href="https://demo.theme-sky.com/nooni-fashion/shop/?filter_area=1&amp;filter_style=dropdown&amp;columns=4&amp;per_page=16"><span
+                                        href="?filter_area=1&amp;filter_style=dropdown&amp;columns=4&amp;per_page=16"><span
                                             class="menu-label">Filter Dropdown</span></a>
                                 </li>
                                 <li id="menu-item-6090"
                                     class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6090">
                                     <a
-                                        href="https://demo.theme-sky.com/nooni-fashion/shop/?filter_area=1&amp;filter_style=floating-sidebar&amp;columns=4&amp;per_page=16"><span
+                                        href="?filter_area=1&amp;filter_style=floating-sidebar&amp;columns=4&amp;per_page=16"><span
                                             class="menu-label">Float Filter</span></a>
                                 </li>
                                 <li id="menu-item-6058"
                                     class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6058">
                                     <a
-                                        href="https://demo.theme-sky.com/nooni-fashion/shop/?loading_type=load-more-button"><span
+                                        href="?loading_type=load-more-button"><span
                                             class="menu-label">Load More Button</span></a>
                                 </li>
                                 <li id="menu-item-6059"
                                     class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6059">
                                     <a
-                                        href="https://demo.theme-sky.com/nooni-fashion/shop/?loading_type=infinity-scroll"><span
+                                        href="?loading_type=infinity-scroll"><span
                                             class="menu-label">Infinity Scroll</span></a>
                                 </li>
                                 <li id="menu-item-6060"
                                     class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6060">
                                     <a
-                                        href="https://demo.theme-sky.com/nooni-fashion/shop/?loading_type=ajax-pagination"><span
+                                        href="?loading_type=ajax-pagination"><span
                                             class="menu-label">Ajax Pagination</span></a>
                                 </li>
                             </ul>
                         </li>
                         <li id="menu-item-5931"
                             class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-5931 ts-normal-menu parent">
-                            <a href="https://demo.theme-sky.com/nooni-fashion/shop/wood-outdoor-adirondack-chair/"><span
+                            <a href="wood-outdoor-adirondack-chair/"><span
                                     class="menu-label">Product</span></a><span class="ts-menu-drop-icon"></span>
                             <ul class="sub-menu">
                                 <li id="menu-item-6061"
                                     class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6061">
                                     <a
-                                        href="https://demo.theme-sky.com/nooni-fashion/shop/chiffon-wrap-button-detail-maxi-dress/"><span
+                                        href="chiffon-wrap-button-detail-maxi-dress/"><span
                                             class="menu-label">Product 01</span></a>
                                 </li>
                                 <li id="menu-item-6062"
                                     class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6062">
                                     <a
-                                        href="https://demo.theme-sky.com/nooni-fashion/shop/chiffon-wrap-button-detail-maxi-dress/?variation_thumbnail=1"><span
+                                        href="chiffon-wrap-button-detail-maxi-dress/?variation_thumbnail=1"><span
                                             class="menu-label">Product 02</span></a>
                                 </li>
                                 <li id="menu-item-6063"
                                     class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6063">
                                     <a
-                                        href="https://demo.theme-sky.com/nooni-fashion/shop/smiley-t-shirt-in-light-blue/"><span
+                                        href="smiley-t-shirt-in-light-blue/"><span
                                             class="menu-label">Product 03</span></a>
                                 </li>
                                 <li id="menu-item-6064"
                                     class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6064">
                                     <a
-                                        href="https://demo.theme-sky.com/nooni-fashion/shop/smiley-t-shirt-in-light-blue/?attr_dropdown=1"><span
+                                        href="smiley-t-shirt-in-light-blue/?attr_dropdown=1"><span
                                             class="menu-label">Product 04</span></a>
                                 </li>
                                 <li id="menu-item-6065"
                                     class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6065">
                                     <a
-                                        href="https://demo.theme-sky.com/nooni-fashion/shop/small-logo-puffer-jacket-in-blue/?gallery_layout=horizontal&amp;tabs_accordion=both&amp;tabs_pos=inside_summary&amp;ads=1"><span
+                                        href="small-logo-puffer-jacket-in-blue/?gallery_layout=horizontal&amp;tabs_accordion=both&amp;tabs_pos=inside_summary&amp;ads=1"><span
                                             class="menu-label">Product 05</span></a>
                                 </li>
                                 <li id="menu-item-6066"
                                     class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6066">
                                     <a
-                                        href="https://demo.theme-sky.com/nooni-fashion/shop/crop-top-jackets-set-in-white/"><span
+                                        href="crop-top-jackets-set-in-white/"><span
                                             class="menu-label">Product 06</span></a>
                                 </li>
                                 <li id="menu-item-6181"
                                     class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6181">
                                     <a
-                                        href="https://demo.theme-sky.com/nooni-fashion/shop/faux-longline-coat-in-light-pink/?meta=0&amp;gallery_layout=grid&amp;tabs_accordion=both&amp;tabs_pos=inside_summary&amp;upsells=1"><span
+                                        href="faux-longline-coat-in-light-pink/?meta=0&amp;gallery_layout=grid&amp;tabs_accordion=both&amp;tabs_pos=inside_summary&amp;upsells=1"><span
                                             class="menu-label">Product 07</span></a>
                                 </li>
                                 <li id="menu-item-6225"
                                     class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6225">
                                     <a
-                                        href="https://demo.theme-sky.com/nooni-fashion/shop/blazer-shorts-pants-set-in-white/"><span
+                                        href="blazer-shorts-pants-set-in-white/"><span
                                             class="menu-label">Product 08</span></a>
                                 </li>
                             </ul>
