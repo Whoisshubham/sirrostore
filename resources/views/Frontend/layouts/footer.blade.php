@@ -1,262 +1,119 @@
 @php
-    $settingData=settings();
+    $settingData = settings();
 @endphp
 
-<footer id="colophon" class="footer-container footer-area loading">
-    <div data-elementor-type="wp-post" data-elementor-id="5433" class="elementor elementor-5433">
-        <div class="elementor-element elementor-element-5f8afb4 e-con-full e-flex e-con e-parent"
-            data-id="5f8afb4" data-element_type="container"
-            data-settings="{&quot;content_width&quot;:&quot;full&quot;}" data-core-v316-plus="true">
-            <div class="elementor-element elementor-element-2cb71de elementor-widget-divider--view-line elementor-widget elementor-widget-divider"
-                data-id="2cb71de" data-element_type="widget" data-widget_type="divider.default">
-                <div class="elementor-widget-container">
-                    <div class="elementor-divider">
-                        <span class="elementor-divider-separator">
-                        </span>
-                    </div>
+
+<!-- Footer -->
+<footer class="text-center text-lg-start text-white" style="background-color: #000">
+    <!-- Grid container -->
+    <div class="container p-4 pb-0">
+        <!-- Section: Links -->
+        <section class="">
+            <!--Grid row-->
+            <div class="row">
+                <!-- Grid column -->
+                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h6 class="text-uppercase mb-4 font-weight-bold">
+                        {{ $settingData->website_name }}
+                    </h6>
+                    <p>
+                        Our staff takes pride in the customer service and passion for the product we sell. Our staff is
+                        knowledgeable and informed about the products they’re selling to you and you provide free
+                        consultation reviews, and an honest unbiased opinion on the products we carry.
+                    </p>
                 </div>
+                <!-- Grid column -->
+
+                <hr class="w-100 clearfix d-md-none" />
+
+            
+
+                <hr class="w-100 clearfix d-md-none" />
+
+                <!-- Grid column -->
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h6 class="text-uppercase mb-4 font-weight-bold">
+                        Useful links
+                    </h6>
+                    <p>
+                        <a href="{{url('accounts')}}" class="text-white">Your Account</a>
+                    </p>
+                    <p>
+                        <a href="{{url('cart')}}" class="text-white">Cart</a>
+                    </p>
+                    <p>
+                        <a href="{{url('about-us')}}" class="text-white">About-us</a>
+                    </p>
+                    <p>
+                        <a href="{{url('contact-us')}}" class="text-white">Contact-Us</a>
+                    </p>
+                </div>
+
+                <!-- Grid column -->
+                <hr class="w-100 clearfix d-md-none" />
+
+                <!-- Grid column -->
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
+                    <p><i class="fas fa-home mr-3"></i> New York, NY 10012, US</p>
+                    <p><i class="fas fa-envelope mr-3"></i> info@sirrostore.com</p>
+                    <p><i class="fas fa-phone mr-3"></i> (571)209-8364</p>
+                    
+                </div>
+                <!-- Grid column -->
             </div>
-        </div>
-        <div class="elementor-element elementor-element-d596666 e-flex e-con-boxed e-con e-parent"
-            data-id="d596666" data-element_type="container"
-            data-settings="{&quot;content_width&quot;:&quot;boxed&quot;}" data-core-v316-plus="true">
-            <div class="e-con-inner">
-                <div class="elementor-element elementor-element-d9233dd e-con-full e-flex e-con e-child"
-                    data-id="d9233dd" data-element_type="container"
-                    data-settings="{&quot;content_width&quot;:&quot;full&quot;}">
-                    <div class="elementor-element elementor-element-3400063 elementor-widget__width-initial elementor-widget elementor-widget-image"
-                        data-id="3400063" data-element_type="widget" data-widget_type="image.default">
-                        <div class="elementor-widget-container">
-                            <img width="480" height="108" src="{{ asset($settingData->logo ?? null) }}" />
-                        </div>
-                    </div>
-                    <div class="elementor-element elementor-element-57ee23f elementor-widget__width-initial elementor-widget-tablet__width-inherit elementor-widget-mobile__width-initial elementor-widget-tablet_extra__width-initial elementor-widget elementor-widget-text-editor"
-                        data-id="57ee23f" data-element_type="widget" data-widget_type="text-editor.default">
-                        <div class="elementor-widget-container">
-                            <p>
-                                Email: info@sirrostore.com
-                                <br>
-                                Address (warehouse): 41655 Fawn Walk Ct, Ashburn Va, 20148
-                            </p>
-                        </div>
-                    </div>
-                    <div class="elementor-element elementor-element-95c3d34 elementor-hidden-desktop elementor-hidden-laptop elementor-hidden-tablet_extra elementor-hidden-tablet elementor-widget-divider--view-line elementor-widget elementor-widget-divider"
-                        data-id="95c3d34" data-element_type="widget" data-widget_type="divider.default">
-                        <div class="elementor-widget-container">
-                            <div class="elementor-divider">
-                                <span class="elementor-divider-separator">
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="elementor-element elementor-element-69ddaec e-con-full e-flex e-con e-child"
-                    data-id="69ddaec" data-element_type="container"
-                    data-settings="{&quot;content_width&quot;:&quot;full&quot;}">
-                    <div class="elementor-element elementor-element-93f058b elementor-widget-mobile__width-inherit ts-align-mobilecenter elementor-widget-tablet_extra__width-inherit elementor-widget-tablet__width-inherit elementor-widget elementor-widget-ts-mailchimp"
-                        data-id="93f058b" data-element_type="widget" data-widget_type="ts-mailchimp.default">
-                        <div class="elementor-widget-container">
-                            <div class="ts-mailchimp-subscription-shortcode ">
-                                <section class="widget-container mailchimp-subscription">
-                                    <div class="widget-title-wrapper">
-                                        <h3 class="widget-title heading-title">SUBSCRIBE FOR EMAILS</h3>
-                                    </div>
-                                    <div class="subscribe-widget">
-                                        <div class="newsletter">
-                                            <p>Enjoy 15% off* your first order when you subscribe up to our
-                                                newsletter</p>
-                                        </div>
+            <!--Grid row-->
+        </section>
+        <!-- Section: Links -->
 
-                                        <script>
-                                            (function () {
-                                                window.mc4wp = window.mc4wp || {
-                                                    listeners: [],
-                                                    forms: {
-                                                        on: function (evt, cb) {
-                                                            window.mc4wp.listeners.push({
-                                                                event: evt,
-                                                                callback: cb
-                                                            });
-                                                        }
-                                                    }
-                                                }
-                                            })();
-                                        </script>
-                                        <!-- Mailchimp for WordPress v4.9.9 - https://wordpress.org/plugins/mailchimp-for-wp/ -->
-                                        <form id="mc4wp-form-1" class="mc4wp-form mc4wp-form-348" method="post"
-                                            data-id="348" data-name="Subscription Form">
-                                            <div class="mc4wp-form-fields">
-                                                <div class="subscribe-email">
-                                                    <input type="email" name="EMAIL"
-                                                        placeholder="Your e-mail address" required />
-                                                    <button class="button" type="submit">Subscribe</button>
-                                                </div>
-                                            </div><label style="display: none !important;">Leave this field
-                                                empty if you're human: <input type="text" name="_mc4wp_honeypot"
-                                                    value="" tabindex="-1" autocomplete="off" /></label><input
-                                                type="hidden" name="_mc4wp_timestamp"
-                                                value="1708281722" /><input type="hidden" name="_mc4wp_form_id"
-                                                value="348" /><input type="hidden" name="_mc4wp_form_element_id"
-                                                value="mc4wp-form-1" />
-                                            <div class="mc4wp-response"></div>
-                                        </form><!-- / Mailchimp for WordPress Plugin -->
-                                    </div>
+        <hr class="my-3">
 
-                                </section>
-                            </div>
-                        </div>
+        <!-- Section: Copyright -->
+        <section class="p-3 pt-0">
+            <div class="row d-flex align-items-center">
+                <!-- Grid column -->
+                <div class="col-md-7 col-lg-8 text-center text-md-start">
+                    <!-- Copyright -->
+                    <div class="p-3">
+                        © 2024 Copyright:
+                        <a class="text-white" href="{{url('/')}}">{{$settings->website_name ?? null}}</a>
                     </div>
-                    <div class="elementor-element elementor-element-b96d57c elementor-hidden-desktop elementor-hidden-laptop elementor-hidden-tablet_extra elementor-hidden-tablet elementor-widget-divider--view-line elementor-widget elementor-widget-divider"
-                        data-id="b96d57c" data-element_type="widget" data-widget_type="divider.default">
-                        <div class="elementor-widget-container">
-                            <div class="elementor-divider">
-                                <span class="elementor-divider-separator">
-                                </span>
-                            </div>
-                        </div>
-                    </div>
+                    <!-- Copyright -->
                 </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-md-5 col-lg-4 ml-lg-0 text-center text-md-end">
+                    <!-- Facebook -->
+                    <a class="btn btn-outline-light btn-floating m-1" class="text-white" role="button"><i
+                            class="fab fa-facebook-f"></i></a>
+
+                    <!-- Twitter -->
+                    <a class="btn btn-outline-light btn-floating m-1" class="text-white" role="button"><i
+                            class="fab fa-twitter"></i></a>
+
+                    <!-- Google -->
+                    <a class="btn btn-outline-light btn-floating m-1" class="text-white" role="button"><i
+                            class="fab fa-google"></i></a>
+
+                    <!-- Instagram -->
+                    <a class="btn btn-outline-light btn-floating m-1" class="text-white" role="button"><i
+                            class="fab fa-instagram"></i></a>
+                </div>
+                <!-- Grid column -->
             </div>
-        </div>
-        <div class="elementor-element elementor-element-df8e883 e-flex e-con-boxed e-con e-parent"
-            data-id="df8e883" data-element_type="container"
-            data-settings="{&quot;content_width&quot;:&quot;boxed&quot;}" data-core-v316-plus="true">
-            <div class="e-con-inner">
-                <div class="elementor-element elementor-element-63ad56e e-con-full e-flex e-con e-child"
-                    data-id="63ad56e" data-element_type="container"
-                    data-settings="{&quot;content_width&quot;:&quot;full&quot;}">
-                    <div class="elementor-element elementor-element-95b1ec0 elementor-widget__width-initial elementor-widget-tablet__width-inherit elementor-widget elementor-widget-text-editor"
-                        data-id="95b1ec0" data-element_type="widget" data-widget_type="text-editor.default">
-                        <div class="elementor-widget-container">
-                            <p>Phone: (571)209-8364<br />Mon-Fri: 8am &#8211; 8pm<br />Sat-Sun: 8am &#8211; 7pm
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="elementor-element elementor-element-be2ee80 e-con-full e-flex e-con e-child"
-                    data-id="be2ee80" data-element_type="container"
-                    data-settings="{&quot;content_width&quot;:&quot;full&quot;}">
-                    <div class="elementor-element elementor-element-a235827 elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
-                        data-id="a235827" data-element_type="widget" data-widget_type="icon-list.default">
-                        <div class="elementor-widget-container">
-                            <ul class="elementor-icon-list-items">
-                                <li class="elementor-icon-list-item">
-                                    <a href="#">
-
-                                        <span class="elementor-icon-list-text">Our Story</span>
-                                    </a>
-                                </li>
-                                <li class="elementor-icon-list-item">
-                                    <a href="#">
-
-                                        <span class="elementor-icon-list-text">Careers</span>
-                                    </a>
-                                </li>
-                                <li class="elementor-icon-list-item">
-                                    <a href="#">
-
-                                        <span class="elementor-icon-list-text">Influencers</span>
-                                    </a>
-                                </li>
-                                <li class="elementor-icon-list-item">
-                                    <a href="#">
-
-                                        <span class="elementor-icon-list-text">Join our team</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="elementor-element elementor-element-fdf0704 e-con-full e-flex e-con e-child"
-                    data-id="fdf0704" data-element_type="container"
-                    data-settings="{&quot;content_width&quot;:&quot;full&quot;}">
-                    <div class="elementor-element elementor-element-3895ddd elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
-                        data-id="3895ddd" data-element_type="widget" data-widget_type="icon-list.default">
-                        <div class="elementor-widget-container">
-                            <ul class="elementor-icon-list-items">
-                                <li class="elementor-icon-list-item">
-                                    <a href="https://demo.theme-sky.com/nooni-fashion/contact-us/">
-
-                                        <span class="elementor-icon-list-text">Contact Us</span>
-                                    </a>
-                                </li>
-                                <li class="elementor-icon-list-item">
-                                    <a href="https://demo.theme-sky.com/nooni-fashion/about-us/">
-
-                                        <span class="elementor-icon-list-text">Customer Service</span>
-                                    </a>
-                                </li>
-                                <li class="elementor-icon-list-item">
-                                    <a href="https://demo.theme-sky.com/nooni-fashion/contact-us/">
-
-                                        <span class="elementor-icon-list-text">Find Store</span>
-                                    </a>
-                                </li>
-                                <li class="elementor-icon-list-item">
-                                    <a href="#">
-
-                                        <span class="elementor-icon-list-text">Shipping & Returns</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="elementor-element elementor-element-584dda3 e-con-full e-flex e-con e-child"
-                    data-id="584dda3" data-element_type="container"
-                    data-settings="{&quot;content_width&quot;:&quot;full&quot;}">
-                    <div class="elementor-element elementor-element-d255c90 elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
-                        data-id="d255c90" data-element_type="widget" data-widget_type="icon-list.default">
-                        <div class="elementor-widget-container">
-                            <ul class="elementor-icon-list-items">
-                                <li class="elementor-icon-list-item">
-                                    <a href="#">
-
-                                        <span class="elementor-icon-list-text">Interior Design</span>
-                                    </a>
-                                </li>
-                                <li class="elementor-icon-list-item">
-                                    <a href="#">
-
-                                        <span class="elementor-icon-list-text">Room Planner</span>
-                                    </a>
-                                </li>
-                                <li class="elementor-icon-list-item">
-                                    <a href="#">
-
-                                        <span class="elementor-icon-list-text">Our Projects</span>
-                                    </a>
-                                </li>
-                                <li class="elementor-icon-list-item">
-                                    <a href="#">
-
-                                        <span class="elementor-icon-list-text">Design Chat</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="elementor-element elementor-element-e11bf66 e-flex e-con-boxed e-con e-parent"
-            data-id="e11bf66" data-element_type="container"
-            data-settings="{&quot;content_width&quot;:&quot;boxed&quot;}" data-core-v316-plus="true">
-            <div class="e-con-inner">
-                <div class="elementor-element elementor-element-c089c34 elementor-widget-divider--view-line elementor-widget elementor-widget-divider"
-                    data-id="c089c34" data-element_type="widget" data-widget_type="divider.default">
-                    <div class="elementor-widget-container">
-                        <div class="elementor-divider">
-                            <span class="elementor-divider-separator">
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        </section>
+        <!-- Section: Copyright -->
     </div>
+    <!-- Grid container -->
 </footer>
-<script src="{{asset('ajaxform.js')}}"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" integrity="sha512-3pIirOrwegjM6erE5gPSwkUzO+3cTjpnV9lexlNZqvupR64iZBnOOTiiLPb9M36zpMScbmUNIcHUqKD47M719g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<!-- Footer -->
+
+<script src="{{ asset('ajaxform.js') }}"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css"
+    integrity="sha512-3pIirOrwegjM6erE5gPSwkUzO+3cTjpnV9lexlNZqvupR64iZBnOOTiiLPb9M36zpMScbmUNIcHUqKD47M719g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"
+    integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

@@ -712,99 +712,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="elementor-element elementor-element-7b06cee e-flex e-con-boxed e-con e-parent"
-                                    data-id="7b06cee" data-element_type="container"
-                                    data-settings="{&quot;content_width&quot;:&quot;boxed&quot;}"
-                                    data-core-v316-plus="true">
-                                    <div class="e-con-inner">
-                                        <div class="elementor-element elementor-element-2fb39e7 title-align-left elementor-widget elementor-widget-ts-product-brands"
-                                            data-id="2fb39e7" data-element_type="widget"
-                                            data-widget_type="ts-product-brands.default">
-                                            <div class="elementor-widget-container">
-                                                <div class="ts-product-brand-wrapper ts-product ts-shortcode ts-slider woocommerce columns-5 use-logo-setting"
-                                                    data-nav="" data-autoplay="1" data-columns="5"
-                                                    data-break_point="[&quot;0&quot;,&quot;300&quot;,&quot;450&quot;,&quot;600&quot;,&quot;715&quot;,&quot;900&quot;]"
-                                                    data-item="[&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;,&quot;5&quot;,&quot;6&quot;]">
-
-                                                    <div class="content-wrapper loading items">
-                                                        <div class="item">
-                                                            <a
-                                                                href="https://demo.theme-sky.com/nooni-fashion/product-brand/a-company/">
-                                                                <img loading="lazy" decoding="async" width="208"
-                                                                    height="110"
-                                                                    src="https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/uploads/2023/04/brand-5.png"
-                                                                    class="attachment-ts_logo_thumb size-ts_logo_thumb"
-                                                                    alt="" /> </a>
-                                                            <div class="meta-wrapper">
-
-                                                            </div>
-                                                        </div>
-                                                        <div class="item">
-                                                            <a
-                                                                href="https://demo.theme-sky.com/nooni-fashion/product-brand/creative-design/">
-                                                                <img loading="lazy" decoding="async" width="208"
-                                                                    height="110"
-                                                                    src="https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/uploads/2023/04/brand-1.png"
-                                                                    class="attachment-ts_logo_thumb size-ts_logo_thumb"
-                                                                    alt="" /> </a>
-                                                            <div class="meta-wrapper">
-
-                                                            </div>
-                                                        </div>
-                                                        <div class="item">
-                                                            <a
-                                                                href="https://demo.theme-sky.com/nooni-fashion/product-brand/d-company/">
-                                                                <img loading="lazy" decoding="async" width="208"
-                                                                    height="110"
-                                                                    src="https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/uploads/2023/04/brand-6.png"
-                                                                    class="attachment-ts_logo_thumb size-ts_logo_thumb"
-                                                                    alt="" /> </a>
-                                                            <div class="meta-wrapper">
-
-                                                            </div>
-                                                        </div>
-                                                        <div class="item">
-                                                            <a
-                                                                href="https://demo.theme-sky.com/nooni-fashion/product-brand/house-smart/">
-                                                                <img loading="lazy" decoding="async" width="208"
-                                                                    height="110"
-                                                                    src="https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/uploads/2023/04/brand-2.png"
-                                                                    class="attachment-ts_logo_thumb size-ts_logo_thumb"
-                                                                    alt="" /> </a>
-                                                            <div class="meta-wrapper">
-
-                                                            </div>
-                                                        </div>
-                                                        <div class="item">
-                                                            <a
-                                                                href="https://demo.theme-sky.com/nooni-fashion/product-brand/real-estate/">
-                                                                <img loading="lazy" decoding="async" width="208"
-                                                                    height="110"
-                                                                    src="https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/uploads/2023/04/brand-4.png"
-                                                                    class="attachment-ts_logo_thumb size-ts_logo_thumb"
-                                                                    alt="" /> </a>
-                                                            <div class="meta-wrapper">
-
-                                                            </div>
-                                                        </div>
-                                                        <div class="item">
-                                                            <a
-                                                                href="https://demo.theme-sky.com/nooni-fashion/product-brand/v-company/">
-                                                                <img loading="lazy" decoding="async" width="208"
-                                                                    height="110"
-                                                                    src="https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/uploads/2023/04/brand-3.png"
-                                                                    class="attachment-ts_logo_thumb size-ts_logo_thumb"
-                                                                    alt="" /> </a>
-                                                            <div class="meta-wrapper">
-
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                               
                             </div>
                         </article>
                     </div>
@@ -865,28 +773,13 @@
             document.addEventListener(event, lazyloadRunObserver);
         });
     </script>
-    <script type="text/javascript">
-        (function() {
-            var c = document.body.className;
-            c = c.replace(/woocommerce-no-js/, 'woocommerce-js');
-            document.body.className = c;
-        })();
-    </script>
+  
     <link rel="stylesheet" href="https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/cache/minify/89150.css"
         media="all" />
 
-    <script src="https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/cache/minify/aa08f.js"></script>
     <script src="https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/cache/minify/e2652.js"></script>
-    <script src="https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/cache/minify/036c3.js"></script>
-    <script src="https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/cache/minify/dfd7c.js"></script>
-    <script src="https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/cache/minify/f1647.js"></script>
-    <script src="https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/cache/minify/d6a2c.js"></script>
-    <script src="https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/cache/minify/077e6.js"></script>
-    <script src="https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/cache/minify/1f9a4.js"></script>
-    <script defer src="https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/cache/minify/09cb6.js"></script>
-    <script src="https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/cache/minify/94e37.js"></script>
-    <script src="https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/cache/minify/b5d0c.js"></script>
-    <div id="ts-quickshop-modal" class="ts-popup-modal">
+ <script src="https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/cache/minify/077e6.js"></script>
+   <div id="ts-quickshop-modal" class="ts-popup-modal">
         <div class="overlay"></div>
         <div class="quickshop-container popup-container">
             <span class="close"></span>

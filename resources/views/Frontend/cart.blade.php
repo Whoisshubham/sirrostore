@@ -405,7 +405,7 @@
     <link rel='stylesheet' id='woocommerce-general-css'
         href='https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/plugins/woocommerce/assets/css/woocommerce.css?ver=8.2.1'
         type='text/css' media='all' />
- 
+
     <link rel='stylesheet' id='jquery-colorbox-css'
         href='https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/plugins/yith-woocommerce-compare/assets/css/colorbox.css?ver=1.4.21'
         type='text/css' media='all' />
@@ -440,13 +440,12 @@
         media='all' />
 
     <script type="text/javascript"
-        src="https://nooni-be87.kxcdn.com/nooni-fashion/wp-includes/js/jquery/jquery.min.js?ver=3.7.1"
-        id="jquery-core-js">
-        </script>
+        src="https://nooni-be87.kxcdn.com/nooni-fashion/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js">
+    </script>
     <script type="text/javascript"
         src="https://nooni-be87.kxcdn.com/nooni-fashion/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1"
         id="jquery-migrate-js"></script>
- 
+
 
 </head>
 
@@ -461,8 +460,7 @@
                     <div class="breadcrumb-title">
                         <h1 class="heading-title page-title entry-title ">Shopping Cart</h1>
                         <div class="breadcrumbs">
-                            <div class="breadcrumbs-container"><a
-                                    href="{{url('/')}}">Home</a> <span
+                            <div class="breadcrumbs-container"><a href="{{ url('/') }}">Home</a> <span
                                     class="brn_arrow">&#047;</span> <span class="current">Shopping Cart</span></div>
                         </div>
                     </div>
@@ -479,13 +477,15 @@
                                 <div class="woocommerce-notices-wrapper"></div>
                                 <form class="woocommerce-cart-form" action="" method="post">
 
-                                    <table class="shop_table shop_table_responsive cart woocommerce-cart-form__contents"
+                                    <table
+                                        class="shop_table shop_table_responsive cart woocommerce-cart-form__contents"
                                         cellspacing="0">
                                         <thead>
                                             <tr>
                                                 <th class="product-remove"><span class="screen-reader-text">Remove
                                                         item</span></th>
-                                                <th class="product-thumbnail"><span class="screen-reader-text">Thumbnail
+                                                <th class="product-thumbnail"><span
+                                                        class="screen-reader-text">Thumbnail
                                                         image</span></th>
                                                 <th class="product-name">Product</th>
                                                 <th class="product-price">Price</th>
@@ -494,54 +494,56 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr class="woocommerce-cart-form__cart-item cart_item">
-                                                <td class="product-remove">
-                                                    <a href="?remove_item=3f088ebeda03513be71d34d214291986&#038;_wpnonce=efc384caaf"
-                                                        class="remove"
-                                                        aria-label="Remove Faux Longline Coat in Light Pink from cart"
-                                                        data-product_id="1995" data-product_sku="0012">&times;</a>
-                                                </td>
-                                                <td class="product-thumbnail">
-                                                    <a href="faux-longline-coat-in-light-pink/"><img loading="lazy"
-                                                            decoding="async" width="450" height="572"
-                                                            src="https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/uploads/2023/04/31-450x572.jpg"
-                                                            class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
-                                                            alt=""
-                                                            srcset="https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/uploads/2023/04/31-450x572.jpg 450w, https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/uploads/2023/04/31-235x300.jpg 235w"
-                                                            sizes="(max-width: 450px) 100vw, 450px" /></a>
-                                                </td>
-                                                <td class="product-name" data-title="Product">
-                                                    <a href="faux-longline-coat-in-light-pink/">Faux
-                                                        Longline Coat in Light Pink</a>
-                                                </td>
-                                                <td class="product-price" data-title="Price">
-                                                    <span class="woocommerce-Price-amount amount"><bdi><span
-                                                                class="woocommerce-Price-currencySymbol">&#36;</span>1,009</bdi></span>
-                                                </td>
-                                                <td class="product-quantity" data-title="Quantity">
-                                                    <div class="quantity">
-                                                        <div class="number-button">
-                                                            <input type="button" value="-" class="minus" />
-                                                            <label class="screen-reader-text"
-                                                                for="quantity_65da092cab3f7">Faux Longline Coat in
-                                                                Light Pink quantity</label>
-                                                            <input type="number" id="quantity_65da092cab3f7"
-                                                                class="input-text qty text"
-                                                                name="cart[3f088ebeda03513be71d34d214291986][qty]"
-                                                                value="1" aria-label="Product quantity" size="4" min="0"
-                                                                max="" step="1" placeholder="" inputmode="numeric"
-                                                                autocomplete="off" />
-                                                            <input type="button" value="+" class="plus" />
+                                            @foreach ($cartList as $cartIteam)
+                                                <tr class="woocommerce-cart-form__cart-item cart_item">
+                                                    <td class="product-remove">
+                                                        <a class="remove"
+                                                            aria-label="Remove Faux Longline Coat in Light Pink from cart"
+                                                            data-product_id="1995" data-product_sku="0012">&times;</a>
+                                                    </td>
+                                                    <td class="product-thumbnail">
+                                                        <a><img loading="lazy" decoding="async" width="450"
+                                                                height="572" src="{{ $cartIteam['image'] ?? null }}"
+                                                                class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
+                                                                alt=""
+                                                                srcset="{{ $cartIteam['image'] ?? null }} 450w, https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/uploads/2023/04/31-235x300.jpg 235w"
+                                                                sizes="(max-width: 450px) 100vw, 450px" /></a>
+                                                    </td>
+                                                    <td class="product-name" data-title="Product">
+                                                        <a>{{ $cartIteam['product_name'] ?? null }}</a>
+                                                    </td>
+                                                    <td class="product-price" data-title="Price">
+                                                        <span class="woocommerce-Price-amount amount"><bdi><span
+                                                                    class="woocommerce-Price-currencySymbol">&#36;</span>{{ $cartIteam['product_sale_price'] ?? null }}</bdi></span>
+                                                    </td>
+                                                    <td class="product-quantity" data-title="Quantity">
+                                                        <div class="quantity">
+                                                            <div class="number-button">
+                                                                <input type="button" value="-"
+                                                                    class="minus" />
+                                                                <label class="screen-reader-text"
+                                                                    for="quantity_65da092cab3f7">Faux Longline Coat in
+                                                                    Light Pink quantity</label>
+                                                                <input type="number" id="quantity_65da092cab3f7"
+                                                                    class="input-text qty text"
+                                                                    name="cart[3f088ebeda03513be71d34d214291986][qty]"
+                                                                    value="1" aria-label="Product quantity"
+                                                                    size="4" min="0" max=""
+                                                                    step="1" placeholder="" inputmode="numeric"
+                                                                    autocomplete="off" />
+                                                                <input type="button" value="+"
+                                                                    class="plus" />
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                </td>
-                                                <td class="product-subtotal" data-title="Subtotal">
-                                                    <span class="woocommerce-Price-amount amount"><bdi><span
-                                                                class="woocommerce-Price-currencySymbol">&#36;</span>1,009</bdi></span>
-                                                </td>
-                                            </tr>
+                                                    </td>
+                                                    <td class="product-subtotal" data-title="Subtotal">
+                                                        <span class="woocommerce-Price-amount amount"><bdi><span
+                                                                    class="woocommerce-Price-currencySymbol">&#36;</span>{{ $cartIteam['product_sale_price'] ?? null }}</bdi></span>
+                                                    </td>
+                                                </tr>
+                                            @endforeach
                                             <tr>
-                                                <td colspan="6" class="actions"> 
+                                                <td colspan="6" class="actions">
                                                     <button type="submit" class="button" name="update_cart"
                                                         value="Update cart">Update cart</button>
                                                     <button type="submit" class="button empty-cart-button"
@@ -571,17 +573,19 @@
                                                 <td data-title="Shipping">
                                                     <ul id="shipping_method" class="woocommerce-shipping-methods">
                                                         <li>
-                                                            <input type="radio" name="shipping_method[0]" data-index="0"
-                                                                id="shipping_method_0_flat_rate1" value="flat_rate:1"
-                                                                class="shipping_method" checked='checked' /><label
+                                                            <input type="radio" name="shipping_method[0]"
+                                                                data-index="0" id="shipping_method_0_flat_rate1"
+                                                                value="flat_rate:1" class="shipping_method"
+                                                                checked='checked' /><label
                                                                 for="shipping_method_0_flat_rate1">Flat rate: <span
                                                                     class="woocommerce-Price-amount amount"><bdi><span
                                                                             class="woocommerce-Price-currencySymbol">&#36;</span>10</bdi></span></label>
                                                         </li>
                                                         <li>
-                                                            <input type="radio" name="shipping_method[0]" data-index="0"
-                                                                id="shipping_method_0_local_pickup2"
-                                                                value="local_pickup:2" class="shipping_method" /><label
+                                                            <input type="radio" name="shipping_method[0]"
+                                                                data-index="0" id="shipping_method_0_local_pickup2"
+                                                                value="local_pickup:2"
+                                                                class="shipping_method" /><label
                                                                 for="shipping_method_0_local_pickup2">Local pickup:
                                                                 <span class="woocommerce-Price-amount amount"><bdi><span
                                                                             class="woocommerce-Price-currencySymbol">&#36;</span>5</bdi></span></label>
@@ -594,7 +598,8 @@
 
                                                         <a href="#" class="shipping-calculator-button">Calculate
                                                             shipping</a>
-                                                        <section class="shipping-calculator-form" style="display:none;">
+                                                        <section class="shipping-calculator-form"
+                                                            style="display:none;">
 
                                                             <p class="form-row form-row-wide"
                                                                 id="calc_shipping_country_field">
@@ -896,8 +901,9 @@
                                                                 id="calc_shipping_city_field">
                                                                 <label for="calc_shipping_city"
                                                                     class="screen-reader-text">City:</label>
-                                                                <input type="text" class="input-text" value=""
-                                                                    placeholder="City" name="calc_shipping_city"
+                                                                <input type="text" class="input-text"
+                                                                    value="" placeholder="City"
+                                                                    name="calc_shipping_city"
                                                                     id="calc_shipping_city" />
                                                             </p>
 
@@ -905,20 +911,21 @@
                                                                 id="calc_shipping_postcode_field">
                                                                 <label for="calc_shipping_postcode"
                                                                     class="screen-reader-text">Postcode / ZIP:</label>
-                                                                <input type="text" class="input-text" value=""
-                                                                    placeholder="Postcode / ZIP"
+                                                                <input type="text" class="input-text"
+                                                                    value="" placeholder="Postcode / ZIP"
                                                                     name="calc_shipping_postcode"
                                                                     id="calc_shipping_postcode" />
                                                             </p>
 
-                                                            <p><button type="submit" name="calc_shipping" value="1"
-                                                                    class="button">Update</button>
+                                                            <p><button type="submit" name="calc_shipping"
+                                                                    value="1" class="button">Update</button>
                                                             </p>
                                                             <input type="hidden"
                                                                 id="woocommerce-shipping-calculator-nonce"
                                                                 name="woocommerce-shipping-calculator-nonce"
                                                                 value="42ae328bfc" /><input type="hidden"
-                                                                name="_wp_http_referer" value="/nooni-fashion/cart/" />
+                                                                name="_wp_http_referer"
+                                                                value="/nooni-fashion/cart/" />
                                                         </section>
                                                     </form>
 
@@ -967,8 +974,8 @@
                                                                 src="https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/themes/nooni/images/prod_loading.gif"
                                                                 data-src="https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/uploads/2023/03/40-450x572.jpg"
                                                                 class="attachment-shop_catalog wp-post-image ts-lazy-load"
-                                                                alt="" width="450" height="572" /><img loading="lazy"
-                                                                decoding="async"
+                                                                alt="" width="450" height="572" /><img
+                                                                loading="lazy" decoding="async"
                                                                 src="https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/themes/nooni/images/prod_loading.gif"
                                                                 data-src="https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/uploads/2023/03/41-450x572.jpg"
                                                                 class="product-image-back ts-lazy-load" alt=""
@@ -987,38 +994,6 @@
                                                                 rel="nofollow"><span
                                                                     class="ts-tooltip button-tooltip">Add to
                                                                     cart</span></a></div>
-                                                        <div class="button-in wishlist">
-                                                            <div class="yith-wcwl-add-to-wishlist add-to-wishlist-257  wishlist-fragment on-first-load"
-                                                                data-fragment-ref="257"
-                                                                data-fragment-options="{&quot;base_url&quot;:&quot;&quot;,&quot;in_default_wishlist&quot;:false,&quot;is_single&quot;:false,&quot;show_exists&quot;:false,&quot;product_id&quot;:257,&quot;parent_product_id&quot;:257,&quot;product_type&quot;:&quot;simple&quot;,&quot;show_view&quot;:false,&quot;browse_wishlist_text&quot;:&quot;Browse wishlist&quot;,&quot;already_in_wishslist_text&quot;:&quot;The product is already in your wishlist!&quot;,&quot;product_added_text&quot;:&quot;Product added!&quot;,&quot;heading_icon&quot;:&quot;fa-heart-o&quot;,&quot;available_multi_wishlist&quot;:false,&quot;disable_wishlist&quot;:false,&quot;show_count&quot;:false,&quot;ajax_loading&quot;:false,&quot;loop_position&quot;:&quot;after_add_to_cart&quot;,&quot;item&quot;:&quot;add_to_wishlist&quot;}">
-
-                                                                <!-- ADD TO WISHLIST -->
-
-                                                                <div class="yith-wcwl-add-button">
-                                                                    <a href="?add_to_wishlist=257&#038;_wpnonce=88e283c6c3"
-                                                                        class="add_to_wishlist single_add_to_wishlist"
-                                                                        data-product-id="257" data-product-type="simple"
-                                                                        data-original-product-id="257"
-                                                                        data-title="&lt;span class=&quot;ts-tooltip button-tooltip&quot; data-title=&quot;Add to wishlist&quot;&gt;Wishlist&lt;/span&gt;"
-                                                                        rel="nofollow">
-                                                                        <i class="yith-wcwl-icon fa fa-heart-o"></i>
-                                                                        <span><span class="ts-tooltip button-tooltip"
-                                                                                data-title="Add to wishlist">Wishlist</span></span>
-                                                                    </a>
-                                                                </div>
-                                                                <!-- COUNT TEXT -->
-                                                            </div>
-                                                        </div>
-                                                        <div class="button-in compare"><a class="compare"
-                                                                href="https://demo.theme-sky.com/nooni-fashion?action=yith-woocompare-add-product&id=257"
-                                                                data-product_id="257"><span
-                                                                    class="ts-tooltip button-tooltip"
-                                                                    data-title="Add to compare">Compare</span></a>
-                                                        </div>
-                                                        <div class="button-in quickshop"><a class="quickshop" href="#"
-                                                                data-product_id="257"><span
-                                                                    class="ts-tooltip button-tooltip">Quick
-                                                                    view</span></a></div>
                                                     </div>
                                                 </div>
                                                 <div class="meta-wrapper">
@@ -1034,376 +1009,7 @@
                                                 </div>
                                             </div>
                                         </section>
-                                        <section
-                                            class="product add-to-wishlist-after_add_to_cart type-product post-238 status-publish last instock product_cat-18th-century product_cat-19th-century product_cat-20th-century product_cat-21th-century product_cat-activities product_cat-body-fit product_cat-casual-clothings product_cat-collections product_cat-curve-plus-size product_cat-fashion-style product_cat-pastel-collection product_cat-petite product_cat-sport-clothings product_cat-spring-collection product_cat-summer-clothings product_cat-summer-collection product_cat-tall product_cat-tops product_cat-vintage-collection product_cat-women product_cat-work-clothings has-post-thumbnail featured shipping-taxable purchasable product-type-simple"
-                                            data-product_id="238">
-                                            <div class="product-wrapper">
-                                                <div class="thumbnail-wrapper">
-                                                    <a href="womens-classic-t-shirt/">
-                                                        <figure class="has-back-image"><img loading="lazy"
-                                                                decoding="async"
-                                                                src="https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/themes/nooni/images/prod_loading.gif"
-                                                                data-src="https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/uploads/2023/04/21-450x572.jpg"
-                                                                class="attachment-shop_catalog wp-post-image ts-lazy-load"
-                                                                alt="" width="450" height="572" /><img loading="lazy"
-                                                                decoding="async"
-                                                                src="https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/themes/nooni/images/prod_loading.gif"
-                                                                data-src="https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/uploads/2023/04/19-450x572.jpg"
-                                                                class="product-image-back ts-lazy-load" alt=""
-                                                                width="450" height="572" />
-                                                        </figure>
-                                                    </a>
-                                                    <div class="product-label on-thumbnail">
-                                                        <span class="featured"><span>Hot</span></span>
-                                                    </div>
-                                                    <div class="product-group-button">
-                                                        <div class="loop-add-to-cart"><a href="?add-to-cart=238"
-                                                                data-quantity="1"
-                                                                class="button product_type_simple add_to_cart_button ajax_add_to_cart"
-                                                                data-product_id="238" data-product_sku="PG9EHX"
-                                                                aria-label="Add &ldquo;Women&#039;s Classic T-Shirt&rdquo; to your cart"
-                                                                rel="nofollow"><span
-                                                                    class="ts-tooltip button-tooltip">Add to
-                                                                    cart</span></a></div>
-                                                        <div class="button-in wishlist">
-                                                            <div class="yith-wcwl-add-to-wishlist add-to-wishlist-238  wishlist-fragment on-first-load"
-                                                                data-fragment-ref="238"
-                                                                data-fragment-options="{&quot;base_url&quot;:&quot;&quot;,&quot;in_default_wishlist&quot;:false,&quot;is_single&quot;:false,&quot;show_exists&quot;:false,&quot;product_id&quot;:238,&quot;parent_product_id&quot;:238,&quot;product_type&quot;:&quot;simple&quot;,&quot;show_view&quot;:false,&quot;browse_wishlist_text&quot;:&quot;Browse wishlist&quot;,&quot;already_in_wishslist_text&quot;:&quot;The product is already in your wishlist!&quot;,&quot;product_added_text&quot;:&quot;Product added!&quot;,&quot;heading_icon&quot;:&quot;fa-heart-o&quot;,&quot;available_multi_wishlist&quot;:false,&quot;disable_wishlist&quot;:false,&quot;show_count&quot;:false,&quot;ajax_loading&quot;:false,&quot;loop_position&quot;:&quot;after_add_to_cart&quot;,&quot;item&quot;:&quot;add_to_wishlist&quot;}">
-                                                                <!-- ADD TO WISHLIST -->
-                                                                <div class="yith-wcwl-add-button">
-                                                                    <a href="?add_to_wishlist=238&#038;_wpnonce=88e283c6c3"
-                                                                        class="add_to_wishlist single_add_to_wishlist"
-                                                                        data-product-id="238" data-product-type="simple"
-                                                                        data-original-product-id="238"
-                                                                        data-title="&lt;span class=&quot;ts-tooltip button-tooltip&quot; data-title=&quot;Add to wishlist&quot;&gt;Wishlist&lt;/span&gt;"
-                                                                        rel="nofollow">
-                                                                        <i class="yith-wcwl-icon fa fa-heart-o"></i>
-                                                                        <span><span class="ts-tooltip button-tooltip"
-                                                                                data-title="Add to wishlist">Wishlist</span></span>
-                                                                    </a>
-                                                                </div>
-                                                                <!-- COUNT TEXT -->
-                                                            </div>
-                                                        </div>
-                                                        <div class="button-in compare"><a class="compare"
-                                                                href="https://demo.theme-sky.com/nooni-fashion?action=yith-woocompare-add-product&id=238"
-                                                                data-product_id="238"><span
-                                                                    class="ts-tooltip button-tooltip"
-                                                                    data-title="Add to compare">Compare</span></a>
-                                                        </div>
-                                                        <div class="button-in quickshop"><a class="quickshop" href="#"
-                                                                data-product_id="238"><span
-                                                                    class="ts-tooltip button-tooltip">Quick
-                                                                    view</span></a></div>
-                                                    </div>
-                                                </div>
-                                                <div class="meta-wrapper">
-                                                    <h3 class="heading-title product-name"><a
-                                                            href="womens-classic-t-shirt/">Women&#039;s
-                                                            Classic T-Shirt</a></h3>
-                                                    <span class="price"><span
-                                                            class="woocommerce-Price-amount amount"><bdi><span
-                                                                    class="woocommerce-Price-currencySymbol">&#36;</span>299</bdi></span></span>
-                                                    <div class="product-group-button-meta"></div>
-                                                </div>
-                                            </div>
-                                        </section>
-                                        <section
-                                            class="product add-to-wishlist-after_add_to_cart type-product post-273 status-publish first instock product_cat-18th-century product_cat-19th-century product_cat-activities product_cat-body-fit product_cat-collections product_cat-fashion-style product_cat-men product_cat-pants product_cat-pastel-collection product_cat-petite product_cat-shorts product_cat-tall product_cat-vacation-wedding product_cat-vintage-collection product_cat-work-clothings has-post-thumbnail sale shipping-taxable purchasable product-type-simple"
-                                            data-product_id="273">
-                                            <div class="product-wrapper">
-                                                <div class="thumbnail-wrapper">
-                                                    <a href="classic-flat-front-chino-pant/">
-                                                        <figure class="no-back-image"><img loading="lazy"
-                                                                decoding="async"
-                                                                src="https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/themes/nooni/images/prod_loading.gif"
-                                                                data-src="https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/uploads/2023/04/33-450x572.jpg"
-                                                                class="attachment-shop_catalog wp-post-image ts-lazy-load"
-                                                                alt="" width="450" height="572" />
-                                                        </figure>
-                                                    </a>
-                                                    <div class="product-label on-thumbnail">
-                                                        <span class="onsale"><span>Sale</span></span>
-                                                    </div>
-                                                    <div class="product-group-button">
-                                                        <div class="loop-add-to-cart"><a href="?add-to-cart=273"
-                                                                data-quantity="1"
-                                                                class="button product_type_simple add_to_cart_button ajax_add_to_cart"
-                                                                data-product_id="273" data-product_sku="SPE-9055"
-                                                                aria-label="Add &ldquo;Classic Flat-Front Chino Pant&rdquo; to your cart"
-                                                                rel="nofollow"><span
-                                                                    class="ts-tooltip button-tooltip">Add to
-                                                                    cart</span></a></div>
-                                                        <div class="button-in wishlist">
-                                                            <div class="yith-wcwl-add-to-wishlist add-to-wishlist-273  wishlist-fragment on-first-load"
-                                                                data-fragment-ref="273"
-                                                                data-fragment-options="{&quot;base_url&quot;:&quot;&quot;,&quot;in_default_wishlist&quot;:false,&quot;is_single&quot;:false,&quot;show_exists&quot;:false,&quot;product_id&quot;:273,&quot;parent_product_id&quot;:273,&quot;product_type&quot;:&quot;simple&quot;,&quot;show_view&quot;:false,&quot;browse_wishlist_text&quot;:&quot;Browse wishlist&quot;,&quot;already_in_wishslist_text&quot;:&quot;The product is already in your wishlist!&quot;,&quot;product_added_text&quot;:&quot;Product added!&quot;,&quot;heading_icon&quot;:&quot;fa-heart-o&quot;,&quot;available_multi_wishlist&quot;:false,&quot;disable_wishlist&quot;:false,&quot;show_count&quot;:false,&quot;ajax_loading&quot;:false,&quot;loop_position&quot;:&quot;after_add_to_cart&quot;,&quot;item&quot;:&quot;add_to_wishlist&quot;}">
-                                                                <!-- ADD TO WISHLIST -->
-                                                                <div class="yith-wcwl-add-button">
-                                                                    <a href="?add_to_wishlist=273&#038;_wpnonce=88e283c6c3"
-                                                                        class="add_to_wishlist single_add_to_wishlist"
-                                                                        data-product-id="273" data-product-type="simple"
-                                                                        data-original-product-id="273"
-                                                                        data-title="&lt;span class=&quot;ts-tooltip button-tooltip&quot; data-title=&quot;Add to wishlist&quot;&gt;Wishlist&lt;/span&gt;"
-                                                                        rel="nofollow">
-                                                                        <i class="yith-wcwl-icon fa fa-heart-o"></i>
-                                                                        <span><span class="ts-tooltip button-tooltip"
-                                                                                data-title="Add to wishlist">Wishlist</span></span>
-                                                                    </a>
-                                                                </div>
-                                                                <!-- COUNT TEXT -->
-                                                            </div>
-                                                        </div>
-                                                        <div class="button-in compare"><a class="compare"
-                                                                href="https://demo.theme-sky.com/nooni-fashion?action=yith-woocompare-add-product&id=273"
-                                                                data-product_id="273"><span
-                                                                    class="ts-tooltip button-tooltip"
-                                                                    data-title="Add to compare">Compare</span></a>
-                                                        </div>
-                                                        <div class="button-in quickshop"><a class="quickshop" href="#"
-                                                                data-product_id="273"><span
-                                                                    class="ts-tooltip button-tooltip">Quick
-                                                                    view</span></a></div>
-                                                    </div>
-                                                </div>
-                                                <div class="meta-wrapper">
-                                                    <h3 class="heading-title product-name"><a
-                                                            href="classic-flat-front-chino-pant/">Classic
-                                                            Flat-Front Chino Pant</a></h3>
-                                                    <span class="price"><del aria-hidden="true"><span
-                                                                class="woocommerce-Price-amount amount"><bdi><span
-                                                                        class="woocommerce-Price-currencySymbol">&#36;</span>2,699</bdi></span></del>
-                                                        <ins><span class="woocommerce-Price-amount amount"><bdi><span
-                                                                        class="woocommerce-Price-currencySymbol">&#36;</span>1,099</bdi></span></ins></span>
-                                                    <div class="product-group-button-meta"></div>
-                                                </div>
-                                            </div>
-                                        </section>
-                                        <section
-                                            class="product add-to-wishlist-after_add_to_cart type-product post-249 status-publish last outofstock product_cat-20th-century product_cat-21th-century product_cat-activities product_cat-body-fit product_cat-casual-clothings product_cat-collections product_cat-women-dresses product_cat-fashion-style product_cat-pastel-collection product_cat-petite product_cat-spring-collection product_cat-summer-clothings product_cat-summer-collection product_cat-tall product_cat-vacation-wedding product_cat-women product_cat-work-clothings has-post-thumbnail featured shipping-taxable purchasable product-type-simple"
-                                            data-product_id="249">
-                                            <div class="product-wrapper">
-                                                <div class="thumbnail-wrapper">
-                                                    <a href="womens-bodycon-mini-dress/">
-                                                        <figure class="has-back-image"><img loading="lazy"
-                                                                decoding="async"
-                                                                src="https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/themes/nooni/images/prod_loading.gif"
-                                                                data-src="https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/uploads/2023/04/17-450x572.jpg"
-                                                                class="attachment-shop_catalog wp-post-image ts-lazy-load"
-                                                                alt="" width="450" height="572" /><img loading="lazy"
-                                                                decoding="async"
-                                                                src="https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/themes/nooni/images/prod_loading.gif"
-                                                                data-src="https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/uploads/2023/04/14-450x572.jpg"
-                                                                class="product-image-back ts-lazy-load" alt=""
-                                                                width="450" height="572" />
-                                                        </figure>
-                                                    </a>
-                                                    <div class="product-label on-thumbnail">
-                                                        <span class="out-of-stock"><span>Sold out</span></span>
-                                                    </div>
-                                                    <div class="product-group-button">
-                                                        <div class="loop-add-to-cart"><a
-                                                                href="womens-bodycon-mini-dress/" data-quantity="1"
-                                                                class="button product_type_simple" data-product_id="249"
-                                                                data-product_sku="VF577"
-                                                                aria-label="Read more about &ldquo;Women&#039;s Bodycon Mini Dress&rdquo;"
-                                                                rel="nofollow"><span
-                                                                    class="ts-tooltip button-tooltip">Read
-                                                                    more</span></a></div>
-                                                        <div class="button-in wishlist">
-                                                            <div class="yith-wcwl-add-to-wishlist add-to-wishlist-249  wishlist-fragment on-first-load"
-                                                                data-fragment-ref="249"
-                                                                data-fragment-options="{&quot;base_url&quot;:&quot;&quot;,&quot;in_default_wishlist&quot;:false,&quot;is_single&quot;:false,&quot;show_exists&quot;:false,&quot;product_id&quot;:249,&quot;parent_product_id&quot;:249,&quot;product_type&quot;:&quot;simple&quot;,&quot;show_view&quot;:false,&quot;browse_wishlist_text&quot;:&quot;Browse wishlist&quot;,&quot;already_in_wishslist_text&quot;:&quot;The product is already in your wishlist!&quot;,&quot;product_added_text&quot;:&quot;Product added!&quot;,&quot;heading_icon&quot;:&quot;fa-heart-o&quot;,&quot;available_multi_wishlist&quot;:false,&quot;disable_wishlist&quot;:false,&quot;show_count&quot;:false,&quot;ajax_loading&quot;:false,&quot;loop_position&quot;:&quot;after_add_to_cart&quot;,&quot;item&quot;:&quot;add_to_wishlist&quot;}">
-                                                                <!-- ADD TO WISHLIST -->
-                                                                <div class="yith-wcwl-add-button">
-                                                                    <a href="?add_to_wishlist=249&#038;_wpnonce=88e283c6c3"
-                                                                        class="add_to_wishlist single_add_to_wishlist"
-                                                                        data-product-id="249" data-product-type="simple"
-                                                                        data-original-product-id="249"
-                                                                        data-title="&lt;span class=&quot;ts-tooltip button-tooltip&quot; data-title=&quot;Add to wishlist&quot;&gt;Wishlist&lt;/span&gt;"
-                                                                        rel="nofollow">
-                                                                        <i class="yith-wcwl-icon fa fa-heart-o"></i>
-                                                                        <span><span class="ts-tooltip button-tooltip"
-                                                                                data-title="Add to wishlist">Wishlist</span></span>
-                                                                    </a>
-                                                                </div>
-                                                                <!-- COUNT TEXT -->
-                                                            </div>
-                                                        </div>
-                                                        <div class="button-in compare"><a class="compare"
-                                                                href="https://demo.theme-sky.com/nooni-fashion?action=yith-woocompare-add-product&id=249"
-                                                                data-product_id="249"><span
-                                                                    class="ts-tooltip button-tooltip"
-                                                                    data-title="Add to compare">Compare</span></a>
-                                                        </div>
-                                                        <div class="button-in quickshop"><a class="quickshop" href="#"
-                                                                data-product_id="249"><span
-                                                                    class="ts-tooltip button-tooltip">Quick
-                                                                    view</span></a></div>
-                                                    </div>
-                                                </div>
-                                                <div class="meta-wrapper">
-                                                    <h3 class="heading-title product-name"><a
-                                                            href="womens-bodycon-mini-dress/">Women&#039;s
-                                                            Bodycon Mini Dress</a></h3>
-                                                    <span class="price"><span
-                                                            class="woocommerce-Price-amount amount"><bdi><span
-                                                                    class="woocommerce-Price-currencySymbol">&#36;</span>224</bdi></span></span>
-                                                    <div class="product-group-button-meta"></div>
-                                                </div>
-                                            </div>
-                                        </section>
-                                        <section
-                                            class="product add-to-wishlist-after_add_to_cart type-product post-223 status-publish first instock product_cat-18th-century product_cat-19th-century product_cat-20th-century product_cat-21th-century product_cat-activities product_cat-back-to-school product_cat-casual-clothings product_cat-collections product_cat-fall-collection product_cat-fashion-style product_cat-girls product_cat-kids product_cat-unisex product_cat-winter-collection has-post-thumbnail featured shipping-taxable purchasable product-type-simple"
-                                            data-product_id="223">
-                                            <div class="product-wrapper">
-                                                <div class="thumbnail-wrapper">
-                                                    <a href="girls-black-fluffy-sweater/">
-                                                        <figure class="has-back-image"><img loading="lazy"
-                                                                decoding="async"
-                                                                src="https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/themes/nooni/images/prod_loading.gif"
-                                                                data-src="https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/uploads/2023/03/43-450x572.jpg"
-                                                                class="attachment-shop_catalog wp-post-image ts-lazy-load"
-                                                                alt="" width="450" height="572" /><img loading="lazy"
-                                                                decoding="async"
-                                                                src="https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/themes/nooni/images/prod_loading.gif"
-                                                                data-src="https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/uploads/2023/03/47-450x572.jpg"
-                                                                class="product-image-back ts-lazy-load" alt=""
-                                                                width="450" height="572" />
-                                                        </figure>
-                                                    </a>
-                                                    <div class="product-label on-thumbnail">
-                                                        <span class="featured"><span>Hot</span></span>
-                                                    </div>
-                                                    <div class="product-group-button">
-                                                        <div class="loop-add-to-cart"><a href="?add-to-cart=223"
-                                                                data-quantity="1"
-                                                                class="button product_type_simple add_to_cart_button ajax_add_to_cart"
-                                                                data-product_id="223" data-product_sku="VF543"
-                                                                aria-label="Add &ldquo;Girls Black Fluffy Sweater&rdquo; to your cart"
-                                                                rel="nofollow"><span
-                                                                    class="ts-tooltip button-tooltip">Add to
-                                                                    cart</span></a></div>
-                                                        <div class="button-in wishlist">
-                                                            <div class="yith-wcwl-add-to-wishlist add-to-wishlist-223  wishlist-fragment on-first-load"
-                                                                data-fragment-ref="223"
-                                                                data-fragment-options="{&quot;base_url&quot;:&quot;&quot;,&quot;in_default_wishlist&quot;:false,&quot;is_single&quot;:false,&quot;show_exists&quot;:false,&quot;product_id&quot;:223,&quot;parent_product_id&quot;:223,&quot;product_type&quot;:&quot;simple&quot;,&quot;show_view&quot;:false,&quot;browse_wishlist_text&quot;:&quot;Browse wishlist&quot;,&quot;already_in_wishslist_text&quot;:&quot;The product is already in your wishlist!&quot;,&quot;product_added_text&quot;:&quot;Product added!&quot;,&quot;heading_icon&quot;:&quot;fa-heart-o&quot;,&quot;available_multi_wishlist&quot;:false,&quot;disable_wishlist&quot;:false,&quot;show_count&quot;:false,&quot;ajax_loading&quot;:false,&quot;loop_position&quot;:&quot;after_add_to_cart&quot;,&quot;item&quot;:&quot;add_to_wishlist&quot;}">
-                                                                <!-- ADD TO WISHLIST -->
-                                                                <div class="yith-wcwl-add-button">
-                                                                    <a href="?add_to_wishlist=223&#038;_wpnonce=88e283c6c3"
-                                                                        class="add_to_wishlist single_add_to_wishlist"
-                                                                        data-product-id="223" data-product-type="simple"
-                                                                        data-original-product-id="223"
-                                                                        data-title="&lt;span class=&quot;ts-tooltip button-tooltip&quot; data-title=&quot;Add to wishlist&quot;&gt;Wishlist&lt;/span&gt;"
-                                                                        rel="nofollow">
-                                                                        <i class="yith-wcwl-icon fa fa-heart-o"></i>
-                                                                        <span><span class="ts-tooltip button-tooltip"
-                                                                                data-title="Add to wishlist">Wishlist</span></span>
-                                                                    </a>
-                                                                </div>
-                                                                <!-- COUNT TEXT -->
-                                                            </div>
-                                                        </div>
-                                                        <div class="button-in compare"><a class="compare"
-                                                                href="https://demo.theme-sky.com/nooni-fashion?action=yith-woocompare-add-product&id=223"
-                                                                data-product_id="223"><span
-                                                                    class="ts-tooltip button-tooltip"
-                                                                    data-title="Add to compare">Compare</span></a>
-                                                        </div>
-                                                        <div class="button-in quickshop"><a class="quickshop" href="#"
-                                                                data-product_id="223"><span
-                                                                    class="ts-tooltip button-tooltip">Quick
-                                                                    view</span></a></div>
-                                                    </div>
-                                                </div>
-                                                <div class="meta-wrapper">
-                                                    <h3 class="heading-title product-name"><a
-                                                            href="girls-black-fluffy-sweater/">Girls
-                                                            Black Fluffy Sweater</a></h3>
-                                                    <span class="price"><span
-                                                            class="woocommerce-Price-amount amount"><bdi><span
-                                                                    class="woocommerce-Price-currencySymbol">&#36;</span>1,599</bdi></span></span>
-                                                    <div class="product-group-button-meta"></div>
-                                                </div>
-                                            </div>
-                                        </section>
-                                        <section
-                                            class="product add-to-wishlist-after_add_to_cart type-product post-235 status-publish last instock product_cat-18th-century product_cat-19th-century product_cat-20th-century product_cat-21th-century product_cat-activities product_cat-body-fit product_cat-casual-clothings product_cat-collections product_cat-curve-plus-size product_cat-fall-collection product_cat-fashion-style product_cat-men-hoodies product_cat-men product_cat-pastel-collection product_cat-petite product_cat-shirts product_cat-sport-clothings product_cat-spring-collection product_cat-summer-collection product_cat-t-shirts product_cat-tall product_cat-work-clothings has-post-thumbnail shipping-taxable purchasable product-type-simple"
-                                            data-product_id="235">
-                                            <div class="product-wrapper">
-                                                <div class="thumbnail-wrapper">
-                                                    <a href="oversized-knitted-t-shirt-in-blue/">
-                                                        <figure class="has-back-image"><img loading="lazy"
-                                                                decoding="async"
-                                                                src="https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/themes/nooni/images/prod_loading.gif"
-                                                                data-src="https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/uploads/2023/04/35-450x572.jpg"
-                                                                class="attachment-shop_catalog wp-post-image ts-lazy-load"
-                                                                alt="" width="450" height="572" /><img loading="lazy"
-                                                                decoding="async"
-                                                                src="https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/themes/nooni/images/prod_loading.gif"
-                                                                data-src="https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/uploads/2023/04/05-450x572.jpg"
-                                                                class="product-image-back ts-lazy-load" alt=""
-                                                                width="450" height="572" />
-                                                        </figure>
-                                                    </a>
-                                                    <div class="product-label on-thumbnail">
-                                                    </div>
-                                                    <div class="product-group-button">
-                                                        <div class="loop-add-to-cart"><a href="?add-to-cart=235"
-                                                                data-quantity="1"
-                                                                class="button product_type_simple add_to_cart_button ajax_add_to_cart"
-                                                                data-product_id="235" data-product_sku="JSRNZP"
-                                                                aria-label="Add &ldquo;Oversized Knitted T-Shirt In Blue&rdquo; to your cart"
-                                                                rel="nofollow"><span
-                                                                    class="ts-tooltip button-tooltip">Add to
-                                                                    cart</span></a></div>
-                                                        <div class="button-in wishlist">
-                                                            <div class="yith-wcwl-add-to-wishlist add-to-wishlist-235  wishlist-fragment on-first-load"
-                                                                data-fragment-ref="235"
-                                                                data-fragment-options="{&quot;base_url&quot;:&quot;&quot;,&quot;in_default_wishlist&quot;:false,&quot;is_single&quot;:false,&quot;show_exists&quot;:false,&quot;product_id&quot;:235,&quot;parent_product_id&quot;:235,&quot;product_type&quot;:&quot;simple&quot;,&quot;show_view&quot;:false,&quot;browse_wishlist_text&quot;:&quot;Browse wishlist&quot;,&quot;already_in_wishslist_text&quot;:&quot;The product is already in your wishlist!&quot;,&quot;product_added_text&quot;:&quot;Product added!&quot;,&quot;heading_icon&quot;:&quot;fa-heart-o&quot;,&quot;available_multi_wishlist&quot;:false,&quot;disable_wishlist&quot;:false,&quot;show_count&quot;:false,&quot;ajax_loading&quot;:false,&quot;loop_position&quot;:&quot;after_add_to_cart&quot;,&quot;item&quot;:&quot;add_to_wishlist&quot;}">
-
-                                                                <!-- ADD TO WISHLIST -->
-
-                                                                <div class="yith-wcwl-add-button">
-                                                                    <a href="?add_to_wishlist=235&#038;_wpnonce=88e283c6c3"
-                                                                        class="add_to_wishlist single_add_to_wishlist"
-                                                                        data-product-id="235" data-product-type="simple"
-                                                                        data-original-product-id="235"
-                                                                        data-title="&lt;span class=&quot;ts-tooltip button-tooltip&quot; data-title=&quot;Add to wishlist&quot;&gt;Wishlist&lt;/span&gt;"
-                                                                        rel="nofollow">
-                                                                        <i class="yith-wcwl-icon fa fa-heart-o"></i>
-                                                                        <span><span class="ts-tooltip button-tooltip"
-                                                                                data-title="Add to wishlist">Wishlist</span></span>
-                                                                    </a>
-                                                                </div>
-
-                                                                <!-- COUNT TEXT -->
-
-                                                            </div>
-                                                        </div>
-                                                        <div class="button-in compare"><a class="compare"
-                                                                href="https://demo.theme-sky.com/nooni-fashion?action=yith-woocompare-add-product&id=235"
-                                                                data-product_id="235"><span
-                                                                    class="ts-tooltip button-tooltip"
-                                                                    data-title="Add to compare">Compare</span></a>
-                                                        </div>
-                                                        <div class="button-in quickshop"><a class="quickshop" href="#"
-                                                                data-product_id="235"><span
-                                                                    class="ts-tooltip button-tooltip">Quick
-                                                                    view</span></a></div>
-                                                    </div>
-                                                </div>
-                                                <div class="meta-wrapper">
-                                                    <h3 class="heading-title product-name"><a
-                                                            href="oversized-knitted-t-shirt-in-blue/">Oversized
-                                                            Knitted T-Shirt In Blue</a></h3>
-                                                    <span class="price"><span
-                                                            class="woocommerce-Price-amount amount"><bdi><span
-                                                                    class="woocommerce-Price-currencySymbol">&#36;</span>749</bdi></span></span>
-                                                    <div class="product-group-button-meta"></div>
-                                                </div>
-                                            </div>
-                                        </section>
+                                    
 
                                     </div>
                                 </div>
@@ -1501,8 +1107,8 @@
     </script>
 
 
- 
- 
+
+
     <script type="text/javascript"
         src="https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/plugins/woocommerce/assets/js/frontend/cart.min.js?ver=8.2.1"
         id="wc-cart-js"></script>
@@ -1524,8 +1130,8 @@
     <script type="text/javascript"
         src="https://nooni-be87.kxcdn.com/nooni-fashion/wp-includes/js/dist/i18n.min.js?ver=7701b0c3857f914212ef"
         id="wp-i18n-js"></script>
-  
- 
+
+
 
     <script type="text/javascript"
         src="https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/plugins/yith-woocommerce-compare/assets/js/woocompare.min.js?ver=2.32.0"
@@ -1539,9 +1145,8 @@
         id="wc-cart-fragments-js"></script>
 
     <script type="text/javascript"
-        src="https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/themes/nooni/js/main.js?ver=1.0.3"
-        id="nooni-script-js">
-        </script>
+        src="https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/themes/nooni/js/main.js?ver=1.0.3" id="nooni-script-js">
+    </script>
     <script type="text/javascript"
         src="https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/themes/nooni/js/jquery.sticky.js?ver=1.0.3"
         id="jquery-sticky-js"></script>
@@ -1550,10 +1155,9 @@
         id="flexslider-js"></script>
     <script type="text/javascript"
         src="https://nooni-be87.kxcdn.com/nooni-fashion/wp-includes/js/underscore.min.js?ver=1.13.4" id="underscore-js">
-        </script>
+    </script>
 
-    <script type="text/javascript"
-        src="https://nooni-be87.kxcdn.com/nooni-fashion/wp-includes/js/wp-util.min.js?ver=6.4.3"
+    <script type="text/javascript" src="https://nooni-be87.kxcdn.com/nooni-fashion/wp-includes/js/wp-util.min.js?ver=6.4.3"
         id="wp-util-js"></script>
 
     <script type="text/javascript"

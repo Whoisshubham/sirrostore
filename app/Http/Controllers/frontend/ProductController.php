@@ -5,6 +5,7 @@ namespace App\Http\Controllers\frontend;
 use App\Http\Controllers\Controller;
 use App\Models\Categorie;
 use App\Models\Product;
+use App\Models\SubCategorie;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
@@ -13,15 +14,15 @@ class ProductController extends Controller
     public function productsList($slug = null)
     {
         if ($slug !== null) {
-            $categorie = Categorie::whereStatus(1)->whereSlug($slug)->first();
+            $categorie = SubCategorie::whereStatus(1)->whereSlug($slug)->first();
             if ($categorie == null) {
                 return redirect(404);
             }
 
-            $productList = Product::with(['productOne'])->where('category_id', $categorie->id)->paginate(8);
+            $productList = Product::with(['productOne'])->where('category_id', $categorie->id)->paginate(12);
         } else {
             $categorie =[];
-            $productList = Product::with(['productOne'])->whereStatus('1')->paginate(8);
+            $productList = Product::with(['productOne'])->whereStatus('1')->paginate(12);
         }
         return view('Frontend.productlist', compact('productList', 'categorie'));
     }

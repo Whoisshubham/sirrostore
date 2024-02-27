@@ -1,37 +1,30 @@
 @php
-    $setting=settings();
+    $setting = settings();
+    $categorieList = categories();
 @endphp
-<link rel="stylesheet" href="{{asset('frontend/css/page.main.css')}}">
-<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-<script src="{{asset('style.js')}}"></script>
+<link rel="stylesheet" href="{{ asset('frontend/css/page.main.css') }}">
+<style>
+    .productBorders {
+        border: 0.2px solid #ccc;
+        margin: 10px;
+    }
+</style>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="{{ asset('style.js') }}"></script>
 <header class="ts-header has-sticky">
     <div class="header-container">
         <div class="header-template">
 
             <div style="background-color: red;border:red;" class="header-top">
-                <div class="container">
+                <div style="padding:5px 0px;">
 
-                    <div class="header-store-notice">Up to 40% off Best-Selling Furniture. <a
-                            href="">Shop Now</a></div>
-                    <div class="header-right hidden-phone">
-
-                        <div class="language-currency">
-                            <div class="header-language">
-                                <div
-                                    class="wpml-ls-statics-shortcode_actions wpml-ls wpml-ls-legacy-dropdown js-wpml-ls-legacy-dropdown">
-                                    <ul>
-
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <div class="header-currency">
-                                <div class="wcml_currency_switcher">
-
-                                </div>
-                            </div>
-                        </div>
+                
+                    <div style="display: flex;justify-content:center;" class="header-store-notice d-flex" ><span> Great Products, Affordable Prices. <a href="">Shop Now</a>
+                    </span>
                     </div>
+                    
                 </div>
             </div>
 
@@ -50,10 +43,9 @@
                                         <ul id="menu-main-menu-2" class="menu">
                                             <li id="menu-item-6468"
                                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6468 hide ts-megamenu ts-megamenu-columns--1 ts-megamenu-fullwidth ts-megamenu-fullwidth-stretch no-stretch-content parent">
-                                                <a href=""><span
-                                                        class="menu-label">Shop</span></a><span
+                                                <a href=""><span class="menu-label">Shop</span></a><span
                                                     class="ts-menu-drop-icon"></span>
-                                                <ul class="sub-menu">
+                                                <ul class="sub-menu" style="top:11px;">
                                                     <li>
                                                         <div
                                                             class="ts-megamenu-widgets-container ts-megamenu-container">
@@ -61,232 +53,50 @@
                                                                 class="elementor elementor-6010">
                                                                 <div class="elementor-element elementor-element-7bb3efb e-flex e-con-boxed e-con e-parent"
                                                                     data-id="7bb3efb" data-element_type="container"
-                                                                    data-settings="{&quot;content_width&quot;:&quot;boxed&quot;}"
+                                                                   
                                                                     data-core-v316-plus="true">
                                                                     <div class="e-con-inner">
-                                                                        <div class="elementor-element elementor-element-3f5ad04 e-con-full e-flex e-con e-child"
-                                                                            data-id="3f5ad04"
-                                                                            data-element_type="container"
-                                                                            data-settings="{&quot;content_width&quot;:&quot;full&quot;}">
-                                                                            <div class="elementor-element elementor-element-03af999 title-align-left elementor-widget elementor-widget-ts-list-of-product-categories"
-                                                                                data-id="03af999"
-                                                                                data-element_type="widget"
-                                                                                data-widget_type="ts-list-of-product-categories.default">
-                                                                                <div class="elementor-widget-container">
+                                                                        @foreach ($categorieList as $category)
+                                                                            <div class="elementor-element elementor-element-3f5ad04 e-con-full e-flex e-con e-child"
+                                                                                data-id="3f5ad04"
+                                                                                data-element_type="container">
+                                                                                <div class="elementor-element elementor-element-03af999 title-align-left elementor-widget elementor-widget-ts-list-of-product-categories"
+                                                                                    data-id="03af999"
+                                                                                    data-element_type="widget"
+                                                                                    data-widget_type="ts-list-of-product-categories.default">
                                                                                     <div
-                                                                                        class="ts-list-of-product-categories-wrapper columns-1 no-shop-more-button">
+                                                                                        class="elementor-widget-container">
+                                                                                        <div
+                                                                                            class="ts-list-of-product-categories-wrapper columns-1 no-shop-more-button">
 
-                                                                                        <h3 class="heading-title">
-                                                                                            Women Clothings
-                                                                                        </h3>
+                                                                                            <h3 class="heading-title">
+                                                                                                {{ $category->name ?? null }}
+                                                                                            </h3>
 
-                                                                                        <div class="list-categories">
-                                                                                            <ul>
-                                                                                                <li><a
-                                                                                                        href="https://demo.theme-sky.com/nooni-fashion/product-category/women/">Women</a>
-                                                                                                </li>
-
-                                                                                                <li><a
-                                                                                                        href="https://demo.theme-sky.com/nooni-fashion/product-category/women/women-coats-jackets/">
-                                                                                                        Coats
-                                                                                                        &amp;
-                                                                                                        Jackets
-                                                                                                    </a></li>
-                                                                                                <li><a
-                                                                                                        href="https://demo.theme-sky.com/nooni-fashion/product-category/women/women-dresses/">
-                                                                                                        Dresses
-                                                                                                    </a></li>
-                                                                                                <li><a
-                                                                                                        href="https://demo.theme-sky.com/nooni-fashion/product-category/women/women-hoodies-sweatshirts/">
-                                                                                                        Hoodies
-                                                                                                        &amp;
-                                                                                                        Sweatshirts
-                                                                                                    </a></li>
-                                                                                                <li><a
-                                                                                                        href="https://demo.theme-sky.com/nooni-fashion/product-category/women/jeans/">
-                                                                                                        Jeans
-                                                                                                    </a></li>
-                                                                                                <li><a
-                                                                                                        href="https://demo.theme-sky.com/nooni-fashion/product-category/women/women-knitwear/">
-                                                                                                        Knitwears
-                                                                                                    </a></li>
-                                                                                            </ul>
+                                                                                            <div
+                                                                                                class="list-categories">
+                                                                                                <ul>
+                                                                                                    @foreach ($category->subcategoriesList as $subCatgeorie)
+                                                                                                        <li><a
+                                                                                                                href="{{ url('products-list', [$subCatgeorie->slug ?? null]) }}">{{ $subCatgeorie->name ?? null }}</a>
+                                                                                                        </li>
+                                                                                                    @endforeach
+                                                                                                </ul>
+                                                                                            </div>
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
-                                                                        </div>
-                                                                        <div class="elementor-element elementor-element-e289b75 e-con-full e-flex e-con e-child"
-                                                                            data-id="e289b75"
-                                                                            data-element_type="container"
-                                                                            data-settings="{&quot;content_width&quot;:&quot;full&quot;}">
-                                                                            <div class="elementor-element elementor-element-09beb86 title-align-left elementor-widget elementor-widget-ts-list-of-product-categories"
-                                                                                data-id="09beb86"
-                                                                                data-element_type="widget"
-                                                                                data-widget_type="ts-list-of-product-categories.default">
-                                                                                <div class="elementor-widget-container">
-                                                                                    <div
-                                                                                        class="ts-list-of-product-categories-wrapper columns-1 no-shop-more-button">
-
-                                                                                        <h3 class="heading-title">
-                                                                                            Men Clothings </h3>
-
-                                                                                        <div class="list-categories">
-                                                                                            <ul>
-
-                                                                                                <li><a
-                                                                                                        href="https://demo.theme-sky.com/nooni-fashion/product-category/men/men-coats-jackets/">
-                                                                                                        Coats
-                                                                                                        &amp;
-                                                                                                        Jackets
-                                                                                                    </a></li>
-                                                                                                <li><a
-                                                                                                        href="https://demo.theme-sky.com/nooni-fashion/product-category/men/men-hoodies/">
-                                                                                                        Hoodies
-                                                                                                    </a></li>
-                                                                                                <li><a
-                                                                                                        href="https://demo.theme-sky.com/nooni-fashion/product-category/men/pants/">
-                                                                                                        Pants
-                                                                                                    </a></li>
-                                                                                                <li><a
-                                                                                                        href="https://demo.theme-sky.com/nooni-fashion/product-category/men/shirts/">
-                                                                                                        Shirts
-                                                                                                    </a></li>
-                                                                                                <li><a
-                                                                                                        href="https://demo.theme-sky.com/nooni-fashion/product-category/men/shorts/">
-                                                                                                        Shorts
-                                                                                                    </a></li>
-                                                                                                <li><a
-                                                                                                        href="https://demo.theme-sky.com/nooni-fashion/product-category/men/t-shirts/">
-                                                                                                        T-Shirts
-                                                                                                    </a></li>
-                                                                                            </ul>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="elementor-element elementor-element-99b1ec8 e-con-full e-flex e-con e-child"
-                                                                            data-id="99b1ec8"
-                                                                            data-element_type="container"
-                                                                            data-settings="{&quot;content_width&quot;:&quot;full&quot;}">
-                                                                            <div class="elementor-element elementor-element-2912afd title-align-left elementor-widget elementor-widget-ts-list-of-product-categories"
-                                                                                data-id="2912afd"
-                                                                                data-element_type="widget"
-                                                                                data-widget_type="ts-list-of-product-categories.default">
-                                                                                <div class="elementor-widget-container">
-                                                                                    <div
-                                                                                        class="ts-list-of-product-categories-wrapper columns-1 no-shop-more-button">
-
-                                                                                        <h3 class="heading-title">
-                                                                                            Shop By Collections
-                                                                                        </h3>
-
-                                                                                        <div class="list-categories">
-                                                                                            <ul>
-
-                                                                                                <li><a
-                                                                                                        href="https://demo.theme-sky.com/nooni-fashion/product-category/collections/fall-collection/">
-                                                                                                        Fall
-                                                                                                        Collection
-                                                                                                    </a></li>
-                                                                                                <li><a
-                                                                                                        href="https://demo.theme-sky.com/nooni-fashion/product-category/collections/pastel-collection/">
-                                                                                                        Pastel
-                                                                                                        Collection
-                                                                                                    </a></li>
-                                                                                                <li><a
-                                                                                                        href="https://demo.theme-sky.com/nooni-fashion/product-category/collections/spring-collection/">
-                                                                                                        Spring
-                                                                                                        Collection
-                                                                                                    </a></li>
-                                                                                                <li><a
-                                                                                                        href="https://demo.theme-sky.com/nooni-fashion/product-category/collections/summer-collection/">
-                                                                                                        Summer
-                                                                                                        Collection
-                                                                                                    </a></li>
-                                                                                                <li><a
-                                                                                                        href="https://demo.theme-sky.com/nooni-fashion/product-category/collections/vintage-collection/">
-                                                                                                        Vintage
-                                                                                                        Collection
-                                                                                                    </a></li>
-                                                                                                <li><a
-                                                                                                        href="https://demo.theme-sky.com/nooni-fashion/product-category/collections/winter-collection/">
-                                                                                                        Winter
-                                                                                                        Collection
-                                                                                                    </a></li>
-                                                                                            </ul>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="elementor-element elementor-element-9b3b53c e-con-full e-flex e-con e-child"
-                                                                            data-id="9b3b53c"
-                                                                            data-element_type="container"
-                                                                            data-settings="{&quot;content_width&quot;:&quot;full&quot;}">
-                                                                            <div class="elementor-element elementor-element-2733035 title-align-left elementor-widget elementor-widget-ts-list-of-product-categories"
-                                                                                data-id="2733035"
-                                                                                data-element_type="widget"
-                                                                                data-widget_type="ts-list-of-product-categories.default">
-                                                                                <div
-                                                                                    class="elementor-widget-container">
-                                                                                    <div
-                                                                                        class="ts-list-of-product-categories-wrapper columns-1 no-shop-more-button">
-
-                                                                                        <h3 class="heading-title">
-                                                                                            Shop By Activity
-                                                                                        </h3>
-
-                                                                                        <div class="list-categories">
-                                                                                            <ul>
-
-                                                                                                <li><a
-                                                                                                        href="https://demo.theme-sky.com/nooni-fashion/product-category/activities/back-to-school/">
-                                                                                                        Back to
-                                                                                                        School
-                                                                                                    </a></li>
-                                                                                                <li><a
-                                                                                                        href="https://demo.theme-sky.com/nooni-fashion/product-category/activities/casual-clothings/">
-                                                                                                        Casual
-                                                                                                        Clothings
-                                                                                                    </a></li>
-                                                                                                <li><a
-                                                                                                        href="https://demo.theme-sky.com/nooni-fashion/product-category/activities/sport-clothings/">
-                                                                                                        Sport
-                                                                                                        Clothings
-                                                                                                    </a></li>
-                                                                                                <li><a
-                                                                                                        href="https://demo.theme-sky.com/nooni-fashion/product-category/activities/summer-clothings/">
-                                                                                                        Summer
-                                                                                                        Clothings
-                                                                                                    </a></li>
-                                                                                                <li><a
-                                                                                                        href="https://demo.theme-sky.com/nooni-fashion/product-category/activities/vacation-wedding/">
-                                                                                                        Vacation
-                                                                                                        &amp;
-                                                                                                        Wedding
-                                                                                                    </a></li>
-                                                                                                <li><a
-                                                                                                        href="https://demo.theme-sky.com/nooni-fashion/product-category/activities/work-clothings/">
-                                                                                                        Work
-                                                                                                        Clothings
-                                                                                                    </a></li>
-                                                                                            </ul>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
+                                                                        @endforeach
                                                                     </div>
                                                                 </div>
-                                                            
+
                                                             </div>
                                                         </div>
                                                     </li>
                                                 </ul>
                                             </li>
-                                           
+
                                         </ul>
                                     </nav>
                                 </div>
@@ -296,15 +106,15 @@
                         <div class="header-center">
                             <div class="logo-wrapper">
                                 <div class="logo">
-                                    <a href="{{url('/')}}">
-                                        <img src="{{asset($setting->logo ?? null)}}"
-                                            style="width: 80px;" class="normal-logo" />
+                                    <a href="{{ url('/') }}">
+                                        <img src="{{ asset($setting->logo ?? null) }}" style="width: 80px;"
+                                            class="normal-logo" />
 
-                                        <img src="{{asset($setting->logo ?? null)}}"
-                                            style="width: 80px;" class="mobile-logo" />
+                                        <img src="{{ asset($setting->logo ?? null) }}" style="width: 80px;"
+                                            class="mobile-logo" />
 
-                                        <img src="{{asset($setting->logo ?? null)}}"
-                                            style="width: 80px;" class="sticky-logo" />
+                                        <img src="{{ asset($setting->logo ?? null) }}" style="width: 80px;"
+                                            class="sticky-logo" />
 
                                     </a>
                                 </div>
@@ -321,14 +131,13 @@
                                 <div class="ts-tiny-account-wrapper">
                                     <div class="account-control">
 
-                                        <a class="login" href="{{url('account')}}"
+                                        <a class="login" href="{{ url('account') }}"
                                             title="My Account">Login/Register</a>
 
                                         <div class="account-dropdown-form dropdown-container">
                                             <div class="form-content">
 
-                                                <form  class="submitForm"
-                                                    action="{{url('user-login')}}"
+                                                <form class="submitForm" action="{{ url('user-login') }}"
                                                     method="post">
                                                     @csrf
                                                     <p class="login-username">
@@ -339,9 +148,9 @@
                                                     </p>
                                                     <p class="login-password">
                                                         <label for="user_pass"></label>
-                                                        <input type="password" name="password" 
-                                                            placeholder="Password" spellcheck="false"
-                                                            class="input" value="" size="20" />
+                                                        <input type="password" name="password" placeholder="Password"
+                                                            spellcheck="false" class="input" value=""
+                                                            size="20" />
                                                     </p>
                                                     <p class="login-remember"><label><input name="rememberme"
                                                                 type="checkbox" id="rememberme" value="forever" />
@@ -349,7 +158,7 @@
                                                     <p class="login-submit">
                                                         <input type="submit" name="wp-submit" id="wp-submit"
                                                             class="button button-primary" value="Sign in" />
-                                                     
+
                                                     </p>
                                                 </form>
                                             </div>
@@ -365,8 +174,7 @@
                             <div class="shopping-cart-wrapper">
                                 <div class="ts-tiny-cart-wrapper">
                                     <div class="cart-icon">
-                                        <a class="cart-control" href=""
-                                            title="View your shopping cart">
+                                        <a class="cart-control" href="" title="View your shopping cart">
                                             <span class="ic-cart"></span>
                                             <span class="cart-number">0</span>
                                             <span class="cart-total"><span
@@ -418,6 +226,31 @@
                 </div>
             </div>
         </div>
-    </div>
-</header>
+    </div> 
+    <script>
+        var nooni_params = null;
+        var yith_wcwl_l10n = null;
 
+        function addTocart(pId) {
+            var url = "{{ route('addCart', ':id') }}";
+            url1 = url.replace(':id', pId);
+            $.ajax({
+                cache: false,
+                contentType: false,
+                processData: false,
+                url: url1,
+                method: "get",
+                dataType: "json",
+                success: function(response) {
+                    if (response.responseCode == 200) {
+                        toastr.success(response.responseMessage);
+                        $('#selectSize').removeClass('show');
+                        removeBackDrop();
+                    } else {
+                        toastr.error(response.responseMessage);
+                    }
+                }
+            });
+        }
+    </script>
+</header>

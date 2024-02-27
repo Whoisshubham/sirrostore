@@ -79282,7 +79282,7 @@ a.fc-event:hover {
     left: 0;
     right: 0;
     border-style: solid;
-    border-color: red;
+    border-color: #E33E3C;
     border-color: var(--fc-now-indicator-color, red);
     border-width: 1px 0 0
 }
@@ -86368,7 +86368,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 }
 
 .sp-input.sp-validation-error {
-    border: 1px solid red;
+    border: 1px solid #E33E3C;
     background: #fdd
 }
 

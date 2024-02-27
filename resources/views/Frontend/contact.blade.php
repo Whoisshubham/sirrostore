@@ -899,7 +899,7 @@
 			<div class="quickshop-content"></div>
 		</div>
 	</div>
-	<script src="{{asset('ajaxform.js')}}"></script>
+	
 </body>
 
 

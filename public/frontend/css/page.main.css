@@ -11005,7 +11005,7 @@ html #page {
     --nooni-middle-color: #000;
     --nooni-middle-border: #d6d6d6;
     --nooni-middle-link-hover-color: #848484;
-    --nooni-middle-cart-number-bg: #000;
+    --nooni-middle-cart-number-bg: #E33E3C;
     --nooni-middle-cart-number-color: #fff;
     --nooni-bottom-bg: #fff;
     --nooni-bottom-color: #000;
@@ -12815,8 +12815,7 @@ header li.widget_nav_menu {
 
 .header-middle>.container {
     justify-content: space-between;
-    padding-top: 31px;
-    padding-bottom: 31px
+    padding-bottom: 7px;
 }
 
 .header-v3 .header-middle>.container {
@@ -13308,7 +13307,7 @@ body .header-right .language-currency:last-child .header-language:last-child .wp
     letter-spacing: 0;
     border-radius: 50%;
     overflow: hidden;
-    background: var(--nooni-middle-cart-number-bg);
+    background: #E33E3C;
     color: var(--nooni-middle-cart-number-color)
 }
 
@@ -20455,7 +20454,7 @@ div.product .single-navigation>a[rel="next"]:hover>span {
 
 .woocommerce div.product form.cart .reset_variations {
     clear: both;
-    color: red;
+    color: #000;
     font-size: 0.86em;
     line-height: 18px;
     display: block;
@@ -28237,7 +28236,7 @@ body.error404 .image-404 .text-clipping+img {
         flex: none;
         text-align: start;
         justify-content: flex-start;
-        margin-right: 40px
+        margin-right: 70px
     }
 
     .header-v4 .ts-header .header-right {
