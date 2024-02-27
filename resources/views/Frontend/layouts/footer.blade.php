@@ -14,7 +14,7 @@
                 <!-- Grid column -->
                 <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
                     <h6 class="text-uppercase mb-4 font-weight-bold">
-                        {{ $settingData->website_name }}
+                        {{ $settingData->website_name ?? null }}
                     </h6>
                     <p>
                         Our staff takes pride in the customer service and passion for the product we sell. Our staff is

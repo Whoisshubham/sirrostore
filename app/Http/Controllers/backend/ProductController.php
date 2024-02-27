@@ -75,10 +75,10 @@ class ProductController extends Controller
         // Encode Method
         $accordanData = json_encode($Accordion);
         $image = json_encode($array);
-        $productId = time() + rand(100, 100000);
+        $productId = time() + rand(100, 100000);    
 
         $storeProduct = new Product();
-        $storeProduct->category_id = $request->categorie ?? null;
+        $storeProduct->sub_category_id = $request->categorie ?? null;
         $storeProduct->product_name = $request->product ?? null;
         $storeProduct->shiping_charge = $request->shiping_charge ?? null;
         $storeProduct->image = $image ?? null;

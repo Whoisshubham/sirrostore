@@ -1,0 +1,71 @@
+img.card-img-top {
+    background-color: #ccc;
+}
+.addToCardBtn {
+    background-color: #fff !important;
+    color: #000 !important;
+    border: 0.1px solid #cccccc33;
+    width: 98%;
+    position: absolute;
+    left: 3px;
+    bottom: 47px;
+}
+a .addToCardBtn{
+    text-decoration: none !important;
+}
+a:hover .addToCardBtn{
+    text-decoration: none !important;
+}
+.card.cardProducts {
+    width: 100% !important;
+}
+.spanPrice{
+    font-weight: 700;
+}
+.cardContent {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+#floatingTextarea2 {
+    border-radius: 0;
+}
+.submitBtn {
+    background-color: #000;
+    padding: 10px 32px 10px 32px;
+    border-radius: 0;
+}
+.contactAddress{
+    background-color: #fff;
+    padding: 40px;
+}
+
+.contactFormSection{
+    background-color: #f6f6f6;
+}
+
+@media only screen and (max-width: 1200px) {
+    .addToCardBtn {
+        position: absolute;
+        bottom: 60px;
+    }
+  }
+
+  @media only screen and (max-width: 992px) {
+    .addToCardBtn {
+        position: absolute;
+        bottom: 3px !important;
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    .addToCardBtn {
+        position: absolute;
+        bottom: 60px !important;
+    }
+    .card.cardProducts {
+        margin-bottom: 20px;
+    }
+  }
+
+  

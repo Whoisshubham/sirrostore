@@ -1,5 +1,5 @@
 @php
-    $settingData = settings();
+$settingData = settings();
 @endphp
 
 <!DOCTYPE html>
@@ -15,60 +15,63 @@
     <link rel="stylesheet" href="https://nooni-be87.kxcdn.com/nooni-fashion/wp-content/cache/minify/e7801.css"
         media="all" />
     <style id='woocommerce-inline-inline-css' type='text/css'>
-        .woocommerce form .form-row .required {
-            visibility: visible;
+    .woocommerce form .form-row .required {
+        visibility: visible;
+    }
+
+    @media screen and (max-width: 480px) {
+        .imageHeight {
+            min-height: 20vh !important;
         }
 
-        @media screen and (max-width: 480px) {
-            .imageHeight {
-                min-height: 20vh !important;
-            }
+        .card-img-top {
+            height: 350px !important;
 
-            .card-img-top {
-                height: 350px !important;
-
-            }
-
-            .cardProducts {
-                width: 40% !important;
-                height: 350px !important;
-                justify-content: space-between;
-                border: none !important;
-            }
-            .text-xs-center{
-                text-align: center;
-            }
-
-            .row {
-                justify-content: space-evenly;
-            }
         }
 
-        @media screen and (min-width: 480px) {
-
-            .imageHeight {
-                height: 50vh !important;
-            }
-
-            .card-img-top {
-                height: 350px !important;
-            }
-
-            .cardProducts {
-                width: 20% !important;
-                height: 350px !important;
-                justify-content: space-between;
-                border: none !important;
-            }
-            .addToCardBtn{
-                background: #000 !important;
-                color: white !important;
-            }
-            .addToCardBtn:hover{
-                background-color: #E33E3C !important;
-                color: #E33E3C;
-            }
+        .cardProducts {
+            width: 40% !important;
+            height: 350px !important;
+            justify-content: space-between;
+            border: none !important;
         }
+
+        .text-xs-center {
+            text-align: center;
+        }
+
+        .row {
+            justify-content: space-evenly;
+        }
+    }
+
+    @media screen and (min-width: 480px) {
+
+        .imageHeight {
+            height: 50vh !important;
+        }
+
+        .card-img-top {
+            height: 350px !important;
+        }
+
+        .cardProducts {
+            width: 20% !important;
+            height: 350px !important;
+            justify-content: space-between;
+            border: none !important;
+        }
+
+        .addToCardBtn {
+            background: #000 !important;
+            color: white !important;
+        }
+
+        .addToCardBtn:hover {
+            background-color: #E33E3C !important;
+            color: #E33E3C;
+        }
+    }
     </style>
 
     <link rel="stylesheet" href="{{ asset('frontend/css/page.main2.css') }}" media="all" />
@@ -107,21 +110,18 @@
                                     <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
                                         <div class="carousel-inner">
                                             @foreach ($sliderList as $key => $banner)
-                                                <div class="carousel-item active">
-                                                    <img src="{{ asset($banner->image) }}"
-                                                        class="imageHeight d-block w-100"
-                                                        alt="{{ asset($banner->image) }}">
-                                                </div>
-                                                <div class="carousel-item">
-                                                    <img src="{{ asset($banner->image) }}"
-                                                        class="imageHeight d-block w-100"
-                                                        alt="{{ asset($banner->image) }}">
-                                                </div>
-                                                <div class="carousel-item">
-                                                    <img src="{{ asset($banner->image) }}"
-                                                        class="imageHeight d-block w-100"
-                                                        alt="{{ asset($banner->image) }}">
-                                                </div>
+                                            <div class="carousel-item active">
+                                                <img src="{{ asset($banner->image) }}" class="imageHeight d-block w-100"
+                                                    alt="{{ asset($banner->image) }}">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="{{ asset($banner->image) }}" class="imageHeight d-block w-100"
+                                                    alt="{{ asset($banner->image) }}">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="{{ asset($banner->image) }}" class="imageHeight d-block w-100"
+                                                    alt="{{ asset($banner->image) }}">
+                                            </div>
                                             @endforeach
                                         </div>
                                         <button class="carousel-control-prev" type="button"
@@ -135,37 +135,195 @@
                                             <span class="visually-hidden">Next</span>
                                         </button>
                                         <style>
-                                            .carousel-control-prev:hover,
-                                            .carousel-control-next:hover {
-                                                background-color: #ffffff00;
-                                            }
+                                        .carousel-control-prev:hover,
+                                        .carousel-control-next:hover {
+                                            background-color: #ffffff00;
+                                        }
                                         </style>
                                     </div>
-                                    <div class="row mx-5">
-                                        <d class="flex text-md-left text-xs-center mt-3">
-                                            <h4><u>OUR PRODUCTS</u></h4>
-                                        </d>
-                                        @foreach ($productList as $product)
+                                    <div class="container">
+                                        <div class="row py-5">
+                                            <d class="flex text-md-left text-xs-center mt-5 mb-3">
+                                                <h4><u>OUR PRODUCTS</u></h4>
+                                            </d>
+                                            @foreach ($productList as $product)
                                             @php
-                                                $images = json_decode($product->image);
+                                            $images = json_decode($product->image);
                                             @endphp
-
-                                            <div class="card cardProducts ">
-                                                <img class="card-img-top" src="{{ $images[0] }}"
-                                                    alt="Card image cap">
-                                                <a style="border-radius: 0px !important;"
-                                                    onclick="addTocart({{ $product->productOne->id ?? null }})"
-                                                    class="btn btn-primary addToCardBtn">Add to cart</a>
-                                                <div class="card-body">
-                                                    <h6 class="card-title">Card title</h6>
-                                                    <span></span>
-
+                                            <div class="row">
+                                                <div class="col-lg-3 col-md-6 col-sm-6 col-6">
+                                                    <div class="card cardProducts ">
+                                                        <img class="card-img-top" src="{{ $images[0] }}"
+                                                            alt="Card image cap">
+                                                        <div class="addButton text-center">
+                                                            <a style="border-radius: 0px !important;"
+                                                                onclick="addTocart({{ $product->productOne->id ?? null }})"
+                                                                class="btn addToCardBtn">Add to cart</a>
+                                                        </div>
+                                                        <div class="cardContent">
+                                                            <h6 class="card-title">Card title</h6>
+                                                            <div class="productPrice">
+                                                                <span class="spanPrice">$259 - $269</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3 col-md-6 col-sm-6 col-6">
+                                                    <div class="card cardProducts ">
+                                                        <img class="card-img-top" src="{{ $images[0] }}"
+                                                            alt="Card image cap">
+                                                        <div class="addButton text-center">
+                                                            <a style="border-radius: 0px !important;"
+                                                                onclick="addTocart({{ $product->productOne->id ?? null }})"
+                                                                class="btn addToCardBtn">Add to cart</a>
+                                                        </div>
+                                                        <div class="cardContent">
+                                                            <h6 class="card-title">Card title</h6>
+                                                            <div class="productPrice">
+                                                                <span class="spanPrice">$259 - $269</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3 col-md-6 col-sm-6 col-6">
+                                                    <div class="card cardProducts ">
+                                                        <img class="card-img-top" src="{{ $images[0] }}"
+                                                            alt="Card image cap">
+                                                        <div class="addButton text-center">
+                                                            <a style="border-radius: 0px !important;"
+                                                                onclick="addTocart({{ $product->productOne->id ?? null }})"
+                                                                class="btn addToCardBtn">Add to cart</a>
+                                                        </div>
+                                                        <div class="cardContent">
+                                                            <h6 class="card-title">Card title</h6>
+                                                            <div class="productPrice">
+                                                                <span class="spanPrice">$259 - $269</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3 col-md-6 col-sm-6 col-6">
+                                                    <div class="card cardProducts ">
+                                                        <img class="card-img-top" src="{{ $images[0] }}"
+                                                            alt="Card image cap">
+                                                        <div class="addButton text-center">
+                                                            <a style="border-radius: 0px !important;"
+                                                                onclick="addTocart({{ $product->productOne->id ?? null }})"
+                                                                class="btn addToCardBtn">Add to cart</a>
+                                                        </div>
+                                                        <div class="cardContent">
+                                                            <h6 class="card-title">Card title</h6>
+                                                            <div class="productPrice">
+                                                                <span class="spanPrice">$259 - $269</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        @endforeach
 
 
+
+                                            @endforeach
+
+
+                                        </div>
                                     </div>
+                                    <section class="contactFormSection">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-lg-12 mt-4">
+                                                    <d class="flex text-md-left text-xs-center mt-5 mb-3">
+                                                        <h4><u>CONTACT US</u></h4>
+                                                    </d>
+                                                </div>
+                                            </div>
+                                            <div class="row mt-3">
+                                                <div class="col-lg-8 col-md-12 col-sm-12">
+                                                    <div class="contactForm">
+                                                        <form>
+                                                            <div class="row mb-3">
+                                                                <div class="col-sm-6">
+                                                                    <input type="text" class="form-control inputForm" id="inputName"
+                                                                        placeholder="Enter Your Name">
+                                                                </div>
+                                                                <div class="col-sm-6">
+                                                                    <input type="number" class="form-control inputForm"
+                                                                        id="inputNumber" placeholder="Phone Number">
+                                                                </div>
+                                                            </div>
+                                                            <div class="row mb-3">
+                                                                <div class="col-sm-6">
+                                                                    <input type="email" class="form-control inputForm" id="inputEmail"
+                                                                        placeholder="Enter Your Email">
+                                                                </div>
+                                                                <div class="col-sm-6">
+                                                                    <input type="text" class="form-control inputForm"
+                                                                        id="inputCompanyname" placeholder="Company Name">
+                                                                </div>
+                                                                <div class="col-sm-12">
+                                                                    <div class="form-floating">
+                                                                        <textarea class="form-control inputForm"
+                                                                            placeholder="Your message here"
+                                                                            id="floatingTextarea2"
+                                                                            style="height: 100px"></textarea>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+
+
+                                                            <button type="submit" class="btn btn-primary submitBtn mb-5">Submit</button>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4 col-md-12 col-sm-12 contactFlex">
+                                                <div class="contactAddress">
+                                                    <div class="headingContent">
+                                                        <h3>Address</h3>
+                                                    </div>
+                                                    <div class="addressText">
+                                                        <p><span class="spanAddIcon"><i class="fas fa-map mr-3"></i></span> New York, NY 10012, US</p>
+                                                    </div>
+                                                    <div class="addressText">
+                                                        <p><span class="spanAddIcon"><i class="fas fa-phone mr-3"></i></span> (571)209-8364</p>
+                                                    </div>
+                                                </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
+
+                                    <section class="aboutSection py-5">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-lg-6 col-md-12 col-sm-12">
+                                                    <div class="aboutContact">
+                                                        <h2>About us</h2>
+                                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In, id vel nobis facilis cum fuga eaque obcaecati neque, quo accusantium alias quos, excepturi atque pariatur iure laudantium sed voluptate officiis ea incidunt voluptatem molestias corrupti! Odit officiis unde debitis voluptatem in voluptate quaerat similique? Cupiditate, sunt voluptatibus. Maxime cupiditate dolores perspiciatis fuga ducimus harum nulla saepe rerum. Repudiandae molestias impedit ut tenetur nostrum labore minus optio nulla enim. Voluptatem, quia!</p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 col-md-12 col-sm-12">
+                                                    <div class="imageAbout">
+                                                        <img src="http://127.0.0.1:8000/slider/1709025825fireSlide02%20(1).jpg" class="aboutImage" alt="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row py-4">
+                                               
+                                                <div class="col-lg-6 col-md-12 col-sm-12">
+                                                    <div class="imageAbout">
+                                                        <img src="http://127.0.0.1:8000/slider/1709025825fireSlide02%20(1).jpg" class="aboutImage" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 col-md-12 col-sm-12">
+                                                    <div class="aboutContact">
+                                                        <h2>Our Mission</h2>
+                                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In, id vel nobis facilis cum fuga eaque obcaecati neque, quo accusantium alias quos, excepturi atque pariatur iure laudantium sed voluptate officiis ea incidunt voluptatem molestias corrupti! Odit officiis unde debitis voluptatem in voluptate quaerat similique? Cupiditate, sunt voluptatibus. Maxime cupiditate dolores perspiciatis fuga ducimus harum nulla saepe rerum. Repudiandae molestias impedit ut tenetur nostrum labore minus optio nulla enim. Voluptatem, quia!</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
 
 
 
@@ -197,15 +355,14 @@
                                                 data-widget_type="ts-testimonial.default">
                                                 <div class="elementor-widget-container">
                                                     <div class="ts-testimonial-wrapper ts-shortcode columns-2 text-default ts-slider show-dots"
-                                                        data-columns="2" data-nav="0" data-dots="1"
-                                                        data-autoplay="">
+                                                        data-columns="2" data-nav="0" data-dots="1" data-autoplay="">
 
                                                         <div class="items loading">
                                                             <div class="item">
                                                                 <blockquote>
                                                                     <div class="image">
-                                                                        <img loading="lazy" decoding="async"
-                                                                            width="180" height="180"
+                                                                        <img loading="lazy" decoding="async" width="180"
+                                                                            height="180"
                                                                             src="data:image/jpeg;base64,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"
                                                                             class="attachment-180x180 size-180x180 wp-post-image"
                                                                             alt=""
@@ -231,8 +388,7 @@
 
                                                                         <div class="author-role">
                                                                             <span class="author">
-                                                                                <a href="#"
-                                                                                    target="_blank">Name</a>
+                                                                                <a href="#" target="_blank">Name</a>
                                                                             </span>
 
 
@@ -245,8 +401,8 @@
                                                             <div class="item">
                                                                 <blockquote>
                                                                     <div class="image">
-                                                                        <img loading="lazy" decoding="async"
-                                                                            width="180" height="180"
+                                                                        <img loading="lazy" decoding="async" width="180"
+                                                                            height="180"
                                                                             src="data:image/jpeg;base64,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"
                                                                             class="attachment-180x180 size-180x180 wp-post-image"
                                                                             alt=""
@@ -272,8 +428,7 @@
 
                                                                         <div class="author-role">
                                                                             <span class="author">
-                                                                                <a href="#"
-                                                                                    target="_blank">Name</a>
+                                                                                <a href="#" target="_blank">Name</a>
                                                                             </span>
 
 
@@ -286,8 +441,8 @@
                                                             <div class="item">
                                                                 <blockquote>
                                                                     <div class="image">
-                                                                        <img loading="lazy" decoding="async"
-                                                                            width="180" height="180"
+                                                                        <img loading="lazy" decoding="async" width="180"
+                                                                            height="180"
                                                                             src="data:image/jpeg;base64,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"
                                                                             class="attachment-180x180 size-180x180 wp-post-image"
                                                                             alt=""
@@ -313,8 +468,7 @@
 
                                                                         <div class="author-role">
                                                                             <span class="author">
-                                                                                <a href="#"
-                                                                                    target="_blank">Name</a>
+                                                                                <a href="#" target="_blank">Name</a>
                                                                             </span>
 
 
@@ -388,30 +542,30 @@
             <script src="{{ asset('frontend/js/index.other.js') }}"></script>
 
             <script>
-                var nooni_params = null;
-                var yith_wcwl_l10n = null;
+            var nooni_params = null;
+            var yith_wcwl_l10n = null;
 
-                function addTocart(pId) {
-                    var url = "{{ route('addCart', ':id') }}";
-                    url1 = url.replace(':id', pId);
-                    $.ajax({
-                        cache: false,
-                        contentType: false,
-                        processData: false,
-                        url: url1,
-                        method: "get",
-                        dataType: "json",
-                        success: function(response) {
-                            if (response.responseCode == 200) {
-                                toastr.success(response.responseMessage);
-                                $('#selectSize').removeClass('show');
-                                removeBackDrop();
-                            } else {
-                                toastr.error(response.responseMessage);
-                            }
+            function addTocart(pId) {
+                var url = "{{ route('addCart', ':id') }}";
+                url1 = url.replace(':id', pId);
+                $.ajax({
+                    cache: false,
+                    contentType: false,
+                    processData: false,
+                    url: url1,
+                    method: "get",
+                    dataType: "json",
+                    success: function(response) {
+                        if (response.responseCode == 200) {
+                            toastr.success(response.responseMessage);
+                            $('#selectSize').removeClass('show');
+                            removeBackDrop();
+                        } else {
+                            toastr.error(response.responseMessage);
                         }
-                    });
-                }
+                    }
+                });
+            }
             </script>
 </body>
 
