@@ -222,7 +222,7 @@ class ProductController extends Controller
         $productDetails->image = $image ?? null;
         $productDetails->slug = $slug ?? null;
         $productDetails->product_name = $request->product ?? null;
-        $productDetails->category_id = $request->categorie ?? null;
+        $productDetails->sub_category_id = $request->categorie ?? null;
         $productDetails->title = $request->title ?? null;
         $productDetails->shiping_charge = $request->shiping_charge ?? 0;
         $productDetails->accordion = $accordanData ?? null;

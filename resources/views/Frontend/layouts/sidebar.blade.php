@@ -142,9 +142,8 @@
                 </div>
             </div>
 
-            <ul class="tab-mobile-menu">
-                <li id="main-menu" class="active"><span>Menu</span></li>
-                <li id="vertical-menu"><span>Categories</span></li>
+            <ul style="padding-left: 0px !important;" class="tab-mobile-menu">
+                <li  id="main-menu" class="active"><span>Menu</span></li>
             </ul>
 
             <h6 class="menu-title"><span>Menu</span></h6>
